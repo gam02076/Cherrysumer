@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+.header{
+    position:fixed;
+    left:50%;
+    width: 100%;
+    padding:10px 0;
+    text-align: center;
+    transform:translateX(-50%);
+    transition: all .3s;
+    z-index: 10;
+    /* border-bottom: 1px solid ; */
+    /* color: rgb(82,86,86); */
+    background-color: rgba(255,255,255,0.1);
+    height: 120px;
+}
+.down{
+    background-color: rgba(255,255,255,1);
+}
+
+.logo{
+    width: 140px;
+    z-index: 20;
+    transform:translateY(10%);
+    transform: translateX(275px);
+    z-index:30;
+}
+
+.menuList{
+    /* border:1px solid black; */
+    display: inline-block;
+    width:550px;
+    margin-right: 50px;
+    margin-top:68px;
+    float: right;
+}
+.menuList a{
+    margin: 0px 40px;
+    position:relative;
+}
+.menuList a:after {
+    /* display:block; */
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-10px;
+    width:0px; /*왼쪽부터 가게 해줌. 없으면 그냥 뜸 */
+    height:2px;
+    transition: all 0.2s ease-in-out;
+    transition-duration: 0.3s;
+    background-color:  #595959;
+    opacity:0;
+}
+.menuList a:hover:after {
+    width:100%;
+    opacity:1;
+}
+
+.icon{
+    width:30px;
+    float:right;
+}
+header a{
+    text-decoration-line: none;
+    /* font-family: 'Noto Serif KR', serif; */
+    font-family: 'Titillium Web', sans-serif;
+    color:#595959;
+}
+#headerHeight{
+    height:130px;
+/*     background-color: yellow; */
+    width:100%;
+    position: relative;
+}
+

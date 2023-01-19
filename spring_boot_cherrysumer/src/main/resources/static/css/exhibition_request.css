@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+#wrapper{
+    max-width: 80%;
+/*     background-color: blue; */
+    /* margin-top:150px; */
+    position: relative;
+    left:10%;
+}
+
+#imgUploadBox{
+	border:3px solid black;
+	margin:0 auto;
+	width:600px;
+	text-align:center;
+}
+
+#imgUploadBox td{
+
+	height:100px;
+
+}
