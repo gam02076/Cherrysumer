@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import com.spring_boot_cherrysumer.project.dao.IExhibitionDAO;
 import com.spring_boot_cherrysumer.project.model.ExhibitionVO;
+import com.spring_boot_cherrysumer.project.model.MemberVO;
 
 @Service
 public class ExhibitionService implements IExhibitionService {
@@ -14,8 +15,13 @@ public class ExhibitionService implements IExhibitionService {
 	IExhibitionDAO dao;
 	
 	@Override
-	public ExhibitionVO detailExhibibition1(String exhNo) {
-		return dao.detailExhibibition1(exhNo);
+	public ExhibitionVO detailViewExhibibition(String exhNo) {
+		return dao.detailViewExhibibition(exhNo);
+	}
+
+	@Override
+	public MemberVO getMemberInfo(String memId) {
+		return dao.getMemberInfo(memId);
 	}
 }
 //

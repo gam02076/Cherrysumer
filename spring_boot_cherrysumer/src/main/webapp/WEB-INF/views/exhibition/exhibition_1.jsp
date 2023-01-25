@@ -20,16 +20,16 @@
 	    <section class="background first">
 	        <div id="text_header">
 	            <div id="painter">
-	                ${evo.exhName }
+	                ${memVo.memName }
 	            </div>
 	            <div class="title eng">
-	                haze of Spring |
+	                ${evo.exhTitle_eng } |
 	            </div>
 	            <div class="title kor">
-	                봄의 아지랑이
+	                ${evo.exhTitle_kr }
 	            </div>
 	            <div id="date">
-	                Until 5 March 2023
+	                ${evo.exhDate}
 	            </div>
 	        </div>         
 	    </section>
@@ -37,10 +37,7 @@
 	    <section> 
 	        <div class="background bg-textPic">
 	            <div class="text firstText">
-	                <font size="6">우</font>리의 인생은 언제나 <font size="6" color="forestgreen">봄</font>이다<br>
-	                <font size="3">- 신명숙 </font><br><br>
-	                Life is a journey<br>
-	                <font size="3">- ralph waldo emerson</font>
+	                ${evo.exhWording1 }
 	            </div>
 	        </div>
 	    </section>  
@@ -48,13 +45,7 @@
 	    <section class="background article">
 	        <img src="<c:url value='/image/exh_person1.png'/>" class="person">
 	        <div class="text interview">
-	            요즘에 다들 마음 한 편에 불안함과 외로움을 갖고 살잖아요.<br>
-	            저도 그렇고 행복한 시간보다 견디는 시간이 더 많았던 것 같아요.<br>
-	            그렇지만 인생은 축복이라고 믿고싶어요. <br>
-	            의미 없는 순간과 시간은 없다고 생각해요.<br>
-	            그래서 제 인생은 늘 봄이었어요. <br>
-	            이렇게 말하면 사람들은 제가 늘 행복했었다고 생각해요. <br>
-	            사실은 그 반대죠. <br>       
+	            ${evo.exhWording2 }      
 	        </div>
 	    </section>
 	    <section class="background bg-pic2">
@@ -62,7 +53,7 @@
 	    <section class="background article">
 	        <img src="<c:url value='/image/exh_glass.jpg'/>" class="pic pic3">
 	        <div class="text article2">
-	           <i> 춘천 문화센터, 2017</i><br>
+	           ${evo.exhWording3 }
 	        </div>
 	    </section>
 	
@@ -107,8 +98,7 @@
 	    <section class="background bg-pic4">
 	        <div class="text2">
 	            <!-- 희망은 보이지 않는 게 아니라, 도전이 만들어 낸 또 다른 도전의 모습으로 당신 앞에 서 있습니다 -->
-	            오랫동안 꿈을 그리는 사람은 마침내 그 꿈을 닮아간다.<br><br>
-	             -니체
+	            ${evo.exhWording4 }
 	        </div>
 	    </section>
 	    <section class="background exhibition">
@@ -130,8 +120,7 @@
 	    <section> 
 	        <div class="background end">
 	            <div class="text firstText ending">
-	                제 작품이 사람들 마음에 한 줄기 빛으로 남았으면 좋겠어요.&nbsp;
-	                <font size="3">- 신명숙 </font><br><br>
+	                ${evo.exhWording4 }
 	            </div>
 	            <div id="GotoPainter">
 	                작가 보러 가기

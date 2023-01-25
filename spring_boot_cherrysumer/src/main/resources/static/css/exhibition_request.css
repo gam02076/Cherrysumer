@@ -1,22 +1,104 @@
-@charset "UTF-8";
-
+body{
+    margin: 0;
+}
 #wrapper{
-    max-width: 80%;
-/*     background-color: blue; */
-    /* margin-top:150px; */
-    position: relative;
-    left:10%;
-}
+	/* width:100vw; */
 
-#imgUploadBox{
-	border:3px solid black;
+	height:2300px;
+
+}
+.logoForm{
+	max-width:80%;
 	margin:0 auto;
-	width:600px;
+    margin-top: 100px;
+    height:230px;
+    /* background-color: aquamarine; */
+    border-bottom: 1px solid rgb(82,86,86);
+    font-size: 2.5rem;
+    font-family: 'Noto Serif KR', serif;
+    /* font-family: 'Gowun Batang', serif; */
+    vertical-align: middle; /* 텍스트 세로 가운데 정렬 */
+    display: relative;
+    background-image: url("/image/sand.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+.logoForm img{
+    height: 140px;
+    position: absolute;
+}
+.logoBox{
+    display: inline-block;
+    height: 2000px;
+    background-color: blueviolet;
+    left:5%;
+}
+
+.textBox{
+    display:inline-block;
+    /* background-color: blanchedalmond; */
+    position: absolute;
+    height: 180px;
+    left:20%;
+}
+
+/* .requestForm{
+    background-color: rgb(240, 240, 240);
+} */
+/* #tableBox{
+	background-color:red;
+} */
+table{
+    margin:0 auto;
+    margin-top: 50px;
+}
+th, td{
+	padding: 10px; /* 테두리와 내용 사이 간격*/
+}
+input{
+	height:100%;
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid silver;
+}
+
+#imageBox{
+	object-fit:cover;
+	height: 740px;
+	line-height:740px;
+	width:660px;
+	line-width:660px;
+	border:3px solid rgb(240,240,240);
 	text-align:center;
+	display:flex;
+	justify-content: center;
+	border-radius:15px;
+}
+#imageBox img{
+	max-width:660px;
+	max-height: 740px;
+	object-fit:contain;
 }
 
-#imgUploadBox td{
-
-	height:100px;
-
+#multiListBox{
+	height:130px;
+	margin:0 auto;
 }
+#listBox{
+	width:190px;
+}
+#imageFileForm{
+	width: 200px;
+}
+
+ textarea {
+    width: 99%;
+    height: 8rem;
+    border: none;
+    resize: none;
+ }
+ 
+ .terms{
+ word-break:break-all;
+ width: 1250px;
+ }
