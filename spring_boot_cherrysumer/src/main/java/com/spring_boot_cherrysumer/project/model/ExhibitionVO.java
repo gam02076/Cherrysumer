@@ -2,67 +2,76 @@ package com.spring_boot_cherrysumer.project.model;
 
 public class ExhibitionVO {
 	private String exhNo;
-	private String exhName;
-	private String exhDescript;
-	private String exhInterview1;
-	private String exhInterview2;
-	private String exhInterview3;
-	private String exhImg1;
-	private String exhImg2;
-	private String exhImg3;
+	private String exhTitle_eng;
+	private String exhTitle_kr;
+	private String exhDate;
+	private String exhWording1;
+	private String exhWording2;
+	private String exhWording3;
+	private String exhWording4;
+	private String exhWording5;
+	private String memId;
 	
+	//getter + setter
 	public String getExhNo() {
 		return exhNo;
 	}
 	public void setExhNo(String exhNo) {
 		this.exhNo = exhNo;
 	}
-	public String getExhName() {
-		return exhName;
+	public String getExhTitle_eng() {
+		return exhTitle_eng;
 	}
-	public void setExhName(String exhName) {
-		this.exhName = exhName;
+	public void setExhTitle_eng(String exhTitle_eng) {
+		this.exhTitle_eng = exhTitle_eng;
 	}
-	public String getExhDescript() {
-		return exhDescript;
+	public String getExhTitle_kr() {
+		return exhTitle_kr;
 	}
-	public void setExhDescript(String exhDescript) {
-		this.exhDescript = exhDescript;
+	public void setExhTitle_kr(String exhTitle_kr) {
+		this.exhTitle_kr = exhTitle_kr;
 	}
-	public String getExhInterview1() {
-		return exhInterview1;
+	public String getExhDate() {
+		return exhDate;
 	}
-	public void setExhInterview1(String exhInterview1) {
-		this.exhInterview1 = exhInterview1;
+	public void setExhDate(String exhDate) {
+		this.exhDate = exhDate;
 	}
-	public String getExhInterview2() {
-		return exhInterview2;
+	public String getExhWording1() {
+		return exhWording1;
 	}
-	public void setExhInterview2(String exhInterview2) {
-		this.exhInterview2 = exhInterview2;
+	public void setExhWording1(String exhWording1) {
+		this.exhWording1 = exhWording1;
 	}
-	public String getExhInterview3() {
-		return exhInterview3;
+	public String getExhWording2() {
+		return exhWording2;
 	}
-	public void setExhInterview3(String exhInterview3) {
-		this.exhInterview3 = exhInterview3;
+	public void setExhWording2(String exhWording2) {
+		this.exhWording2 = exhWording2;
 	}
-	public String getExhImg1() {
-		return exhImg1;
+	public String getExhWording3() {
+		return exhWording3;
 	}
-	public void setExhImg1(String exhImg1) {
-		this.exhImg1 = exhImg1;
+	public void setExhWording3(String exhWording3) {
+		this.exhWording3 = exhWording3;
 	}
-	public String getExhImg2() {
-		return exhImg2;
+	public String getExhWording4() {
+		return exhWording4;
 	}
-	public void setExhImg2(String exhImg2) {
-		this.exhImg2 = exhImg2;
+	public void setExhWording4(String exhWording4) {
+		this.exhWording4 = exhWording4;
 	}
-	public String getExhImg3() {
-		return exhImg3;
+	public String getExhWording5() {
+		return exhWording5;
 	}
-	public void setExhImg3(String exhImg3) {
-		this.exhImg3 = exhImg3;
+	public void setExhWording5(String exhWording5) {
+		this.exhWording5 = exhWording5;
 	}
-}	
+	public String getMemId() {
+		return memId;
+	}
+	public void setMemId(String memId) {
+		this.memId = memId;
+	}
+	
+}

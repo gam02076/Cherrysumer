@@ -1,0 +1,10 @@
+@charset "UTF-8";
+.background{
+    height: 380px;
+    width: 100vw;
+    background-size: cover;
+    overflow: hidden;
+    background-attachment: fixed;
+/*     background-color:rgb(245,245,245); */
+    background-image: url("/image/sand.jpg");
+}

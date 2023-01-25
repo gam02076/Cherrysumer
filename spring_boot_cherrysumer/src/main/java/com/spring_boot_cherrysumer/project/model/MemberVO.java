@@ -10,6 +10,8 @@ public class MemberVO {
 	private String memAddress1;
 	private String memAddress2;
 	private String memType;
+	private String memImg;
+	private String memIntroduce;
 	
 	public String getMemId() {
 		return memId;
@@ -65,4 +67,18 @@ public class MemberVO {
 	public void setMemType(String memType) {
 		this.memType = memType;
 	}
+	public String getMemImg() {
+		return memImg;
+	}
+	public void setMemImg(String memImg) {
+		this.memImg = memImg;
+	}
+	public String getMemIntroduce() {
+		return memIntroduce;
+	}
+	public void setMemIntroduce(String memIntroduce) {
+		this.memIntroduce = memIntroduce;
+	}
+	
+	
 }

@@ -4,9 +4,21 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
   <mapper namespace="com.spring_boot_cherrysumer.project.dao.IExhibitionDAO">
+  
+  
   <!-- 전시회 상세 조회 -->
-  	<select id="detailExhibibition1" parameterType="string"
+  	<select id="detailViewExhibibition" parameterType="string"
   			resultType="com.spring_boot_cherrysumer.project.model.ExhibitionVO">
-  		SELECT * FROM exhibition1 WHERE exhNo = #{exhNo}	
+  		SELECT * FROM exhibition WHERE exhNo = #{exhNo}	
   	</select>  	
+  	
+  <!-- 전시회에 출력할 회원 정보 반환 -->
+  	<select id="getMemberInfo" parameterType="string"
+  			resultType="com.spring_boot_cherrysumer.project.model.MemberVO">
+  		SELECT memId, memName, memImg
+  		FROM member
+  		WHERE memId=#{memId}
+  	</select>
+  	
+  	
   </mapper>
