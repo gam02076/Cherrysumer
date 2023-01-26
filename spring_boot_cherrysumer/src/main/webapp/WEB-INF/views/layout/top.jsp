@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <header>
     <div class="header">
-        <img src="<c:url value='/image/exh_logo(text2).png'/>" class="logo">
+        <a href="/"><img src="<c:url value='/image/exh_logo(text2).png'/>" class="logo"></a>
         <div id="headerRight">
         <div class="menuList" id="memList">
         	<c:if test="${empty sessionScope.sid }">
@@ -14,7 +14,7 @@
 			<c:if test="${not empty sessionScope.sid }">
 					${sessionScope.sid}님 
 					<a class="header-item" href="/member/logout">로그아웃</a> 
-					<a class="header-item" href="#">마이페이지</a>
+					<a class="header-item" href="/Mypage">마이페이지</a>
 			</c:if>	 
             </div>
             

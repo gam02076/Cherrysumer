@@ -1,5 +1,10 @@
 @charset "UTF-8";
-
+body{
+    margin:0;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
 .header{
     position:fixed;
     left:50%;
@@ -8,7 +13,7 @@
     text-align: center;
     transform:translateX(-50%);
     transition: all .3s;
-    z-index: 10;
+    z-index: 101;
     /* border-bottom: 1px solid ; */
     /* color: rgb(82,86,86); */
     background-color: rgba(255,255,255,1);
@@ -22,7 +27,7 @@
     width: 140px;
     z-index: 20;
     transform:translateY(10%);
-    transform: translateX(275px);
+    transform: translateX(201%);
     z-index:30;
 }
 #headerRight{

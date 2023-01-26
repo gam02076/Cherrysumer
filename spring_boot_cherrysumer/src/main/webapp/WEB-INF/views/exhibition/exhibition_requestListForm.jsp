@@ -8,6 +8,6 @@
 		<title>UploadResultView</title>
 	</head>
 	<body>
-		${exhibition_UploadResultView 페이지입니다. }
+		exhibition_UploadResultView 페이지입니다.
 	</body>
 </html>

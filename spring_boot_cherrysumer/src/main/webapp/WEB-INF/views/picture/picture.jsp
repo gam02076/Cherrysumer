@@ -89,31 +89,31 @@
 				
 
 			<div id="image1">
-				<a href="#"> <img src="<c:url value="/image/겨울사진16.jpg/"/>"
+				<a href="#"> <img src="<c:url value="/image/p16.jpg/"/>"
 					alt="img" class="main_image" />
 				</a>
 			</div>
 
 			<div id="image2">
-				<a href="#"> <img src="<c:url value="/image/겨울사진01.jpg/"/>"
+				<a href="#"> <img src="<c:url value="/image/p1.jpg/"/>"
 					alt="img" class="main_image" />
 				</a>
 			</div>
 
 			<div id="image3">
-				<a href="#"> <img src="<c:url value="/image/겨울명화01.jpg/"/>"
+				<a href="#"> <img src="<c:url value="/image/01.jpg/"/>"
 					alt="img" class="main_image" />
 				</a>
 			</div>
 
 			<div id="image4">
-				<a href="#"> <img src="<c:url value="/image/겨울명화02.jpg/"/>"
+				<a href="#"> <img src="<c:url value="/image/02.jpg/"/>"
 					alt="img" class="main_image" />
 				</a>
 			</div>
 
 			<div id="image5">
-				<a href="#"> <img src="<c:url value="/image/겨울사진02.jpg/"/>"
+				<a href="#"> <img src="<c:url value="/image/p2.jpg/"/>"
 					alt="img" class="main_image" />
 				</a>
 			</div>
@@ -124,31 +124,31 @@
 		<div class="grid_container_02">
 
 			<div id="image6">
-				<a href="#"> <img src="<c:url value="/image/겨울사진05.jpg/"/>"
+				<a href="#"> <img src="<c:url value="/image/p5.jpg/"/>"
 					alt="img" class="main_image" />
 				</a>
 			</div>
 
 			<div id="image7">
-				<a href="#"> <img src="<c:url value="/image/겨울사진03.jpg/"/>"
+				<a href="#"> <img src="<c:url value="/image/p3.jpg/"/>"
 					alt="img" class="main_image" />
 				</a>
 			</div>
 
 			<div id="image8">
-				<a href="#"> <img src="<c:url value="/image/겨울명화04.jpg/"/>"
+				<a href="#"> <img src="<c:url value="/image/04.jpg/"/>"
 					alt="img" class="main_image" />
 				</a>
 			</div>
 
 			<div id="image9">
-				<a href="#"> <img src="<c:url value="/image/겨울명화05.jpg/"/>"
+				<a href="#"> <img src="<c:url value="/image/05.jpg/"/>"
 					alt="img" class="main_image" />
 				</a>
 			</div>
 
 			<div id="image10">
-				<a href="#"> <img src="<c:url value="/image/겨울사진04.jpg/"/>"
+				<a href="#"> <img src="<c:url value="/image/p4.jpg/"/>"
 					alt="img" class="main_image" />
 				</a>
 			</div>
@@ -159,31 +159,31 @@
 		<div class="grid_container_03">
 
 			<div id="image11">
-				<a href="#"> <img src="<c:url value="/image/겨울사진14.jpg/"/>"
+				<a href="#"> <img src="<c:url value="/image/p14.jpg/"/>"
 					alt="img" class="main_image" />
 				</a>
 			</div>
 
 			<div id="image12">
-				<a href="#"> <img src="<c:url value="/image/겨울명화03.jpg/"/>"
+				<a href="#"> <img src="<c:url value="/image/03.jpg/"/>"
 					alt="img" class="main_image" />
 				</a>
 			</div>
 
 			<div id="image13">
-				<a href="#"> <img src="<c:url value="/image/겨울사진13.jpg/"/>"
+				<a href="#"> <img src="<c:url value="/image/p13.jpg/"/>"
 					alt="img" class="main_image" />
 				</a>
 			</div>
 
 			<div id="image14">
-				<a href="#"> <img src="<c:url value="/image/겨울사진12.jpg/"/>"
+				<a href="#"> <img src="<c:url value="/image/p12.jpg/"/>"
 					alt="img" class="main_image" />
 				</a>
 			</div>
 
 			<div id="image15">
-				<a href="#"> <img src="<c:url value="/image/겨울사진06.jpg/"/>"
+				<a href="#"> <img src="<c:url value="/image/p6.jpg/"/>"
 					alt="img" class="main_image" />
 				</a>
 			</div>

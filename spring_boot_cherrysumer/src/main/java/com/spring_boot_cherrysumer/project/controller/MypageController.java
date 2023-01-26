@@ -38,7 +38,7 @@ public class MypageController {
 	public String updatepage(MypageVO vo) {
 		System.out.print(vo.getMemId());
 		service.updatepage(vo);
+		System.out.print(vo.getMemId());
 		return "redirect:/Mypage";
 	}
-
 }
