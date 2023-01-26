@@ -1,0 +1,53 @@
+@charset "utf-8";
+
+body {
+	margin: 0px;
+}
+
+#wrap {
+	width: 1050px;
+    height: 1050px;
+	background-image: url("/image/signup_image1.png");
+	background-size:100% 100%;
+	margin: auto;
+}
+
+#findIdForm {
+	width: 305px;
+	margin: auto;
+	/* padding: 10px; */
+	padding-top: 150px;
+	text-align: left;
+}
+
+#findIdForm h1 {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.input_area {
+	border: solid 1px #dadada;
+	padding: 0px 0px 5px 0px;
+	background: white;
+}
+
+.input_area input:not([type=checkbox]) {
+	width: 260px;
+	height: 35px;
+}
+
+.btnArea {
+	text-align: center;
+	padding: 30px;
+}
+
+button {
+	width: 100px;
+	height: 35px;
+	border: 0px;
+	color: white;
+	background: #282A35;
+	margin-top: 50px;
+    margin-left: 25px;
+	cursor: pointer;
+}
