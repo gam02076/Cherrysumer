@@ -22,7 +22,7 @@
             <a href="/artist">Artists</a>
             <a href="/exhibitionList">Exhibition</a>
             <a href="/picture">Painting & Photo</a>
-            <img src="<c:url value='/image/exh_menu_icon.png'/>" class="icon">
+          <%--   <img src="<c:url value='/image/exh_menu_icon.png'/>" class="icon"> --%>
         </div>
         </div>
     </div>

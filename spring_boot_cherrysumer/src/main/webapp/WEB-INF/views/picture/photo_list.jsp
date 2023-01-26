@@ -17,12 +17,18 @@
 	type="text/css" />
 
 
+<link href="<c:url value='/css/picture/menu.css'/>" rel="stylesheet"
+	type="text/css" />
+
 
 
 <link href="<c:url value='/css/picture/modal_register.css'/>"
-	rel="stylesheet" type="text/css" /> 
-
-<link rel="stylesheet" type="text/css" href="<c:url value='/css/artList.css' />"><!-- 모달 (Detail)  -->
+	rel="stylesheet" type="text/css" />
+	
+	
+ <link rel="stylesheet" type="text/css" href="<c:url value='/css/artList.css' />"><!-- 모달 (Detail)  -->
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/header.css'/>">
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/bottom.css'/>">
 
 <title>목록리스트</title>
 </head>
@@ -30,23 +36,41 @@
 
 <body>
 
+<c:import url="/WEB-INF/views/layout/top.jsp" />
 
 
-	<div class="a">
-		<div class="menu" onclick="sideMenu();"></div>
-
-		<div class="side_menu" onclick="sideMenu()">
-			<div id="menu_box">
-				<a href="<c:url value='/picture/'/>">Mini Exhibition</a><br> <br>
-				<a href="<c:url value='/picture/picture_list/'/>">Painting</a><br>
-				<br> <a href="<c:url value='/picture/photo_list/'/>">Photograph</a><br>
-				<br> <a
-					<%-- href="<c:url value='/picture/registerform/'/>" --%> class="register">작품
-					등록하기</a><br>
-			</div>
+	<!-- 사이드바 시작 -->
+	<aside class="side-bar">
+		<div class="side-bar__status-ico">
+			<div></div>
+			<div></div>
+			<div></div>
 		</div>
 
+		<nav class="side-bar__menu-box-1">
+			<ul>
+				<li><a href="<c:url value='/picture/'/>"> <span> <i class="fas fa-home"></i>
+					</span> <span>HOME</span>
+				</a></li>
+				<li><a href="<c:url value='/picture/picture_list/'/>"> <span> <i class="fas fa-home"></i>
+					</span> <span>ART</span>
+				</a></li>
+				</li>
+				<li><a href="<c:url value='/picture/photo_list/'/>"> <span> <i class="fas fa-home"></i>
+					</span> <span>Photo</span>
+				</a></li>
+				</li>
+				</li>
+				<li style="border:none"><a class="register" style="font-size: x-large;">작품등록<i class="fas fa-home" ></i>
+					 
+				</a></li>
 
+
+
+
+			</ul>
+		</nav>
+	</aside>
 
 
 		<form action="/picture/searchResult" method="post">
@@ -107,17 +131,18 @@
 
 
 	<div class="modal">
-	
-		<div class="modal_content" title="클릭하면 창이 닫힘" >
+
+		<div class="modal_content" title="클릭하면 창이 닫힘">
 			<!--<input type="hidden" id="selectmemId">-->
-			
-			
+
+
 			<form id="register" action="/register" method="post"
 				enctype="multipart/form-data">
 				<div class="modal_container">
 					<div class="title_box">
 						<div>
-							<h1>작품등록</h1>
+							<h1
+								style="letter-spacing: 15px; font-size: 52px; margin-bottom: 0px;">작품등록</h1>
 						</div>
 					</div>
 					<div class="product">
@@ -176,11 +201,6 @@
 		</div>
 	</div>
 
-<!-- 모달 창 -->
-      <div id="Detailmodal">
-		  <div id="Detail_content" title="클릭하면 창이 닫힘">
-		  </div>
-	  </div>
 
 
 
@@ -215,6 +235,11 @@
 
 
 
+<!-- 모달 창 -->
+      <div id="Detailmodal">
+		  <div id="Detail_content" title="클릭하면 창이 닫힘">
+		  </div>
+	  </div>
 
 
 
@@ -238,12 +263,10 @@
 
 
 
-
 <script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
 <script src="<c:url value='/js/picture/picture.js'/>"></script>
 <script src="<c:url value='/js/picture/menu.js'/>"></script>
 <script src="<c:url value='/js/picture/modal.js'/>"></script>
 <script src="<c:url value='/js/picture/file.js'/>"></script>
 <script src="<c:url value='/js/artList.js' />"></script> <!-- 모달 (Detail)  -->
-
 </html>

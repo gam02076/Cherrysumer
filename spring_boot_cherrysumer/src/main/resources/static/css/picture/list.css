@@ -48,7 +48,7 @@
 	padding: 0 0px;
 	left: 50%;
 	transform: translateX(-50%);
-	border: 1px solid black;
+
 	border-radius: 10px;
 }
 
@@ -117,21 +117,20 @@
 }
 
 .searchinput {
-	width: 20%;
-	height: 68px;
-	font-size: 29px;
-	
-	border: none;
+	width: 9%;
+    height: 46px;
+    font-size: 18px;
+    border: none;
     border-bottom: 1px solid;
-    
-    background-color: aliceblue;
+    background-color: #ffffff;
 }
 
 .searchinput:focus {outline:none;}
 
 .searchdiv{
-	text-align: center;
-	background-color: aliceblue;
+	text-align: end;
+    position: relative;
+    right: 230px;
 }
 
 /* 백업 */ /* 백업 */ /* 백업 */ /* 백업 */ /* 백업 */ /* 백업 */
