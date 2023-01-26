@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.spring_boot_cherrysumer.project.dao.IMemberDAO">
+  	
+  	<!-- 로그인 체크 : id/pwd 여러 개를 파라미터로 받아올 때는 hashmap 사용해야 함 -->
+  	
+  	<!-- 암호화 이후 -->
+  	<select id="loginCheck" parameterType="string" resultType="string">
+  		SELECT memPwd FROM member WHERE memId=#{id}
+  	</select>
+  	
+  	<!-- 회원 등록 -->
+  	<insert id="insertMember" parameterType="com.spring_boot_cherrysumer.project.model.MemberVO">
+  		insert into member(memId, memPwd, memName, memHP, memEmail, memZipcode, memAddress1, memAddress2, memType)
+  		values(#{memId},#{memPwd},#{memName},#{memHP},#{memEmail},#{memZipcode},#{memAddress1},#{memAddress2},#{memType})
+  	</insert>
+  	
+  	<insert id="insertPoint" parameterType="string">
+  		insert into point_all(pointTotal, memId)
+  		values(3000, #{memId})
+  	</insert>
+  	
+  	<!-- 아이디 중복 확인 -->
+  	<select id="memIdCheck" parameterType="string" resultType="string">
+  		select memId from member where memId = #{memId}
+  	</select>
+  	
+  	<!-- 아이디 찾기 -->
+  	<select id="findId" parameterType="hashmap" resultType="string">
+		SELECT memId
+		FROM member 
+		WHERE memName=#{memName} AND memEmail=#{memEmail}
+	</select>
+	
+	  	<!-- 비밀번호 변경 전 memName 가져오기 -->
+  	<select id="findPwd" parameterType="hashmap" resultType="string">
+		SELECT memName
+		FROM member
+		WHERE memName=#{memName} AND memEmail=#{memEmail}
+	</select>
+	
+  	<!-- 비밀번호 변경하기 -->
+  	<update id="changePwd" parameterType="com.spring_boot_cherrysumer.project.model.MemberVO">
+  		UPDATE member
+  		SET memPwd=#{memPwd}
+  		WHERE memId=#{memId}
+  	</update>
+  </mapper>

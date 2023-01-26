@@ -1,0 +1,99 @@
+@charset "utf-8";
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+} 
+button {
+	cursor: pointer;
+}
+
+#login {
+	text-align:center;
+}
+
+#loginForm h4 {
+    text-align: left;
+}
+
+#loginBox {
+	width: 1080px;
+	height: 1080px;
+	margin: 0 auto;
+	margin-top: 128px;
+	margin-bottom: 128px;
+	background-image: url("/image/login_image1.png");
+	background-size:100% 100%;
+}
+
+#loginBox h1 {
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+}
+
+#loginBox form {
+	width: 600px;
+	padding: 60px;
+	Box-sizing: border-Box;
+	display: inline-block;
+	margin-top: 500px;
+}
+
+#loginBox input {
+	display: block;
+	width: 360px;
+	height: 50px;
+	margin-bottom: 10px;
+	margin-left: 55px;
+	padding: 0 20px;
+	Box-sizing: border-Box;
+}
+
+#loginBox ul {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 25px;
+	margin-top: 25px;
+}
+
+#loginBox li {
+	display: inline-block;
+	height: 12px;
+	line-height: 12px;
+	border-left: 1px solid #333;
+	padding-left: 10px;
+	margin-left: 4px;
+}
+
+#loginBox li:first-child {
+	border-left: 0px;
+}
+
+#loginBox a {
+	color: #333;
+	font-size: 12px;
+	position: relative;
+	top: -2px;
+}
+
+#loginBox button {
+	display: block;
+	width: 220px;
+	height: 50px;
+	margin: 0 auto;
+	border: none;
+	background-color: #282A35;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+}

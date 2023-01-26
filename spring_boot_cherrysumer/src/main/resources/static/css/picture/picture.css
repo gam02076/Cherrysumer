@@ -1,0 +1,270 @@
+@charset "UTF-8";
+
+body {
+    
+
+    margin: 0;
+}
+
+.main_grid_container {
+    background-color: #373737;
+    margin: 0px;
+    grid-column: 2 / -1;
+}
+
+.main_image {
+    width: 100%;
+    height: 100%;
+    box-shadow: 3px 3px 15px black;
+}
+
+.main_image:hover {
+    transform: scale(1.2);
+    transition: all 0.7s linear;
+}
+
+#image1 {
+    grid-column: 4 / span 36;
+    grid-row: 4 / span 3;
+}
+
+#image2 {
+    grid-column: 54 / span 35;
+    grid-row: 2 / span 4;
+}
+
+#image3 {
+    grid-column: 56 /span 40;
+    grid-row: 7 / span 6;
+}
+
+#image4 {
+    grid-column: 1 / span 38;
+    grid-row: 14 / span 5;
+}
+
+#image5 {
+    grid-column: 66 / span 33;
+    grid-row: 15 / span 3;
+}
+
+/* grid_container_01 END */
+
+#image6 {
+
+    grid-column: 66 / span 32;
+    grid-row: 11 / span 5;
+
+}
+
+#image7 {
+    grid-column: 55 / span 42;
+    grid-row: 1 / span 4;
+}
+
+#image8 {
+    grid-column: 7 / span 37;
+    grid-row: 14 / span 5;
+}
+
+#image9 {
+    grid-column: 1 / span 59;
+    grid-row: 6 / span 5;
+}
+
+#image10 {
+
+    grid-column: 60 / span 41;
+    grid-row: 17 / span 3;
+}
+
+#image11 {
+    grid-column: 1 / span 31;
+    grid-row: 1 /span 4;
+
+}
+
+#image12 {
+    grid-column: 64 / span 32;
+    grid-row: 2 / span 4;
+}
+
+#image13 {
+    grid-column: 1 / span 39;
+    grid-row: 13 / span 5;
+}
+
+#image14 {
+    grid-column: 11 / span 30;
+    grid-row: 6 / span 5;
+}
+
+#image15 {
+    grid-column: 50/ span 40;
+    grid-row: 10 / span 6;
+}
+
+#image16 {
+    grid-column: 33/ 46;
+    grid-row: 25 /26;
+}
+
+#image17 {
+    grid-column: 6/ 20;
+    grid-row: 26 /27;
+}
+
+#image18 {
+    grid-column: 6/ 19;
+    grid-row: 28 /29;
+}
+
+#image19 {
+    grid-column: 28/ 48;
+    grid-row: 27 /29;
+}
+
+#text {
+    position: absolute;
+    top: 735px;
+    left: 433px;
+    font-size: 40px;
+}
+
+#tt {
+
+    font-family: sans-serif;
+    font-size: 3em;
+    color: #d2cdc5;
+    position: absolute;
+    width: 500px;
+    animation: slide 3s;
+}
+
+@keyframes slide {
+    from {
+        left: -450px;
+        opacity: 0;
+    }
+
+    to {
+        left: 100px;
+        opacity: 1;
+    }
+}
+
+@keyframes disappear {
+    from {
+        left: 100px;
+        opacity: 1;
+    }
+
+    to {
+        left: -450px;
+        opacity: 0;
+    }
+}
+
+.grid_container_01 {
+    margin: 0% 5%;
+    padding: 0% 5%;
+    display: grid;
+    grid-template-columns: repeat(100, 1fr);
+    grid-template-rows: repeat(18, 100px);
+}
+
+.grid_container_02 {
+    margin: 3% 5%;
+    padding: 3% 5%;
+    display: grid;
+    grid-template-columns: repeat(100, 1fr);
+    grid-template-rows: repeat(18, 100px);
+}
+
+.grid_container_03 {
+    margin: 0% 5%;
+    padding: 0% 5%;
+    display: grid;
+    grid-template-columns: repeat(100, 1fr);
+    grid-template-rows: repeat(19, 100px);
+}
+
+#d {
+
+    background-color: blueviolet;
+    grid-area: footer;
+}
+
+
+/* 
+사이드 메뉴바 */
+
+.menu {
+    background: url("/image/burger-bar2.png/");
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat ;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    z-index: 999;
+    position: absolute;
+    position: fixed;
+top: 16px;
+    left: 0px;
+    transition: 0.3;
+
+}
+.menu.active{
+    background:  url("/image/cross.png/");
+    background-size: 50px;
+    background-position: center;
+    background-repeat: no-repeat ;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    z-index: 999;
+    position: absolute;
+    position: fixed;
+    
+    left: 0px;
+}
+.side_menu {
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    top:0px;
+    display: none;
+    background-color:#717171;
+       opacity: 0.9;
+    position: fixed;
+    z-index: 99;
+}
+    
+}
+.side_menu li {
+    color: black;
+    font-size: 1.3em;
+    font-weight: 700;
+}
+.side_menu.active{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#menu_box{
+    position: absolute;
+    left: 20%;
+    top:20%;
+    font-size: 50px;
+}
+a{
+    text-decoration: none;
+    color: rgb(143 143 143);
+    font-size: xx-large;
+}
+
+
+
+
+

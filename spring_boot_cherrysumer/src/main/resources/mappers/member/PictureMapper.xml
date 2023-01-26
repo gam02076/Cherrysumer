@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.spring_boot_cherrysumer.project.dao.IPictureDAO">
+  	
+  	
+  	<resultMap id="resultpic" type="com.spring_boot_cherrysumer.project.model.PictureVO" >
+  		
+  		<result property="picTitle"  column="picTitle"  />
+  		<result property="picNo"  column="picNo"  />
+  		<result property="picPrice"  column="picPrice"  />
+  		<result property="picType"  column="picType"  />
+  		<result property="picSize"  column="picSize"  />
+  		<result property="picimg"  column="picimg"  />
+		<result property="picauthor"  column="picauthor"  />
+		<result property="piccontent"  column="piccontent"  />
+			<result property="pictech"  column="pictech"  />
+  	</resultMap>
+  	
+
+  	<select id="ListPicture" resultMap="resultpic">
+  		SELECT * FROM  picture ORDER BY picNo DESC
+  	</select>
+  	
+ <insert id="insert" parameterType="com.spring_boot_cherrysumer.project.model.PictureVO">
+  		insert into picture(picTitle, picNo, picPrice, picType, picSize,picimg,picauthor,piccontent,pictech)
+  		values (#{picTitle},#{picNo},#{picPrice},#{picType},#{picSize},#{picimg},#{picauthor},#{piccontent},#{pictech})
+ </insert>
+  	
+	<select id="Search" parameterType="String" resultMap="resultpic">
+  		SELECT * FROM  picture WHERE
+  		picTitle Like CONCAT('%',#{keyword},'%')
+  		OR piccontent Like CONCAT('%',#{keyword},'%')
+  		OR picauthor Like CONCAT('%',#{keyword},'%')
+  		OR picauthor Like CONCAT('%',#{keyword},'%')
+  	</select>
+
+  	<!-- SELECT * FROM members where memType='1'; -->
+  	
+  	</mapper>
