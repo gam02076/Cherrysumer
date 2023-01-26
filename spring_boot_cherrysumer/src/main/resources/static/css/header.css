@@ -25,15 +25,24 @@
     transform: translateX(275px);
     z-index:30;
 }
-
-.menuList{
+#headerRight{
+	    float: right;
+	    
+}
+#headerRight{
     /* border:1px solid black; */
     display: inline-block;
     width:550px;
     margin-right: 50px;
-    margin-top:68px;
-    float: right;
+    /* margin-top:68px;
+    float: right; */
+    
 }
+.menuList{
+	text-align: right;
+    margin-top: 10px;
+}
+
 .menuList a{
     margin: 0px 40px;
     position:relative;
