@@ -1,5 +1,7 @@
 package com.spring_boot_cherrysumer.project.model;
 
+import java.sql.Date;
+
 public class PictureVO {
 	public String memId ;
 	public String picTitle ;
@@ -11,6 +13,7 @@ public class PictureVO {
 	public String picauthor;
 	public String piccontent;
 	public String pictech;
+	public Date picTime;
 	
 	
 	public String getMemId() {
@@ -73,13 +76,13 @@ public class PictureVO {
 	public void setPictech(String pictech) {
 		this.pictech = pictech;
 	}
+	public Date getPicTime() {
+		return picTime;
+	}
+	public void setPicTime(Date picTime) {
+		this.picTime = picTime;
+	}
 	
-	
-	
-	
-
-	
-
 	
 	
 }
