@@ -58,7 +58,7 @@ opacity:1;
 <tr><th>프로필 사진</th>
  <td><div id="b"></div><br/><input id="button" type="button" value="수정하기">
  <input id="button" type="button" value="삭제하기"></button></td></tr>
-<tr><th>아이디</th><td><input type="text" id="memName" name="memName" value="${vo.memId}" ></td></tr>
+<tr><th>아이디</th><td><input type="text" id="memId" name="memId" value="${vo.memId}" readonly ></td></tr>
 <tr><th>이름</th><td><input type="text" id="memName" name="memName" value="${vo.memName}"></td></tr>
 <tr><th>이메일</th><td><input type="text" id="memEmail" name="memEmail" value="${vo.memEmail}"></td></tr>
 <tr><th>전화</th><td><input type="text" id="memHP" name="memHP" value="${vo.memHP}"></td></tr>
