@@ -23,7 +23,7 @@ li{
   color:black;
   overflow:hidden;
 
-  z-index:11;
+ z-index: 103;
 }
 
 .side-bar:hover {
