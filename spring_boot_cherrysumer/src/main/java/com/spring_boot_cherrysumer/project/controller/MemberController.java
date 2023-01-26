@@ -58,10 +58,10 @@ public class MemberController {
 	@RequestMapping("/member/insert")
 	public String insert(MemberVO vo) {
 		service.insertMember(vo);
-		/*
-		 * pservice.insertPoint(vo.getMemId());
-		 * pservice.insertMemIdPoint(vo.getMemId());
-		 */
+
+		pservice.insertPoint(vo.getMemId());
+		pservice.insertMemIdPoint(vo.getMemId());
+
 
 		return "member/login"; // 회원가입 후 로그인 폼으로 이동
 	}

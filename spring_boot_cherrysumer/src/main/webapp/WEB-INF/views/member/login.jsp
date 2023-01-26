@@ -7,10 +7,12 @@
 		<meta charset="UTF-8">
 		<title>시선</title>
 		<link rel="stylesheet" type="text/css" href="<c:url value='/css/login.css'/>">
+		<link rel="stylesheet" type="text/css" href="<c:url value='/css/header.css'/>">
 		<script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
 		<script src="<c:url value='/js/login.js'/>"></script>
 	</head>
 	<body>
+	<c:import url = "/WEB-INF/views/layout/top.jsp"/>
 	<div id="wrap">
 		<div id="loginBox">
 			<div id="login">
@@ -24,7 +26,7 @@
 					<ul>
 						<li><a href="<c:url value="/member/findIdForm"/>">아이디 찾기</a></li>
 						<li><a href="<c:url value="/member/findPwdForm"/>">비밀번호 변경</a></li>
-						<li><a href="<c:url value="/member/signUp"/>">회원가입</a></li>
+						<li><a href="<c:url value="/member/signup"/>">회원가입</a></li>
 					</ul>
 					<button type="submit">로그인</button>
 				</form>

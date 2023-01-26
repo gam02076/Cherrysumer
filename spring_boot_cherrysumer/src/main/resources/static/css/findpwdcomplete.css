@@ -1,28 +1,28 @@
-@charset "UTF-8";
+@charset "utf-8";
 
 body {
 	margin: 0px;
 }
 
-.wrap {
+#wrap {
 	width: 1050px;
-    height: 1980px;
+    height: 1050px;
 	background-image: url("/image/signup_image1.png");
 	background-size:100% 100%;
-	margin-top: -160px;
-	margin-left: 395px;
+	margin: auto;
 }
 
-#signUpForm {
-	width: 400px;
+#changePwd {
+	width: 280px;
 	margin: auto;
-	padding: 10px;
-	padding-top: 300px;
+	/* padding: 10px; */
+	padding-top: 125px;
 	text-align: left;
 }
 
-#signUpForm h1 {
+#changePwd h1 {
 	text-align: center;
+	margin-bottom: 50px;
 }
 
 .input_area {
@@ -42,11 +42,12 @@ body {
 }
 
 button {
-	width: 100px;
+	width: 150px;
 	height: 35px;
 	border: 0px;
 	color: white;
 	background: #282A35;
-	margin: 5px;
+	/* margin-top: 50px;
+    margin-left: 25px; */
 	cursor: pointer;
 }
