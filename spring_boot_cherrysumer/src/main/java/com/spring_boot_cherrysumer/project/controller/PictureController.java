@@ -70,18 +70,14 @@ public class PictureController {
 			
 			model.addAttribute(savedFileName, sendFile);
 			
-			System.out.println(savedFileName);
+			
 
 			vo.picimg = savedFileName;
 			
-			System.out.println(vo.picimg);
+		
 			
 			service.insert(vo);
 			
-			System.out.println(vo.picauthor);
-			
-			
-			System.out.println(vo);
 			return "redirect:/picture/picture_list/"; 
 			
 		}
