@@ -148,7 +148,7 @@ background-color:white;
             </div>
             <div class="details">
                 <h2>${list.memName} </h2>
-                <p>인스타 : ${list.memInstargram}<br/><br/>
+                <p>asdf : ${list.memInstargram}<br/><br/>
                 페이스북 : ${list.memFacebook}<br/><br/>
                 블로그 : ${list.memBlog}<br/></p>
             </div></div>
