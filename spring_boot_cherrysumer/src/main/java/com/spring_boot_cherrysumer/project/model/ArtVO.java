@@ -7,7 +7,9 @@ public class ArtVO {
     private String artName_eng;
     private int artPrice;
 	private int artDate;
-    private String artSize;
+	private String artSize;
+	private String artExplain;
+	private String artMain;
     private String memId;
     private String ctgId;
     
@@ -65,5 +67,17 @@ public class ArtVO {
 	}
 	public void setCtgId(String ctgId) {
 		this.ctgId = ctgId;
+	}
+	public String getArtExplain() {
+		return artExplain;
+	}
+	public void setArtExplain(String artExplain) {
+		this.artExplain = artExplain;
+	}
+	public String getArtMain() {
+		return artMain;
+	}
+	public void setArtMain(String artMain) {
+		this.artMain = artMain;
 	}
 }

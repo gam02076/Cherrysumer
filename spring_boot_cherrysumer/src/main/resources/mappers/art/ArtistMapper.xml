@@ -35,4 +35,10 @@
 		  	select memId from picture where picNo=#{picNo}
 		</select>
 		
+		
+		<!-- 전시회 목록 불러오기 -->
+	  	<select id="exList"  resultType="com.spring_boot_cherrysumer.project.model.ArtVO">
+		  	select * from art 
+		</select>
+		
   </mapper>
