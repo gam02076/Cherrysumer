@@ -1,0 +1,177 @@
+@charset "UTF-8";
+
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#warp{
+width:100%;
+height:100%;
+scroll-snap-type: y mandatory;
+overflow-y: scroll;
+}
+#show{
+width:100%;
+height:400px;
+background-attachment: fixed;
+
+}
+#show1{
+width:100%;
+height:918px;
+}
+
+
+#show2{
+width:100%;
+ overflow:hidden;
+    height:auto;
+	background-image: url("../images/집.jpg");        
+	background-size : 40% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+    background-attachment: fixed;
+    margin:auto;
+}
+
+.left{
+	margin-left:400px;
+	width:500px;
+	height:500px;	
+	opacity: 0;
+	border:10px solid white;
+	transform: translate(0);
+	overflow: hidden;
+
+}
+.right{
+	margin-left:1100px;
+	width:500px;
+	height:500px;	
+	opacity: 0;
+	border:10px solid white;
+	transform: translate(0);
+	overflow: hidden;
+}
+
+#show3{
+display: inline-block;
+width:100%;
+height:1000px;
+text-align: center;
+
+}
+.show3-1{
+width:300px;
+height:300px;
+	background-image: url("../images/사람.jpg");        
+	background-size : 100% 100%;
+	display: inline-block;
+	margin:100px;
+	opacity:0;
+}
+.show3-1{
+  position:relative;
+  width: 200px;
+  height: 200px;
+  margin: 50px;
+}
+.show3-2{
+	margin-top:200px;
+	border:5px solid;
+}
+
+.show3-1::before{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  content:'';
+  top:-10px;
+  left:-10px;
+  border: 2px solid #000;
+  z-index:-1;
+  transition: all 0.2s;
+}
+.show3-1:hover::before{
+  top: 10px;
+  left: 10px
+}
+.show3-1::after{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  content:'';
+  top:10px;
+  left:10px;
+  background:#000;
+  z-index:-1;
+  transition: all 0.2s;
+}
+.show3-1:hover::after{
+  top: -10px;
+  left:-10px
+}
+#show4{
+width:100%;
+height:2000px;
+text-align: center;
+}
+
+
+#b{
+width:300px;
+height:300px;
+margin:10px;
+margin-top:400px;
+float:left;
+box-shadow: 10px 10px 10px 10px gray;
+background-image: url("../images/바탕화면.png");
+background-size: 100% 100%;
+
+}
+#c{
+width:300px;
+height:300px;
+margin:10px;
+margin-top:100px;
+float:left;
+box-shadow: 10px 10px 10px 10px gray;
+background-image: url("../images/2.png");
+background-size: 100% 100%;
+}
+#b {
+  transition: all 0.2s linear;
+}
+#b:hover{
+  transform: scale(1.4);
+}
+#c {
+  transition: all 0.2s linear;
+}
+#c:hover{
+  transform: scale(1.4);
+}
+#e{
+	width:10%;
+	height:10%;
+	background-color:green;
+	boder:5px;
+	float:left;
+	background-color: #black;
+    border: 1px solid black;
+    background-image: url('../images/사람.jpg');
+    background-size: 100% 100%;
+}
+#f{
+	psition:absoulute;
+	width:100%;
+	height:100%;
+	background-color:white;
+	transition:all 0.5s;
+	opacity: 0;
+}
+#e:hover #f{
+	opacity: 1;
+	
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.spring_boot_cherrysumer.project.dao.IHomeDAO">
+  	<resultMap id="memResult" type="com.spring_boot_cherrysumer.project.model.HomeVO" >
+  		<result property="memNo"  column="memNo"  />
+  		<result property="memPicture"  column="memPicture"  />
+  		<result property="memName"  column="memName"  />
+  		<result property="memInstargram"  column="memInstargram"  />
+  		<result property="memFacebook"  column="memFacebook"  />
+  		<result property="memBlog"  column="memBlog"  />
+  	</resultMap>
+  
+  <!-- 전체 상품 조회 -->
+  <select id="listMember" resultMap="memResult">
+  		SELECT * FROM member2 ORDER BY memNo
+  </select>
+  
+  </mapper>

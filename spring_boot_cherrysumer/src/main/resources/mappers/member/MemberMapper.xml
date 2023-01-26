@@ -11,7 +11,6 @@
   	<select id="loginCheck" parameterType="string" resultType="string">
   		SELECT memPwd FROM member WHERE memId=#{id}
   	</select>
-  	
   	<!-- 회원 등록 -->
   	<insert id="insertMember" parameterType="com.spring_boot_cherrysumer.project.model.MemberVO">
   		insert into member(memId, memPwd, memName, memHP, memEmail, memZipcode, memAddress1, memAddress2, memType)

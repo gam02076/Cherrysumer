@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.spring_boot_cherrysumer.project.dao.IMypageDAO">
+ <resultMap id="pageResult" type="com.spring_boot_cherrysumer.project.model.MypageVO">
+<result property="memId"  column="memId"  />
+<result property="memPwd"  column="memPwd"  />
+<result property="memName"  column="memName"  />
+<result property="memEmail"  column="memEmail"  />
+<result property="memHP"  column="memHP"  />
+<result property="memZipcode"  column="memZipcode"  />
+<result property="memAddress1"  column="memAddress1"  />
+<result property="memAddress2"  column="memAddress2"  />
+<result property="memType"  column="memType"  />
+</resultMap>
+<select id="readpage" parameterType="string"
+resultType="com.spring_boot_cherrysumer.project.model.MypageVO">
+SELECT * FROM member WHERE memId = #{memId}
+</select>
+<update id="updatepage"  parameterType="com.spring_boot_cherrysumer.project.model.MypageVO">
+  		UPDATE member
+  		SET memName=#{memName}, memEmail=#{memEmail}, memHP=#{memHP}, memZipcode=#{memZipcode},
+  		memAddress1=#{memAddress1},memAddress2=#{memAddress2},memType=#{memType}
+  	    WHERE memId=#{memId}
+</update>
+
+</mapper>
