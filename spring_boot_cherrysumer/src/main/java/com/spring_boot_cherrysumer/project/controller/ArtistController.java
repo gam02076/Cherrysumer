@@ -1,0 +1,113 @@
+package com.spring_boot_cherrysumer.project.controller;
+
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.spring_boot_cherrysumer.project.model.MemberVO;
+import com.spring_boot_cherrysumer.project.model.PictureVO;
+import com.spring_boot_cherrysumer.project.service.ArtistService;
+
+@Controller
+public class ArtistController {
+	@Autowired
+	ArtistService service;
+
+	/* 아티스트 리스트 */
+	@RequestMapping("/artist")
+	public String artistAll(Model model) {
+
+		ArrayList<MemberVO> artList = service.ArtistAll();
+		model.addAttribute("artList", artList);
+		
+
+		return "art/artistList";
+	}
+
+	/* 아티스트 모달창 DB전송 */
+	  @RequestMapping("/artistModal") 
+	  public String artistModal(@RequestParam String memId,Model model) {
+	  
+	  System.out.println(memId);
+	  
+	  MemberVO name = service.Artist(memId); 
+	  model.addAttribute("name", name);
+	  
+	  ArrayList<PictureVO> art = service.ArtList(memId); 
+	  model.addAttribute("art", art);
+	  
+	  return "art/artistModal";
+	  }
+	  
+	  /* 아티스트 모달창 DB전송 */
+	  @RequestMapping("/artModal") 
+	  public String artModal(@RequestParam String memId,Model model) {
+	  
+	  System.out.println(memId);
+	  
+	  MemberVO name = service.Artist(memId); 
+	  model.addAttribute("name", name);
+	  
+	  ArrayList<PictureVO> art = service.ArtList(memId); 
+	  model.addAttribute("art", art);
+	  
+	  return "art/artDetail";
+	  }
+	  
+	  
+			/* 사진 리스트 (임시) */
+		  @RequestMapping("/artList")
+			public String artList(Model model) {
+			  ArrayList<PictureVO> art=service.ArtListALL();
+			  model.addAttribute("art", art);
+
+				return "art/artList";
+			}
+		  
+		/* 사진상세정보 DB전송 */
+		
+		  @RequestMapping("/artDetail")
+		  
+		  public String artDetail(@RequestParam String picNo,Model model) {
+		  System.out.println(picNo);
+		  PictureVO art=service.picDetail(picNo);
+		  model.addAttribute("art", art);
+		  
+		  String member=service.picMemId(picNo);
+		  
+		  MemberVO mem = service.Artist(member); 
+		  model.addAttribute("mem", mem);
+		  
+		  
+			/*
+			 * ArtDetailVO art = service.ArtDetail(picNo); model.addAttribute("art", art);
+			 * 
+			 * System.out.println(art);
+			 * 
+			 * MemberVO name = service.ArtName(memId); model.addAttribute("name", name);
+			 */
+		  
+		  
+		  
+			return "/art/artDetail"; }
+		  
+		  @RequestMapping("/exhibitionList")
+		  public String exhibitionList(Model model) {
+			  ArrayList<PictureVO> art=service.ArtListALL();
+			  model.addAttribute("art", art);
+			  return "art/exhibitionList";
+		  }
+		  
+		  @RequestMapping("/test")
+		  public String test() {
+			  return "art/test";
+		  }
+		 
+		 
+		 
+
+}

@@ -22,6 +22,7 @@
 <link href="<c:url value='/css/picture/modal_register.css'/>"
 	rel="stylesheet" type="text/css" /> 
 
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/artList.css' />"><!-- 모달 (Detail)  -->
 
 <title>목록리스트</title>
 </head>
@@ -59,7 +60,7 @@
 	<div class="container">
 
 		<c:forEach var="pict" items="${photo}">
-			<div class="box">
+			<div class="box" id="${pict.picNo}">
 				<input type="hidden" class="cardNO" value="${pict.picNo}">
 				<div class="img" value="${pict.picNo}">
 					<img src="<c:url value="/image/${pict.picimg}"/>"
@@ -175,7 +176,11 @@
 		</div>
 	</div>
 
-
+<!-- 모달 창 -->
+      <div id="Detailmodal">
+		  <div id="Detail_content" title="클릭하면 창이 닫힘">
+		  </div>
+	  </div>
 
 
 
@@ -239,5 +244,6 @@
 <script src="<c:url value='/js/picture/menu.js'/>"></script>
 <script src="<c:url value='/js/picture/modal.js'/>"></script>
 <script src="<c:url value='/js/picture/file.js'/>"></script>
+<script src="<c:url value='/js/artList.js' />"></script> <!-- 모달 (Detail)  -->
 
 </html>
