@@ -14,7 +14,7 @@
 			<c:if test="${not empty sessionScope.sid }">
 					${sessionScope.sid}님 
 					<a class="header-item" href="/member/logout">로그아웃</a> 
-					<a class="header-item" href="#">마이페이지</a>
+					<a class="header-item" href="/Mypage">마이페이지</a>
 			</c:if>	 
             </div>
             
