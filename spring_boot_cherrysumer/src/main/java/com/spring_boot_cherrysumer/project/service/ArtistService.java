@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.spring_boot_cherrysumer.project.dao.IArtistDAO;
-import com.spring_boot_cherrysumer.project.model.ArtVO;
 import com.spring_boot_cherrysumer.project.model.MemberVO;
 import com.spring_boot_cherrysumer.project.model.PictureVO;
 
@@ -51,12 +50,6 @@ public class ArtistService implements IArtistDAO {
 	public String picMemId(String picNo) {
 		// TODO Auto-generated method stub
 		return dao.picMemId(picNo);
-	}
-
-	@Override
-	public ArrayList<ArtVO> exList() {
-		// TODO Auto-generated method stub
-		return dao.exList();
 	}
 
 	

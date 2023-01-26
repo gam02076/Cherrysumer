@@ -62,7 +62,7 @@
 						<span class="input_area"><input type="text" name="memAddress2" class="postcodify_details" id="memAddress2"></span>
 						
 						<h4>* 아티스트 등록 여부</h4>
-						<input type='radio' name='memType' id='memType' value='일반'/>일반 <input type='radio' name='memType' id='memType' value='작가'/>아티스트
+						<input type='radio' name='memType' id='memType' value='normal'/>일반 <input type='radio' name='memType' id='memType' value='artist'/>아티스트
 						
 						<div class="btnArea">
 							<button type="button" id="joinBtn" onclick="signupCheck();">가입하기</button>

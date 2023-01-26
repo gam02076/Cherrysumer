@@ -7,13 +7,11 @@
 		<meta charset="UTF-8">
 		<title>시선</title>
 		<link rel="stylesheet" type="text/css" href="<c:url value='/css/signup.css'/>">
-		<link rel="stylesheet" type="text/css" href="<c:url value='/css/header.css'/>">
 		<script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
 		<script src="<c:url value='/js/signup.js'/>"></script>
 		<script src="<c:url value='/js/idCheck.js'/>"></script>
 	</head>
 	<body>
-	<c:import url = "/WEB-INF/views/layout/top.jsp"/>
 		<div id="wrap">
 			<div class="wrap">
 				<div id="signUp">
