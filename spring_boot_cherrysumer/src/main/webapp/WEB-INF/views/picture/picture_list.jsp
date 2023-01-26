@@ -17,7 +17,7 @@
 	type="text/css" />
 
 
-<link href="<c:url value='/css/picture/meun.css'/>" rel="stylesheet"
+<link href="<c:url value='/css/picture/menu.css'/>" rel="stylesheet"
 	type="text/css" />
 
 
@@ -27,7 +27,8 @@
 	
 	
  <link rel="stylesheet" type="text/css" href="<c:url value='/css/artList.css' />"><!-- 모달 (Detail)  -->
-
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/header.css'/>">
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/bottom.css'/>">
 
 <title>목록리스트</title>
 </head>
@@ -35,6 +36,7 @@
 
 <body>
 
+<c:import url="/WEB-INF/views/layout/top.jsp" />
 
 
 	<!-- 사이드바 시작 -->
@@ -59,7 +61,7 @@
 				</a></li>
 				</li>
 				</li>
-				<li style="border:none"><a class="register" style="font-size: x-large; ">작품등록<i class="fas fa-home" ></i>
+				<li style="border:none"><a class="register" style="font-size: x-large;">작품등록<i class="fas fa-home" ></i>
 					 
 				</a></li>
 
@@ -201,11 +203,6 @@
 		</div>
 	</div>
 
-<!-- 모달 창 -->
-      <div id="Detailmodal">
-		  <div id="Detail_content" title="클릭하면 창이 닫힘">
-		  </div>
-	  </div>
 
 
 
@@ -240,6 +237,11 @@
 
 
 
+<!-- 모달 창 -->
+      <div id="Detailmodal">
+		  <div id="Detail_content" title="클릭하면 창이 닫힘">
+		  </div>
+	  </div>
 
 
 

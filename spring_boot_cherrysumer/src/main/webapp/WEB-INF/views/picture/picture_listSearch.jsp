@@ -17,7 +17,7 @@
 	type="text/css" />
 
 
-<link href="<c:url value='/css/picture/meun.css'/>" rel="stylesheet"
+<link href="<c:url value='/css/picture/menu.css'/>" rel="stylesheet"
 	type="text/css" />
 
 

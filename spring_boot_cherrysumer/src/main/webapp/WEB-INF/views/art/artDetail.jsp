@@ -21,7 +21,7 @@
                     <th>작품명</th>
                     <td class="underline">${art.picTitle }</td>
                     <th>작가명</th>
-                    <td class="underline">${mem.memName }</td>
+                    <td class="underline">${art.picauthor }</td>
                 </tr>
                 <tr>
                     <th>제작년도</th>

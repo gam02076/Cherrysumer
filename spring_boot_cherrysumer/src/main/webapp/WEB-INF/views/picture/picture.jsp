@@ -9,77 +9,32 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="<c:url value='/css/picture/picture.css'/>" rel="stylesheet"
-	type="text/css" />
+<link href="<c:url value='/css/picture/picture.css'/>" rel="stylesheet" type="text/css" />
 
-<script src="https://kit.fontawesome.com/bb34e32cb3.js"
-	crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/bb34e32cb3.js"crossorigin="anonymous"></script>
 
 
-<link href="<c:url value='/css/picture/modal_register.css'/>"
-	rel="stylesheet" type="text/css" />
+<link href="<c:url value='/css/picture/modal_register.css'/>"rel="stylesheet" type="text/css" />
 
-<link href="<c:url value='/css/picture/modal.css'/>" rel="stylesheet"
-	type="text/css" />
+<link href="<c:url value='/css/picture/modal.css'/>" rel="stylesheet" type="text/css" />
 
 
-<link href="<c:url value='/css/picture/meun.css'/>" rel="stylesheet"
-	type="text/css" />
+<link href="<c:url value='/css/picture/menu.css'/>" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/header.css'/>">
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/bottom.css'/>">
 
 <title>사진,그림 판매 목록</title>
 </head>
-<div class="menu-btn">
-    <div class="line line--1"></div>
-    <div class="line line--2"></div>
-    <div class="line line--3"></div>
-  </div>
-
-  <div class="nav-links">
-    <a href="" class="link">Home</a>
-    <a href="" class="link">Contact</a>
-    <a href="" class="link">Profile</a>
-    <a href="" class="link">About</a>
-  </div>
-</nav>
-
-
-<div class="inform">
-  Sliding Menu
-</div>
 
 
 
 <body>
 
+<c:import url="/WEB-INF/views/layout/top.jsp" />
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-	<content class="content"> <side> ㅋ </side>
-
-	<div class="main_grid_container">
-
-
-
-		<!-- <div class="menu" onclick="sideMenu();"></div> -->
-
-		
-
-		<%-- <a href="<c:url value='/publicE/viewlistAllpublicEvent'/>" id="menu-btn">공공기관</a> --%>
-
-		<div class="grid_container_01">
-
-				<!-- 사이드바 시작 -->
+<!-- 사이드바 시작 -->
 	<aside class="side-bar">
 		<div class="side-bar__status-ico">
 			<div></div>
@@ -111,6 +66,27 @@
 			</ul>
 		</nav>
 	</aside>
+
+
+
+
+
+
+	<content class="content"> <side> ㅋ </side>
+
+	<div class="main_grid_container">
+
+
+
+		<!-- <div class="menu" onclick="sideMenu();"></div> -->
+
+		
+
+		<%-- <a href="<c:url value='/publicE/viewlistAllpublicEvent'/>" id="menu-btn">공공기관</a> --%>
+
+		<div class="grid_container_01">
+
+				
 
 			<div id="image1">
 				<a href="#"> <img src="<c:url value="/image/겨울사진16.jpg/"/>"
