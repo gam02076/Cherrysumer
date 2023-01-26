@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.spring_boot_cherrysumer.project.dao.IPointDAO">
+  	<!-- 회원가입시 point_change 테이블에 이력 남기기 -->
+  	<insert id="insertMemIdPoint" parameterType="string">
+  		INSERT INTO point_change(memId, pointAdd, pointDescription)
+  		VALUES (#{memId}, 1000, "회원가입 포인트")
+  	</insert>
+  	
+  	<!-- 회원가입시 point_all 테이블에 넣기 -->
+  	<insert id="insertPoint" parameterType="string">
+  		INSERT INTO point_all(pointTotal, memId)
+  		VALUES (1000, #{memId})
+  	</insert>
+  	
+  	<!-- 포인트 변동 사항 넣기 -->
+  	<insert id="changePoint" parameterType="hashmap">
+  		INSERT INTO point_change(memId, pointAdd, pointDescription)
+  		VALUES (#{memId}, #{pointAdd}, #{pointDescription})
+  	</insert>
+  	
+  	<!-- 총 포인트 업데이트 -->
+  	<update id="updatePoint" parameterType="hashmap">
+  		UPDATE point_all
+  		SET pointTotal = pointTotal+#{pointAdd}
+  		WHERE memId=#{memId}
+  	</update>
+  	
+  	<!-- 포인트 변동 사항 넣기 -->
+  	<insert id="changePoint2" parameterType="hashmap">
+  		INSERT INTO point_change(memId, pointUsed, pointDescription)
+  		VALUES (#{memId}, #{pointUsed}, #{pointDescription})
+  	</insert>
+  	
+  	<!-- 총 포인트 업데이트 -->
+  	<update id="updatePoint2" parameterType="hashmap">
+  		UPDATE point_all
+  		SET pointTotal = pointTotal-#{pointUsed}
+  		WHERE memId=#{memId}
+  	</update>
+  	
+	<!-- 총 포인트 가져오기 -->
+  	<select id="pointTotalCheck" parameterType="string" resultType="int">
+		SELECT pointTotal
+		FROM point_all
+		WHERE memId=#{memId}
+	</select>
+  </mapper>
+  

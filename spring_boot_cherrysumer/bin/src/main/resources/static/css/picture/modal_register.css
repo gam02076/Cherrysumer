@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+body{
+	
+	 font-family: 'S-CoreDream-3Light';
+}
+
+@font-face {
+     font-family: 'S-CoreDream-3Light';
+     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+
+
+.product {
+	position: relative;
+	display: flex;
+	margin-top: 22px;
+	padding: 0px 55px;
+}
+
+.product_image {
+	position: relative;
+	width: 820px;
+	height: 450px;
+	text-align: center;
+	min-width: 500px;
+}
+
+#preview {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: scale-down;
+}
+
+.Infotable {
+	min-width: 500px;
+	border-spacing: 20px;
+	    font-size: 14px;
+}
+
+input:focus {
+	outline: none;
+}
+
+.underline {
+	border-style: none;
+	border-bottom: solid 1px #868686;
+	border-collapse: collapse;
+	background: transparent;
+}
+
+.textarea {
+	height: 50%;
+	border-style: none;
+	text-align: center;
+}
+
+textarea {
+	height: 89%;
+	width: 96%;
+	border: none;
+	background: #f7f7f7;
+	border: 2px solid black;
+}
+
+.btn {
+	text-align: center;
+}
+
+/* 다시시작 */
+.title_box {
+	height: 10%;
+}
+
+.file {
+	margin-bottom: 15px;
+	position: relative;
+	left: 10%;
+	text-align: left;
+}
+
+.title_box div {
+	text-align: center;
+	position: relative;
+	line-height: 97px;
+}
+
+.btn_1:hover {
+	cursor: pointer;
+}
+
+/* ### ### ### 01 */
+.btn_1 {
+	color: #000000;
+	border: #000000 solid 1px;
+	padding: 10px;
+	width: 240px;
+	background-color: #ffffff;
+}
+
+.btn_1:hover {
+	color: #ffffff;
+	background-color: #000000;
+}
