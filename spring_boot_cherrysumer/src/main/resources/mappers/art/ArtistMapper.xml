@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+   <mapper namespace="com.spring_boot_cherrysumer.project.dao.IArtistDAO">
+	  	
+	  	<!-- 작가들 조회 -->
+	  	<select id="ArtistAll" resultType="com.spring_boot_cherrysumer.project.model.MemberVO">
+	  		SELECT * FROM member where memType='작가'
+	  	</select>
+	  	
+	  <!-- 모든 작가들 사진 조회 -->
+	  	<select id="ArtListALL" resultType="com.spring_boot_cherrysumer.project.model.PictureVO">
+	  		SELECT * FROM picture 
+	  	</select>
+	  	
+	  	<!--memId로 작가 사진 목록 불러오기-->
+	  	<select id="ArtList" parameterType="string" resultType="com.spring_boot_cherrysumer.project.model.PictureVO">
+		  	select * from picture where memId=#{memId}
+		</select>
+	  	
+	  	<!-- memId로 작가 정보 가져오기 -->
+	  	<select id="Artist" parameterType="string" resultType="com.spring_boot_cherrysumer.project.model.MemberVO">
+		  	select * from member where memId=#{memId}
+		</select>
+		
+		<!-- picNo 사진 상세 정보 가져오기 -->
+	  	<select id="picDetail" parameterType="string" resultType="com.spring_boot_cherrysumer.project.model.PictureVO">
+		  	select * from picture where picNo=#{picNo}
+		</select>
+		
+		<!-- picNo 사진 상세 정보 가져오기 -->
+	  	<select id="picMemId" parameterType="string" resultType="string">
+		  	select memId from picture where picNo=#{picNo}
+		</select>
+		
+  </mapper>
