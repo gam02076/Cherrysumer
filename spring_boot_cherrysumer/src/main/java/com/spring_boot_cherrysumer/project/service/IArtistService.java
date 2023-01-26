@@ -2,6 +2,7 @@ package com.spring_boot_cherrysumer.project.service;
 
 import java.util.ArrayList;
 
+import com.spring_boot_cherrysumer.project.model.ArtVO;
 import com.spring_boot_cherrysumer.project.model.MemberVO;
 import com.spring_boot_cherrysumer.project.model.PictureVO;
 
@@ -14,4 +15,6 @@ public interface IArtistService {
 	  
 	  public PictureVO picDetail(String picNo); // 그림 상세 정보
 	  public String picMemId(String picNo); // 그림 아티스트 ID
+	  
+	  public ArrayList<ArtVO> exList(); // 그림 아티스트 ID
 	}
