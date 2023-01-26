@@ -8,7 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.spring_boot_cherrysumer.project.model.ArtVO;
 import com.spring_boot_cherrysumer.project.model.MemberVO;
 import com.spring_boot_cherrysumer.project.model.PictureVO;
 import com.spring_boot_cherrysumer.project.service.ArtistService;
@@ -33,6 +32,7 @@ public class ArtistController {
 	  @RequestMapping("/artistModal") 
 	  public String artistModal(@RequestParam String memId,Model model) {
 	  
+	  System.out.println(memId);
 	  
 	  MemberVO name = service.Artist(memId); 
 	  model.addAttribute("name", name);
@@ -47,6 +47,7 @@ public class ArtistController {
 	  @RequestMapping("/artModal") 
 	  public String artModal(@RequestParam String memId,Model model) {
 	  
+	  System.out.println(memId);
 	  
 	  MemberVO name = service.Artist(memId); 
 	  model.addAttribute("name", name);
@@ -72,6 +73,7 @@ public class ArtistController {
 		  @RequestMapping("/artDetail")
 		  
 		  public String artDetail(@RequestParam String picNo,Model model) {
+		  System.out.println(picNo);
 		  PictureVO art=service.picDetail(picNo);
 		  model.addAttribute("art", art);
 		  
@@ -93,16 +95,10 @@ public class ArtistController {
 		  
 			return "/art/artDetail"; }
 		  
-		  
-		/* 전시회 */
 		  @RequestMapping("/exhibitionList")
 		  public String exhibitionList(Model model) {
-			  
-			  ArrayList<ArtVO> art=service.exList();
+			  ArrayList<PictureVO> art=service.ArtListALL();
 			  model.addAttribute("art", art);
-			  ArrayList<PictureVO> pic=service.ArtListALL();
-			  model.addAttribute("pic", pic);
-			  
 			  return "art/exhibitionList";
 		  }
 		  

@@ -27,10 +27,9 @@ button {
 #loginBox {
 	width: 1080px;
 	height: 1080px;
-	/* margin: 0 auto; */
-	margin-left: 395px;
-	margin-top: -130px;
-	/* margin-bottom: 128px; */
+	margin: 0 auto;
+	margin-top: 128px;
+	margin-bottom: 128px;
 	background-image: url("/image/login_image1.png");
 	background-size:100% 100%;
 }

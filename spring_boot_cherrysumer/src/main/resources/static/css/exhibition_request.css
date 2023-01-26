@@ -2,58 +2,38 @@ body{
     margin: 0;
 }
 #wrapper{
-	/* width:100vw; */
+	background-image:url("/image/exh_museum.jpg");
+	background-size:100%;
+	overflow: hidden;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
 
-	height:2300px;
-
-}
-.logoForm{
-	max-width:80%;
-	margin:0 auto;
-    margin-top: 100px;
-    height:230px;
-    /* background-color: aquamarine; */
-    border-bottom: 1px solid rgb(82,86,86);
-    font-size: 2.5rem;
-    font-family: 'Noto Serif KR', serif;
-    /* font-family: 'Gowun Batang', serif; */
-    vertical-align: middle; /* 텍스트 세로 가운데 정렬 */
-    display: relative;
-    background-image: url("/image/sand.jpg");
-    background-repeat: no-repeat;
-    background-size:cover;
-}
-.logoForm img{
-    height: 140px;
-    position: absolute;
-}
 .logoBox{
-    display: inline-block;
-    height: 2000px;
-    background-color: blueviolet;
-    left:5%;
+    height:230px;
+    text-align:center;
+    margin-top:50px;
 }
 
-.textBox{
-    display:inline-block;
-    /* background-color: blanchedalmond; */
-    position: absolute;
-    height: 180px;
-    left:20%;
+.logoBox img{
+	height:230px;
+	
 }
-
-/* .requestForm{
-    background-color: rgb(240, 240, 240);
-} */
-/* #tableBox{
-	background-color:red;
-} */
 table{
     margin:0 auto;
     margin-top: 50px;
+    background-color: rgba(240, 240, 240, 0.9);
+    border-radius: 10px;
+    box-shadow:0px 0px 20px #011;
 }
 th, td{
-	padding: 10px; /* 테두리와 내용 사이 간격*/
+	padding: 15px; /* 테두리와 내용 사이 간격*/
+	padding-left: 40px;
+	padding-right: 40px;
+}
+.item{
+	font-family: 'Do Hyeon', sans-serif;
+	color: rgb(122,122,122);
 }
 input{
 	height:100%;

@@ -16,8 +16,7 @@
   		<result property="picimg"  column="picimg"  />
 		<result property="picauthor"  column="picauthor"  />
 		<result property="piccontent"  column="piccontent"  />
-		<result property="pictech"  column="pictech"  />
-	
+			<result property="pictech"  column="pictech"  />
   	</resultMap>
   	
 

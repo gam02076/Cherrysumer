@@ -21,6 +21,7 @@
 	type="text/css" />
 
 
+
 <link href="<c:url value='/css/picture/modal_register.css'/>"
 	rel="stylesheet" type="text/css" />
 	
@@ -31,6 +32,7 @@
 
 <title>목록리스트</title>
 </head>
+
 
 <body>
 
@@ -246,6 +248,21 @@
 
 
 </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
