@@ -8,10 +8,12 @@ public class ArtVO {
     private int artPrice;
 	private int artDate;
     private String artSize;
+    private String artExplain;
+    private String artMain;
     private String memId;
     private String ctgId;
     
-    // Getter + Setter
+    //getter + setter
 	public String getArtNo() {
 		return artNo;
 	}
@@ -54,6 +56,18 @@ public class ArtVO {
 	public void setArtSize(String artSize) {
 		this.artSize = artSize;
 	}
+	public String getArtExplain() {
+		return artExplain;
+	}
+	public void setArtExplain(String artExplain) {
+		this.artExplain = artExplain;
+	}
+	public String getArtMain() {
+		return artMain;
+	}
+	public void setArtMain(String artMain) {
+		this.artMain = artMain;
+	}
 	public String getMemId() {
 		return memId;
 	}
@@ -66,4 +80,6 @@ public class ArtVO {
 	public void setCtgId(String ctgId) {
 		this.ctgId = ctgId;
 	}
+    
+    
 }
