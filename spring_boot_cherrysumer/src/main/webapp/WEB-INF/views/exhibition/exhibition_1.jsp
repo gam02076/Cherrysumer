@@ -14,13 +14,14 @@
 	        @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Kaisei+Tokumin:wght@500&family=Noto+Serif+KR&family=Sofia+Sans+Semi+Condensed&family=Titillium+Web&display=swap'); 
 	    </style>
 	</head>
+	
 	<body>
 		<c:import url = "/WEB-INF/views/layout/top.jsp"/>
 		
 	    <section class="background first">
 	        <div id="text_header">
 	            <div id="painter">
-	                ${memVo.memName }
+	                ${evo.exhNickname }
 	            </div>
 	            <div class="title eng">
 	                ${evo.exhTitle_eng } |
@@ -29,7 +30,7 @@
 	                ${evo.exhTitle_kr }
 	            </div>
 	            <div id="date">
-	                ${evo.exhDate}
+	                ${evo.exhEndDate}
 	            </div>
 	        </div>         
 	    </section>
@@ -37,7 +38,7 @@
 	    <section> 
 	        <div class="background bg-textPic">
 	            <div class="text firstText">
-	                ${evo.exhWording1 }
+	                ${evo.exhSummary }
 	            </div>
 	        </div>
 	    </section>  
@@ -45,7 +46,7 @@
 	    <section class="background article">
 	        <img src="<c:url value='/image/exh_person1.png'/>" class="person">
 	        <div class="text interview">
-	            ${evo.exhWording2 }      
+	            ${evo.exhInterview1 }      
 	        </div>
 	    </section>
 	    <section class="background bg-pic2">
@@ -53,7 +54,7 @@
 	    <section class="background article">
 	        <img src="<c:url value='/image/exh_glass.jpg'/>" class="pic pic3">
 	        <div class="text article2">
-	           ${evo.exhWording3 }
+	           ${evo.exhInterview2}
 	        </div>
 	    </section>
 	
@@ -98,7 +99,7 @@
 	    <section class="background bg-pic4">
 	        <div class="text2">
 	            <!-- 희망은 보이지 않는 게 아니라, 도전이 만들어 낸 또 다른 도전의 모습으로 당신 앞에 서 있습니다 -->
-	            ${evo.exhWording4 }
+	            ${evo.exhInterview3}
 	        </div>
 	    </section>
 	    <section class="background exhibition">
@@ -120,7 +121,7 @@
 	    <section> 
 	        <div class="background end">
 	            <div class="text firstText ending">
-	                ${evo.exhWording4 }
+	                ${evo.exhClosingWords }
 	            </div>
 	            <div id="GotoPainter">
 	                작가 보러 가기

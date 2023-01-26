@@ -74,10 +74,8 @@
 
 
 		<form action="/picture/searchResult" method="post">
-			<div class="searchdiv">
 			<input type="search" name="keyword" placeholder="검색"
 				class=searchinput>
-		</div>
 			<!-- <input type="submit" name=""
 					value="검색"> -->
 		</form>

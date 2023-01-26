@@ -4,15 +4,19 @@ public class ExhibitionVO {
 	private String exhNo;
 	private String exhTitle_eng;
 	private String exhTitle_kr;
-	private String exhDate;
-	private String exhWording1;
-	private String exhWording2;
-	private String exhWording3;
-	private String exhWording4;
-	private String exhWording5;
+	private String exhNickname;
+	private String exhStartDate;
+	private String exhEndDate;
+	private String exhSummary;
+	private String exhInterview1;
+	private String exhInterview2;
+	private String exhInterview3;
+	private String exhClosingWords;
+	private String exhConfirm;
 	private String memId;
 	
-	//getter + setter
+	
+	// getter + setter
 	public String getExhNo() {
 		return exhNo;
 	}
@@ -31,41 +35,59 @@ public class ExhibitionVO {
 	public void setExhTitle_kr(String exhTitle_kr) {
 		this.exhTitle_kr = exhTitle_kr;
 	}
-	public String getExhDate() {
-		return exhDate;
+	public String getExhNickname() {
+		return exhNickname;
 	}
-	public void setExhDate(String exhDate) {
-		this.exhDate = exhDate;
+	public void setExhNickname(String exhNickname) {
+		this.exhNickname = exhNickname;
 	}
-	public String getExhWording1() {
-		return exhWording1;
+	public String getExhStartDate() {
+		return exhStartDate;
 	}
-	public void setExhWording1(String exhWording1) {
-		this.exhWording1 = exhWording1;
+	public void setExhStartDate(String exhStartDate) {
+		this.exhStartDate = exhStartDate;
 	}
-	public String getExhWording2() {
-		return exhWording2;
+	public String getExhEndDate() {
+		return exhEndDate;
 	}
-	public void setExhWording2(String exhWording2) {
-		this.exhWording2 = exhWording2;
+	public void setExhEndDate(String exhEndDate) {
+		this.exhEndDate = exhEndDate;
 	}
-	public String getExhWording3() {
-		return exhWording3;
+	public String getExhSummary() {
+		return exhSummary;
 	}
-	public void setExhWording3(String exhWording3) {
-		this.exhWording3 = exhWording3;
+	public void setExhSummary(String exhSummary) {
+		this.exhSummary = exhSummary;
 	}
-	public String getExhWording4() {
-		return exhWording4;
+	public String getExhInterview1() {
+		return exhInterview1;
 	}
-	public void setExhWording4(String exhWording4) {
-		this.exhWording4 = exhWording4;
+	public void setExhInterview1(String exhInterview1) {
+		this.exhInterview1 = exhInterview1;
 	}
-	public String getExhWording5() {
-		return exhWording5;
+	public String getExhInterview2() {
+		return exhInterview2;
 	}
-	public void setExhWording5(String exhWording5) {
-		this.exhWording5 = exhWording5;
+	public void setExhInterview2(String exhInterview2) {
+		this.exhInterview2 = exhInterview2;
+	}
+	public String getExhInterview3() {
+		return exhInterview3;
+	}
+	public void setExhInterview3(String exhInterview3) {
+		this.exhInterview3 = exhInterview3;
+	}
+	public String getExhClosingWords() {
+		return exhClosingWords;
+	}
+	public void setExhClosingWords(String exhClosingWords) {
+		this.exhClosingWords = exhClosingWords;
+	}
+	public String getExhConfirm() {
+		return exhConfirm;
+	}
+	public void setExhConfirm(String exhConfirm) {
+		this.exhConfirm = exhConfirm;
 	}
 	public String getMemId() {
 		return memId;
@@ -73,5 +95,6 @@ public class ExhibitionVO {
 	public void setMemId(String memId) {
 		this.memId = memId;
 	}
+	
 	
 }

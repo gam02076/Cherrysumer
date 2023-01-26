@@ -1,11 +1,5 @@
 @charset "UTF-8";
 
-body{
-	margin:0;
-}
-body::-webkit-scrollbar {
-    display: none;
-}
 .header{
     position:fixed;
     left:50%;
@@ -14,7 +8,7 @@ body::-webkit-scrollbar {
     text-align: center;
     transform:translateX(-50%);
     transition: all .3s;
-    z-index: 101;
+    z-index: 10;
     /* border-bottom: 1px solid ; */
     /* color: rgb(82,86,86); */
     background-color: rgba(255,255,255,1);
@@ -28,7 +22,7 @@ body::-webkit-scrollbar {
     width: 140px;
     z-index: 20;
     transform:translateY(10%);
-    transform: translateX(201%);
+    transform: translateX(275px);
     z-index:30;
 }
 #headerRight{
