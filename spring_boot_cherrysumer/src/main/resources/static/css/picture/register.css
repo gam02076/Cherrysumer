@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+	background-image: url(<c:url value='/js/picture/picture.js'/>);
+}
+
+.container {
+    margin-left: 14%;
+    margin-right: 14%;
+	height: 600px;
+	border: 2px solid rgb(104, 103, 103);
+}
+
+.product {
+	position: relative;
+	display: flex;
+	margin-top: 22px;
+	padding: 0px 55px;
+}
+
+.product_image {
+	position: relative;
+	width: 820px;
+	height: 450px;
+	text-align: center;
+	min-width: 500px;
+}
+
+#preview {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: scale-down;
+}
+
+table {
+	min-width: 500px;
+	border-spacing: 20px;
+}
+
+.underline {
+	border-style: none;
+	border-bottom: solid 1px #868686;
+	border-collapse: collapse;
+	background: transparent;
+}
+
+.textarea {
+	height: 50%;
+	border-style: none;
+	text-align: center;
+}
+
+textarea {
+	height: 89%;
+	width: 96%;
+	border: none;
+	background: #f7f7f7;
+}
+
+.btn {
+	text-align: center;
+}
+
+/* 다시시작 */
+.title_box {
+	height: 10%;
+}
+
+.file {
+	margin-bottom: 15px;
+	position: relative;
+	left: 30px;
+}
+
+.title_box div {
+	text-align: center;
+	position: relative;
+	line-height: 97px;
+}
+
+.btn_1:hover {
+	cursor: pointer;
+}
+
+/* ### ### ### 01 */
+.btn_1 {
+	color: #000000;
+	border: #000000 solid 1px;
+	padding: 10px;
+	width: 240px;
+	background-color: #ffffff;
+}
+
+.btn_1:hover {
+	color: #ffffff;
+	background-color: #000000;
+}
