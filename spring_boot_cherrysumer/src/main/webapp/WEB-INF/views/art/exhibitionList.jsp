@@ -36,7 +36,7 @@
 				      <c:set var="small" value="0"/>
 				      <c:set var="now" value="1"/>
 				      
- 						<c:forEach var="art" items="${art }" begin = "4" end = "6" varStatus="status">
+ 						<c:forEach var="art" items="${art }" begin = "0" end = "5" varStatus="status">
  						<%-- <c:forEach var="pic" items="${pic }" begin = "5" end = "8" varStatus="status"> --%>
  						
 						 <c:choose>
