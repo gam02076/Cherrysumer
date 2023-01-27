@@ -23,5 +23,10 @@ public class ExhibitionService implements IExhibitionService {
 	public MemberVO getMemberInfo(String memId) {
 		return dao.getMemberInfo(memId);
 	}
+
+	@Override
+	public MemberVO ExhRequest_MemberInfo(String memId) {
+		return dao.ExhRequest_MemberInfo(memId);
+	}
 }
 //

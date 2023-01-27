@@ -20,5 +20,13 @@
   		WHERE memId=#{memId}
   	</select>
   	
-  	
+  	<!-- 전시회 신청서에 출력할 회원 정보 반환 -->
+  	<select id="ExhRequest_MemberInfo" parameterType="string"
+  			resultType="com.spring_boot_cherrysumer.project.model.MemberVO">
+		SELECT memId, memName, memEmail, memHP
+		FROM member
+		WHERE memId=#{memId}
+	</select>
+	
+	
   </mapper>
