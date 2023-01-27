@@ -97,12 +97,12 @@ background-color:white;
                   <a class='cta-link' href='#'>형</a>
                 </div>
                 <div class='master-container-scroller_item'>
-                  <a class='cta-link' href='#'>ㅁㄴㅇㄹ</a>
+                  <a class='cta-link' href='#'>심규민</a>
                 </div>
                 <div class='master-container-scroller_item'>
-                  <a class='cta-link' href='#'>ㅁㄴㅇㄹ</a>
+                  <a class='cta-link' href='#'>최성빈</a>
                 </div>
-                <div class='master-container-scroller_item'>ㅁㄴㅇㄹ</div>
+                <div class='master-container-scroller_item'>박은빈</div>
               </div><br/>
               <div>모 두 가 작 가 가 될 수 있 습 니 다</div>
             </h1>
@@ -165,7 +165,6 @@ background-color:white;
                 </div></div>
                 </c:if>
 </c:forEach>
-<c:import url = "/WEB-INF/views/layout/bottom.jsp"/>
                 </div>
 
 

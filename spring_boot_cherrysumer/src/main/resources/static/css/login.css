@@ -28,12 +28,9 @@ button {
 	width: 1080px;
 	height: 1080px;
 	/* margin: 0 auto; */
-/* 	margin-left: 395px;
-	margin-top: -130px; */
+ 	margin-left: 455px;
+	margin-top: -130px;
 	/* margin-bottom: 128px; */
-	position: relative;
-    top: 0%;
-    left: 13%;
 	background-image: url("/image/login_image1.png");
 	background-size:100% 100%;
 }

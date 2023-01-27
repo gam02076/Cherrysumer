@@ -66,8 +66,10 @@
 .artist{
       width: 100%;
       /* transition: all 0.2s linear; */
-      margin:10px 0px;
+      /* margin:10px 0px; */
+      height: 100%;
  }
+ 
 
 .scrollZone {
     position: fixed;
@@ -103,8 +105,8 @@
 	border:none;
 	color:white;
 	 /* box-shadow: 280px 0 0 0 #e91e63 inset; */
-    box-shadow: 0px 200px 10px 0px #252562  inset, 
-    			0 -200px 0 0 #252562  inset;
+    box-shadow: 0px 200px 10px 0px #252562 inset,
+     0px -210px 0 0 #252562 inset;
 	
 	animation-name: floating;
 
@@ -125,10 +127,11 @@
 }
 
 
-#imgbox{
-	width:auto
-	
+.imgbox{
+	width:auto;
+	height:300px;
 }
+
 
 
 
