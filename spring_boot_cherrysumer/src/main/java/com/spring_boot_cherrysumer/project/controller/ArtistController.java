@@ -12,12 +12,16 @@ import com.spring_boot_cherrysumer.project.model.ArtVO;
 import com.spring_boot_cherrysumer.project.model.MemberVO;
 import com.spring_boot_cherrysumer.project.model.PictureVO;
 import com.spring_boot_cherrysumer.project.service.ArtistService;
+import com.spring_boot_cherrysumer.project.service.PictureService;
 
 @Controller
 public class ArtistController {
 	@Autowired
 	ArtistService service;
-
+	
+	@Autowired
+	PictureService service2;	
+	
 	/* 아티스트 리스트 */
 	@RequestMapping("/artist")
 	public String artistAll(Model model) {
@@ -112,6 +116,46 @@ public class ArtistController {
 		  }
 		 
 		 
+			/* 마이페이지 내 작품 리스트 */
+		  @RequestMapping("/myArt")
+			
+			public String myArt(Model model) {
+			
+			  ArrayList<PictureVO> pic = service2.ListPicture();
+
+				model.addAttribute("pic",pic);
+			
+				return "mypage/myPg_myArt"; 	
+			}
+		  
+		  
+			/* 마이페이지 내 작품 value값 불러오기 */
+		  @RequestMapping("/myArtDate")
+		  
+		  public String myArtDate(@RequestParam String picNo,Model model) {
+			  
+		  PictureVO art=service.picDetail(picNo);
+		  model.addAttribute("art", art);
+		  
+			/*
+			 * String member=service.picMemId(picNo);
+			 * 
+			 * MemberVO mem = service.Artist(member); model.addAttribute("mem", mem);
+			 */
+		  
+			return "mypage/updateMyart"; }
+		  
+		  
+		  /* 마이페이지 내 작품 update */
+		  	@RequestMapping("/updateArt")
+		  public String updateArt(PictureVO vo) {
+		  		System.out.println(vo.getPicNo());
+		  		System.out.println(vo.getPicTitle());
+			  
+		  		service.ArtUpdate(vo);
+		  		return "redirect:/myArt";
+		  
+			}
 		 
 
 }

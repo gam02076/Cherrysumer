@@ -14,6 +14,8 @@
     <div class="product">
         <div class="product_image">
             <img src="<c:url value='/image/${art.picimg }'/>" class="image">
+            <div class="waterMark" style="left:32%;"></div>
+            <div class="waterMark" style="right:32%;"></div>
         </div>
         <div id="productInfo">
             <table id="TbModal">

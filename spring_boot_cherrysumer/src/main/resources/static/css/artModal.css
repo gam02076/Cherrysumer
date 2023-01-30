@@ -24,6 +24,13 @@ body {
     object-fit: scale-down;
 }
 
+.waterMark{
+	background: black;
+    position: absolute;
+    height: 100%;
+    width: 1px;
+}
+
 #productInfo{
 	color:white
 	
