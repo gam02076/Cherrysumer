@@ -12,7 +12,9 @@ public interface IPictureService {
 
 	public ArrayList<PictureVO> Search(String keyword);
 	
-
 	
+////	삭제
+//	public void Delete(String picNo);
+//	
 	
 } 

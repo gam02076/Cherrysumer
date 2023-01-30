@@ -84,6 +84,7 @@
 	<div class="container">
 
 		<c:forEach var="pict" items="${pic}">
+		<c:if test="${pict.picType eq '2' }">
 			<div class="box" id="${pict.picNo}">
 				<input type="hidden" class="cardNO" value="${pict.picNo}">
 				<div class="img" value="${pict.picNo}">
@@ -99,7 +100,7 @@
 
 						<tr>
 							<th>작가:</th>
-							<td>${pict.picauthor}</td>
+							<td>${pict.picauthor} </td>
 						</tr>
 						<tr>
 							<th>가격:</th>
@@ -117,6 +118,7 @@
 
 				</div>
 			</div>
+			</c:if>
 		</c:forEach>
 	</div>
 

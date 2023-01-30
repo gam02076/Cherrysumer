@@ -34,6 +34,14 @@ public class PictureService implements IPictureService {
 		
 	}
 	
+////	삭제
+//	@Override
+//	public void Delete(String picNo) {
+//		
+//		dao.Delete(picNo);
+//		
+//	}
+	
  
 	
 	

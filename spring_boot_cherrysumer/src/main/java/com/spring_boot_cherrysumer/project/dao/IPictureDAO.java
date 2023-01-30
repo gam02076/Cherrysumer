@@ -10,6 +10,8 @@ public interface IPictureDAO {
 	public void insert(PictureVO vo ); // 등록
 
 	public ArrayList<PictureVO> Search(String keyword);
+
+//	public void Delete(String picNo); //삭제
 	
 
 }
