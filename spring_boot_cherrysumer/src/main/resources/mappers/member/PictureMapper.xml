@@ -25,11 +25,13 @@
   		SELECT * FROM  picture ORDER BY picNo DESC
   	</select>
   	
+  	<!-- 등록 -->
  <insert id="insert" parameterType="com.spring_boot_cherrysumer.project.model.PictureVO">
   		insert into picture(picTitle, picNo, picPrice, picType, picSize,picimg,picauthor,piccontent,pictech)
   		values (#{picTitle},#{picNo},#{picPrice},#{picType},#{picSize},#{picimg},#{picauthor},#{piccontent},#{pictech})
  </insert>
   	
+  	<!-- 검색 -->
 	<select id="Search" parameterType="String" resultMap="resultpic">
   		SELECT * FROM  picture WHERE
   		picTitle Like CONCAT('%',#{keyword},'%')
@@ -37,6 +39,14 @@
   		OR picauthor Like CONCAT('%',#{keyword},'%')
   		OR picauthor Like CONCAT('%',#{keyword},'%')
   	</select>
+  	
+  <!-- 댓글 삭제 -->
+  	<!-- <delete id="Delete" parameterType="string">
+  		delete
+  		from comments
+  		where picNo=#{picNo}
+  	</delete>
+  	 -->
 
   	<!-- SELECT * FROM members where memType='1'; -->
   	
