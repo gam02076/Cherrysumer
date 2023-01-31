@@ -13,10 +13,14 @@ body{
 
 .banner_img{
 	width:45%;
+	margin: 12px;
+    /* border: solid 14px #e7d1d1; */
 }
 
 .banner_img2{
-	width:55%;
+	width:52%;    
+	margin: 13px;
+    /* border: solid 14px #e7d1d1; */
 }
 .banner_img:hover:after,
 .banner_img:hover > .hover_text,
@@ -193,6 +197,6 @@ body{
 
 #main{
 	font-size: 0;
-	background: cadetblue;
+	background: #715252;
 }
 
