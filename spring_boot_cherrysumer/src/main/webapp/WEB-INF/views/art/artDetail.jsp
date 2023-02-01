@@ -14,6 +14,7 @@
     <div class="product">
         <div class="product_image">
             <img src="<c:url value='/image/${art.picimg }'/>" class="image">
+            <pre class="waterMark">시 선</pre>
         </div>
         <div id="productInfo">
             <table id="TbModal">

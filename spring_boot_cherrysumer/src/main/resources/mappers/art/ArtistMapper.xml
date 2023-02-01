@@ -41,4 +41,12 @@
 		  	select * from art 
 		</select>
 		
+		<!-- 작품 업데이트 -->
+	  	<update id="ArtUpdate"  parameterType="com.spring_boot_cherrysumer.project.model.PictureVO">
+  		UPDATE picture
+  		SET picTitle=#{picTitle},picPrice=#{picPrice},picType=#{picType},picSize=#{picSize},
+  		piccontent=#{piccontent},picauthor=#{picauthor},pictech=#{pictech}
+  	    WHERE picNo=#{picNo}
+		</update>
+		
   </mapper>
