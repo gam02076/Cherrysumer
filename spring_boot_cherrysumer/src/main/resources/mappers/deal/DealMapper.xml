@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper
+	namespace="com.spring_boot_cherrysumer.project.dao.IDealDAO">
+
+
+	<select id="DealCheck" parameterType="string"
+		resultType="com.spring_boot_cherrysumer.project.model.PictureVO">
+		select * from picture where picNo=#{picNo}
+	</select>
+
+
+</mapper>
