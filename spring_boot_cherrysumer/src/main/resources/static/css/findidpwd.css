@@ -13,7 +13,7 @@ body {
 }
 
 #findIdForm {
-	width: 305px;
+	width: 400px;
 	margin: auto;
 	/* padding: 10px; */
 	padding-top: 150px;
@@ -48,6 +48,28 @@ button {
 	color: white;
 	background: #282A35;
 	margin-top: 50px;
-    margin-left: 25px;
+    margin-left: 60px;
 	cursor: pointer;
+}
+
+#codeCheckBtn {
+    width: 100px;
+    height: 35px;
+    border: 0px;
+    color: white;
+    background: #282A35;
+    margin-top: 0px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+#mailSendBtn {
+    width: 100px;
+    height: 35px;
+    border: 0px;
+    color: white;
+    background: #282A35;
+    margin-top: 0px;
+    margin-left: 25px;
+    cursor: pointer;
 }

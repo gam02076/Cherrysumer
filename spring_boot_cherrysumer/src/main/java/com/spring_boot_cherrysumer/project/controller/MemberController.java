@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.spring_boot_cherrysumer.project.model.MemberVO;
+import com.spring_boot_cherrysumer.project.service.EmailService;
 import com.spring_boot_cherrysumer.project.service.MemberService;
 import com.spring_boot_cherrysumer.project.service.PointService;
 
@@ -22,6 +23,9 @@ public class MemberController {
 	
 	@Autowired
 	PointService pservice;
+	
+	@Autowired
+	EmailService eservice;
 
 	// 비밀번호 암호화 한 경우의 로그인 처리 방식
 	@ResponseBody
@@ -140,6 +144,14 @@ public class MemberController {
 		service.changePwd(vo);
 		
 		return "member/login"; // 로그인 폼으로 이동
+	}
+	
+	// 이메일 인증
+	@ResponseBody
+	@RequestMapping("/emailCheck")
+	public String emailCheck(@RequestParam("email") String email) {
+		System.out.println("이메일 인증 이메일 : " + email);
+		return eservice.joinEmail(email);
 	}
 	
 }
