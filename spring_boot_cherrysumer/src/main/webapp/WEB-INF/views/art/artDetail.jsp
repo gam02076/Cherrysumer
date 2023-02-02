@@ -10,11 +10,11 @@
    </head>
     <body>
     
-    
+  <form id="register" action="/dealcheck" method="post">  
+  <input type="hidden" name="picNo" value="${art.picNo}">
     <div class="product">
         <div class="product_image">
             <img src="<c:url value='/image/${art.picimg }'/>" class="image">
-            <pre class="waterMark">시 선</pre>
         </div>
         <div id="productInfo">
             <table id="TbModal">
@@ -34,10 +34,17 @@
             <div class="underline">작품소개</div>
             <div id="artInfo">작품 소개입니다.</div>
             
-            <div><a href="#" class="myButton">구매하기</a></div>
+           <div><button type="submit" value="등록" class="myButton">구매하기</button></div>
+         
+         <!--    <div><a class="myButton">구매하기</a></div> -->
         </div>
     </div>
 		    
-		  
+		  </form>
     </body>
+    
+    <script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
+<script src="<c:url value='/js/deal/deal.js'/>"></script>
+    
+    
   </html>

@@ -16,17 +16,12 @@ public class DealController {
 
 	@RequestMapping("/dealcheck")
 	public String DealCheck(@RequestParam String picNo, Model model){
-		
-			
-	
+
 		PictureVO deal=service.DealCheck(picNo); 
-		
-					
-		
+
 		model.addAttribute("deal", deal);
-		
-					
-		
+
 		return "/deal/deal";
 	}
 }
+
