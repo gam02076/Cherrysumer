@@ -27,11 +27,11 @@
 						
 					<h4>이메일</h4>
 					<span class="input_area"><input type="text" maxlength="30" id="findIdEmail" name="findIdEmail" 
-					placeholder="이메일을 입력해 주세요." required></span>
+					placeholder="이메일을 입력해 주세요." required></span><button type="button" id="mailSendBtn">인증번호 받기</button>
 					
-					<h4>인증코드</h4>
-					<span class="input_area"><input type="text" maxlength="10" id="findIdCode" name="findIdCode" 
-					placeholder="인증번호를 입력해 주세요." required></span>
+					<h4>인증번호</h4>
+					<span class="input_area"><input type="text" maxlength="6" id="findIdCode" name="findIdCode" 
+					placeholder="인증번호를 입력해 주세요." required></span><button type="button" id="codeCheckBtn">인증번호 확인</button>
 					
 					<button type="submit">찾기</button>
 					<button type="button" onClick="history.back()">취소</button>
