@@ -11,4 +11,5 @@ public interface IMemberService {
 	public String findId(String memName, String memEmail);
 	public String findPwd(String memName, String memEmail);
 	public void changePwd(MemberVO vo);
+	public String memInfoSearchNameCheck(String memName, String memEmail); // 이름 체크
 }

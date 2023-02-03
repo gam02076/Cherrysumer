@@ -154,4 +154,15 @@ public class MemberController {
 		return eservice.joinEmail(email);
 	}
 	
+	@ResponseBody
+	@RequestMapping("/member/nameCheck")
+	public String nameCheck(@RequestParam("findIdName") String memName,
+							@RequestParam("findIdEmail") String memEmail) {
+		String no_result = service.memInfoSearchNameCheck(memName, memEmail);
+		String result="no_data";
+		if(no_result != null) {
+			result="data";
+		}
+		return result;
+	}
 }

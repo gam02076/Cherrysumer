@@ -12,4 +12,5 @@ public interface IMemberDAO {
 	public String findPwd(HashMap<String, Object> map);
 	public void insertPoint(String memId);
 	public void changePwd(MemberVO vo);
+	public String memInfoSearchNameCheck(String memName, String memEmail);
 }

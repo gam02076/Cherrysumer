@@ -11,6 +11,7 @@
 		<link rel="stylesheet" type="text/css" href="<c:url value='/css/findidpwd.css'/>">
 		<script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
 		<script src="<c:url value='/js/findIdForm.js'/>"></script>
+		<script src="<c:url value='/js/emailsend.js'/>"></script>
 	</head>
 	<body>
 	<div id="wrap">
