@@ -18,6 +18,7 @@
 
 
 <div class="conteiner">
+<form id="" action="kakaopay" method="json" enctype="multipart/form-data" >
 	<h2 class="headtitle">구매하실 작품을 확인 해주세요.</h2>
 
 	<hr>
@@ -33,19 +34,21 @@
 							<th>작품명</th>
 							<td>${deal.picTitle}</td>
 							<th>ID</th>
-							<td>멤아이디</td>
+							<td>${sessionScope.sid}</td>
 						</tr>
 												<tr>
 							<th>소재/기법</th>
 							<td>${deal.pictech}</td>
 							<th>작가명</th>
 							<td>${deal.picauthor}</td>
+							<input type="hidden" name="picauthor" value="${deal.picauthor}"> 
 						</tr>
 						<tr>
 							<th>사이즈</th>
 							<td>${deal.picSize}</td>
 							<th>가격</th>
-							<td>${deal.picPrice}</td> 
+						<%-- 	<input type="hidden" name="picPrice" value="${deal.picPrice}"> --%>
+							<td>${deal.picPrice}원</td> 
 						</tr>
 						<tr>
 							<td></td>
@@ -123,9 +126,47 @@
 	<hr>
 	
 	<h1>총 결제 금액:</h1>
+		<button type="submit" value="등록" id="btn-kakaopay" onclick="btn-kakaopay">등록</button>
+
 	<hr>
+	
+	</form>
 	</div>
 </body>
 
+
+
+<script>
+$(function(){
+	$('#kakaobtn').click(function(){
+		$.ajax({
+			url:'kakaopay',
+			dataType:'json',
+			success:function(data.tid){
+				 // alert(resp.tid); //결제 고유 번호
+				var box = resp.next_redirect_pc_url;
+				window.open(box);
+				alert("결제가 완료 되었습니다.");
+				location.href = box;
+				
+			},
+			error:function(error){
+				alert(error);
+			}
+			
+		});
+	});
+});
+
+</script>
+
+
+
+
+
+
+
+
 <script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
+<script src="<c:url value='/js/deal/kakao.js'/>"></script>
 </html>
