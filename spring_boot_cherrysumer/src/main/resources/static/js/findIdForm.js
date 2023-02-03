@@ -40,26 +40,25 @@
  
  
  
- /* $(document).ready(function() {
+ $(document).ready(function() {
 	var emailAuthCheck = "fail";
-	const domain = "@";
-
+	
 	// 인증번호 받기 버튼 클릭시
-	$('#mailCheckBtn').on('click', function() {
-		var email = $('#insertEmail').val() + domain + $('#domainText').val();
+	$('#mailSendBtn').on('click', function() {
+		var findIdEmail = $('#findIdEmail').val();
 		// 입력한 메일 값 가져옴
-		console.log("완성된 이메일 : " + email);
+		console.log("완성된 이메일 : " + findIdEmail);
 		// 인증번호
-		const checkInput = $('#mailCheckInput');
+		const checkInput = $('#findIdCode');
 
-		if($('#memName').val() == "") {
+		if($('#findIdName').val() == "") {
 			alert("이름을 입력해주세요.");
 		} else {
 			$.ajax({
 				type:'post',
-				url: "/member/nameCheck",
-				data: {"memName": $('#memName').val(),
-					  "memEmail" : email
+				url: "/member/findId",
+				data: {"findIdName": $('#findIdName').val(),
+					  "findIdEmail" : findIdEmail
 				},
 				dataType: 'text',
 				success:function(result) {
@@ -67,7 +66,7 @@
 						$.ajax({
 							type:'post',
 							url: "/emailCheck",
-							data: {"email": $('#insertEmail').val() + domain +  $('#domainText').val()
+							data: {"email": $('#findIdEmail').val()
 							},
 							success:function(data){
 								checkInput.attr("disabled", false);
@@ -88,14 +87,14 @@
 
 	// 인증번호 비교
 	// blur -> focus가 되는 경우
-	$("#mailCheckInput").on('keyup', function() {
+	/*$("#findIdCode").on('keyup', function() {
 		const inputCode = $(this).val();
 		const $resultMsg = $('#mailCheckWarn');
 
 		if(inputCode === code) {
 			$resultMsg.html('인증번호가 일치합니다.');
 			$resultMsg.css("color", "green");
-			$('#mailCheckBtn').attr("disabled", true);
+			$('#mailSendBtn').attr("disabled", true);
 			$('#userMail').attr('readonly', true);
 			emailAuthCheck = "success";
 			console.log("emailAuthCheck = " + emailAuthCheck);
@@ -106,35 +105,5 @@
 			console.log("emailAuthCheck = " + emailAuthCheck);
 		}
 	});
-
-
-	// 이메일을 선택하여 입력
-	$('#domainList').on("change", function(){
-		// 직접입력이 아니면
-		if(event.target.value !== 'directInput'){
-			// 선택값을 텍스트에 넣고 텍스트창 막음
-			$("#domainText").val(event.target.value);
-			$("#domainText").attr("readonly", true);
-		} else {
-			// 공백을 넣고 텍스트창 오픈
-			$("#domainText").val('');
-			$("#domainText").attr("readonly", false);
-		}
-	});
-
-	// id찾기 다음버튼 클릭시 (미완성)
-	$('#idNextBtn').on('click', function() {
-		var email = $('#insertEmail').val() + domain + $('#domainText').val();
-		var memName = $('#memName').val();
-		if(emailAuthCheck == "success"){
-			location.href='/member/idSearchResult/'+memName+'/'+email+'';
-		} else if(memName == "") {
-			alert("이름을 입력해주세요.");
-		} else if($('#insertEmail').val() == "") {
-			alert("이메일을 입력해주세요.");
-		} else if($('#domainText').val() == "") {
-			alert("이메일을 확인해주세요.");
-		}
-	});
-});
 */
+});
