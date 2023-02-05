@@ -48,4 +48,9 @@
   		SET memPwd=#{memPwd}
   		WHERE memId=#{memId}
   	</update>
+  	
+  	<!-- 이름, 이메일 체크 -->
+	<select id="memInfoSearchNameCheck" parameterType="string" resultType="string">
+		SELECT memName FROM member WHERE memName=#{memName} AND memEmail=#{memEmail}
+	</select>
   </mapper>

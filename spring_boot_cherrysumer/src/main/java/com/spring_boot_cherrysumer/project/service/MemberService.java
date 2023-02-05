@@ -79,4 +79,10 @@ public class MemberService implements IMemberService {
 		dao.changePwd(vo);
 	}
 
+	@Override
+	public String memInfoSearchNameCheck(String memName, String memEmail) {
+		
+		return dao.memInfoSearchNameCheck(memName, memEmail);
+	}
+
 }
