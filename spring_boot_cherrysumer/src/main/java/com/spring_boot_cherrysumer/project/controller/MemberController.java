@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.spring_boot_cherrysumer.project.model.MemberVO;
+import com.spring_boot_cherrysumer.project.service.ArtistService;
 import com.spring_boot_cherrysumer.project.service.EmailService;
 import com.spring_boot_cherrysumer.project.service.MemberService;
 import com.spring_boot_cherrysumer.project.service.PointService;
@@ -26,21 +27,27 @@ public class MemberController {
 	
 	@Autowired
 	EmailService eservice;
+	
+	@Autowired
+	ArtistService pointService;
 
 	// 비밀번호 암호화 한 경우의 로그인 처리 방식
-	@ResponseBody
-	@RequestMapping("/member/eqlogin")
-	public String loginCheck(@RequestParam HashMap<String, Object> param, HttpSession session) {
-		// 로그인 체크 결과
-		String result = service.loginCheck(param);
+		@ResponseBody
+		@RequestMapping("/member/eqlogin")
+		public String loginCheck(@RequestParam HashMap<String, Object> param, HttpSession session) {
+			// 로그인 체크 결과
+			String result = service.loginCheck(param);
 
-		// 아이디와 비밀번호 일치하면 (로그인 성공하면) 서비스에서 success 반환
-		if (result.equals("success")) {
-			// 로그인 성공하면 세션 변수 지정
-			session.setAttribute("sid", param.get("id"));
+			// 아이디와 비밀번호 일치하면 (로그인 성공하면) 서비스에서 success 반환
+			if (result.equals("success")) {
+				// 로그인 성공하면 세션 변수 지정
+				session.setAttribute("sid", param.get("id"));
+				
+				String memId = (String)session.getAttribute("sid");
+				session.setAttribute("mypoint", pointService.NowMyPoint(memId));
+			}
+			return result;
 		}
-		return result;
-	}
 	
 	// 아이디 찾은 후 로그인
 	@RequestMapping("/member/searchAfterLoginForm")
