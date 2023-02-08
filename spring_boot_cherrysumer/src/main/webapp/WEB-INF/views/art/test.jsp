@@ -5,44 +5,27 @@
   <html>
    <head>
      <meta charset="UTF-8">
-     <title>Insert title here</title>
+     <title>test</title>
+      <link rel="stylesheet" type="text/css" href="<c:url value='/css/mypage/myPg_myArt.css' />"><!-- 모달 (Detail)  -->
+     <link href="<c:url value='/css/mypage/myPg_myArt.css'/>" rel="stylesheet" type="text/css" />
+     <script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
+   	 <script src="<c:url value='/js/text.js' />"></script> <!-- 모달 (Detail)  -->
    </head>
-    <body>
-      
-      
-      <c:set var="big" value="0"/>
-      <c:set var="small" value="0"/>
-      <c:set var="now" value="1"/>
-
-<c:forEach var="cnt" begin="1" end="10" step="1">
-<c:choose>
-	
-	<c:when test="${cnt%2!=0 and now==1 }">
-	<h2>작은사진</h2>
-		<c:set var="now" value="2"/>
-		</c:when>
-		
-	<c:when test="${cnt%2!=0 and now==2 }">
-		<h2>큰사진</h2>
-		<c:set var="now" value="1"/>
-		</c:when>
-		
-		<c:when test="${cnt%2==0 and big!=small}">
-		
-	<p>작은사진</p>
-		<c:set var="small" value="${small+1 }"/>
-		</c:when>
-		
-	<c:when test="${cnt%2==0 and big==small}">
-		<p>큰사진</p>
-		<c:set var="big" value="${big+1 }"/>
-		</c:when>
-	
-</c:choose>
-</c:forEach>
-      
-      
-      
-      
+   <div id="container">
+	      <c:forEach var="art" items="${art}">
+		      	<form method="post">
+					<ul class="myart">
+						<li><img src="<c:url value="/image/${art.picimg}"/>" class="myimage"></li>
+						<li><input type="button" value="수정하기" class="update" id="${art.picNo}">
+						<input type="button" value="삭제하기" class="delete" id="${art.picNo}"></li>
+					</ul>
+				</form>
+			</c:forEach>
+				
+		</div>
+		<!-- paging -->
+		<nav aria-label="Page navigation example">
+			<ul class="pagination pagination-seperated "></ul>
+		</nav>
     </body>
   </html>
