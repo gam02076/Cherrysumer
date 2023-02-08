@@ -8,14 +8,13 @@
      <title>작가 소개</title>
      <link rel="stylesheet" type="text/css" href="<c:url value='/css/artistList.css' />">
      <link rel="stylesheet" type="text/css" href="<c:url value='/css/artistModal.css' />">
-     <link rel="stylesheet" type="text/css" href="<c:url value='/css/header.css'/>">
-     <c:import url="/WEB-INF/views/layout/top.jsp" />
+     <c:import url="/WEB-INF/views/layout/head.jsp" />
      <script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
-		<script src="<c:url value='/js/artistList.js' />"></script>
-		<link rel="shortcut icon" href="#"> <!-- 파비콘 오류 -->
+	<script src="<c:url value='/js/artistList.js' />"></script>
+	<link rel="shortcut icon" href="#"> <!-- 파비콘 오류 -->
    </head>
     <body id="artistBody">
-    
+    <c:import url="/WEB-INF/views/layout/top.jsp" />
     <div id="content">
       <div id="artists">
     	<div id="list">
@@ -48,5 +47,6 @@
       <div class="modal">
 		  
 	  </div>
+	  <c:import url="/WEB-INF/views/layout/bottom.jsp" />
     </body>
   </html>
