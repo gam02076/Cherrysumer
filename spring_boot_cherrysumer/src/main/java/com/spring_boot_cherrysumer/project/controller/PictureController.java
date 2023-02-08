@@ -24,7 +24,7 @@ public class PictureController {
 	
 		@RequestMapping("/picture") 
 		public String picture() {
-			return "/picture/picture"; 
+			return "/picture/picture2"; 
 		}
 
 		
@@ -57,10 +57,12 @@ public class PictureController {
 		public String insert (PictureVO vo,
 							@RequestParam("upload")MultipartFile file, Model model) throws IOException{
 			
-			// String uploadPath="/Users/shimgyumin/java_class/cherrysumer_upload/";
+//			 String uploadPath="/Users/shimgyumin/java_class/cherrysumer_upload/";
 //	String uploadPath = "/Users/pizza/STS3/SpringWorkspace/cherrysumer_upload/";
-		String uploadPath = "C:/springWorkspace/upload/";
+String uploadPath = "C:/springWorkspace/upload/";
 		
+			 
+			 
 			String orgName=file.getOriginalFilename();
 			
 
@@ -78,7 +80,6 @@ public class PictureController {
 
 			vo.picimg = savedFileName;
 			
-		
 			
 			service.insert(vo);
 			
@@ -151,8 +152,6 @@ public class PictureController {
 //public String picture1() {
 //	return "/picture/register"; 
 //}				
-
-
 
 
 
