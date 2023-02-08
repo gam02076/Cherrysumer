@@ -9,12 +9,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="<c:url value='/css/picture/picture.css'/>" rel="stylesheet"
-	type="text/css" />
-<link href="<c:url value='/css/picture/list.css'/>" rel="stylesheet"
-	type="text/css" />
-<link href="<c:url value='/css/picture/modal.css'/>" rel="stylesheet"
-	type="text/css" />
+<link href="<c:url value='/css/picture/picture.css'/>" rel="stylesheet" type="text/css" />
+<link href="<c:url value='/css/picture/list.css'/>" rel="stylesheet" type="text/css" />
+<link href="<c:url value='/css/picture/modal.css'/>" rel="stylesheet" type="text/css" />
 
 
 <link href="<c:url value='/css/picture/menu.css'/>" rel="stylesheet"
@@ -22,14 +19,16 @@
 
 
 
-<link href="<c:url value='/css/picture/modal_register.css'/>"
-	rel="stylesheet" type="text/css" />
+<link href="<c:url value='/css/picture/modal_register.css'/>" rel="stylesheet" type="text/css" />
 	
 	
- <link rel="stylesheet" type="text/css" href="<c:url value='/css/artList.css' />"><!-- 모달 (Detail)  -->
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/artList.css' />"><!-- 모달 (Detail)  -->
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/header.css'/>">
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/bottom.css'/>">
 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" />
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/picture/button.css'/>">
 <title>목록리스트</title>
 </head>
 
@@ -39,38 +38,7 @@
 <c:import url="/WEB-INF/views/layout/top.jsp" />
 
 
-	<!-- 사이드바 시작 -->
-	<aside class="side-bar">
-		<div class="side-bar__status-ico">
-			<div></div>
-			<div></div>
-			<div></div>
-		</div>
-
-		<nav class="side-bar__menu-box-1">
-			<ul>
-				<li><a href="<c:url value='/picture/'/>"> <span> <i class="fas fa-home"></i>
-					</span> <span>HOME</span>
-				</a></li>
-				<li><a href="<c:url value='/picture/picture_list/'/>"> <span> <i class="fas fa-home"></i>
-					</span> <span>ART</span>
-				</a></li>
-				</li>
-				<li><a href="<c:url value='/picture/photo_list/'/>"> <span> <i class="fas fa-home"></i>
-					</span> <span>Photo</span>
-				</a></li>
-				</li>
-				</li>
-				<li style="border:none"><a class="register" style="font-size: x-large;">작품등록<i class="fas fa-home" ></i>
-					 
-				</a></li>
-
-
-
-
-			</ul>
-		</nav>
-	</aside>
+	
 
 
 		<form action="/picture/searchResult" method="post">
@@ -86,6 +54,7 @@
 	<div class="container">
 
 		<c:forEach var="pict" items="${photo}">
+		<c:if test="${pict.picType eq '1' }">
 			<div class="box" id="${pict.picNo}">
 				<input type="hidden" class="cardNO" value="${pict.picNo}">
 				<div class="img" value="${pict.picNo}">
@@ -119,6 +88,7 @@
 
 				</div>
 			</div>
+			</c:if>
 		</c:forEach>
 	</div>
 
@@ -207,34 +177,6 @@
 
 
 
-	<%-- <div class="main_grid_container02">
-
-
-
-			<c:forEach var="pict" items="${pic}">
-
-				<div class="card_list">
-					<input type="hidden" class="cardNO" value="${pict.picNo}">
-					<div class="item  item1">
-						<div class="image" value="${pict.picNo}">
-							<img src="<c:url value="/image/${pict.picimg}"/>" alt="img"
-								class="image" />
-						</div>
-
-						<div class="cont">
-							<strong class="card_title">${pict.picTitle}</strong>
-							<p class="card_price">가격:${pict.picPrice}</p>
-							<p class="card_price">작가: 심 규 민</p>
-							<a href="#" class="list_btn">구매하기</a>
-						</div>
-					</div>
-				</div>
-			</c:forEach>
-		</div>
-
-	</div> --%>
-
-
 
 
 <!-- 모달 창 -->
@@ -243,22 +185,29 @@
 		  </div>
 	  </div>
 
+<!-- 모달창 끝 -->
 
+<!-- 플로팅 버튼 -->
+
+ <div class="floating-button">
+  
+  <span class="move-guestBook">
+     <a class="guest-btn" href="<c:url value='/picture/photo_list/'/>"></a>
+  </span>
+  
+   <span class="move-myWebSite">
+      <a class="myWebSite-btn" href="<c:url value='/picture/picture_list/'/>"></a>
+	</span>
+<c:if test="${not empty sessionScope.sid }">
+	<span class="move-myWebSite">
+      <a class="myWebSite-btn2" href="<c:url value='/picture/registerform/'/>"></a>
+	</span>
+</c:if>
+</div>
 
 
 
 </body>
-
-
-
-
-
-
-
-
-
-
-
 
 
 

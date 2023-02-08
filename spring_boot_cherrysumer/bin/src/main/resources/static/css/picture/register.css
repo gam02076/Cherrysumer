@@ -5,9 +5,12 @@ body {
 	background-image: url(<c:url value='/js/picture/picture.js'/>);
 }
 
+
+
 .container {
     margin-left: 14%;
     margin-right: 14%;
+    margin-top: 5%; 
 	height: 600px;
 	border: 2px solid rgb(104, 103, 103);
 }

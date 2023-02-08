@@ -16,8 +16,11 @@
   		<result property="picimg"  column="picimg"  />
 		<result property="picauthor"  column="picauthor"  />
 		<result property="piccontent"  column="piccontent"  />
-		<result property="pictech"  column="pictech"  />
-	<result property="picTime"  column="picTime"  />
+		<result property="pictech"  column="pictech"  />	
+	
+	
+	
+
   	</resultMap>
   	
 
@@ -39,6 +42,11 @@
   		OR picauthor Like CONCAT('%',#{keyword},'%')
   		OR picauthor Like CONCAT('%',#{keyword},'%')
   	</select>
+  	
+  	
+  	
+  	
+  	
   	
   <!-- 댓글 삭제 -->
   	<!-- <delete id="Delete" parameterType="string">
