@@ -44,10 +44,10 @@ public class ExhibitionController {
 //	}
 
 	 //Ajax로 대표 이미지 1개 업로드
-	@RequestMapping("/exhibition_requestForm")
-	public String exhibition_requestForm() {
-		return "exhibition/exhibition_request";
-	}
+//	@RequestMapping("/exhibition_requestForm")
+//	public String exhibition_requestForm() {
+//		return "exhibition/exhibition_request";
+//	}
 	
 //	// upload 폴더에 이미지 파일 업로드
 //	@ResponseBody

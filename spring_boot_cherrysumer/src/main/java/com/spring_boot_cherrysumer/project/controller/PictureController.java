@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.UUID;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,6 +27,8 @@ public class PictureController {
 			return "/picture/picture"; 
 		}
 
+		
+		
 		@RequestMapping("/picture/picture_list/")
 	
 		public String pictureList(Model model) {
@@ -37,7 +41,7 @@ public class PictureController {
 		}
 			
 			
-			@RequestMapping("/picture/photo_list/")
+		@RequestMapping("/picture/photo_list/")
 			
 			public String photo_list(Model model) {
 			
@@ -53,10 +57,9 @@ public class PictureController {
 		public String insert (PictureVO vo,
 							@RequestParam("upload")MultipartFile file, Model model) throws IOException{
 			
-			/*
-			 * String uploadPath="/Users/shimgyumin/java_class/cherrysumer_upload/";
-			 *///////		String uploadPath = "/Users/pizza/STS3/SpringWorkspace/cherrysumer_upload/";
-		String uploadPath = "C:/springWorkspace/upload/";
+			 String uploadPath="/Users/shimgyumin/java_class/cherrysumer_upload/";
+//	String uploadPath = "/Users/pizza/STS3/SpringWorkspace/cherrysumer_upload/";
+//		String uploadPath = "C:/springWorkspace/upload/";
 		
 			String orgName=file.getOriginalFilename();
 			
@@ -85,7 +88,8 @@ public class PictureController {
 		@RequestMapping("/picture/registerform/") 
 		public String picture1() {
 			return "/picture/register"; 
-		}				
+		}		
+		
 		
 		@RequestMapping("/picture/searchResult")
 		public String Search (@RequestParam String keyword, Model model) {
@@ -95,12 +99,25 @@ public class PictureController {
 			
 			
 			return"picture/picture_listSearch";
+			
 		}
 		
 		
-	
+////		삭제
+//		@RequestMapping("/picture/Delete")
+//		public String Delete(@RequestParam String memId,
+//							@RequestParam String picNo,
+//							HttpSession session) {		
+//			if(memId == session.getAttribute(memId))
+//			{	
+//		service.Delete(picNo);
+//		}		
+//			return "";
+//		}
 
 }
+
+
 //
 //@RequestMapping("/register01")
 //public String insert (PictureVO vo,

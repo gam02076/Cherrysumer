@@ -27,12 +27,23 @@ public class PictureService implements IPictureService {
 		
 	}
 	
+	
+	// 키워드 검색
 	@Override
 	public ArrayList<PictureVO> Search (String keyword ) {
 	
 		return dao.Search(keyword);
 		
 	}
+	
+	
+////	삭제
+//	@Override
+//	public void Delete(String picNo) {
+//		
+//		dao.Delete(picNo);
+//		
+//	}
 	
  
 	

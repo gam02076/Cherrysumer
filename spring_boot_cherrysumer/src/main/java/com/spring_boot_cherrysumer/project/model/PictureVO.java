@@ -1,19 +1,24 @@
 package com.spring_boot_cherrysumer.project.model;
 
+
 import java.sql.Date;
+import java.sql.Timestamp;
+
 
 public class PictureVO {
 	public String memId ;
 	public String picTitle ;
 	public int picNo ;
-	public String picPrice ;
+	public int picPrice ;
 	public String picType ;
 	public String picSize ;
 	public String picimg ;
 	public String picauthor;
 	public String piccontent;
 	public String pictech;
-	public Date picTime;
+	public Timestamp picTime;
+	public Date pictime2;
+	
 	
 	
 	public String getMemId() {
@@ -34,10 +39,10 @@ public class PictureVO {
 	public void setPicNo(int picNo) {
 		this.picNo = picNo;
 	}
-	public String getPicPrice() {
+	public int getPicPrice() {
 		return picPrice;
 	}
-	public void setPicPrice(String picPrice) {
+	public void setPicPrice(int picPrice) {
 		this.picPrice = picPrice;
 	}
 	public String getPicType() {
@@ -76,12 +81,20 @@ public class PictureVO {
 	public void setPictech(String pictech) {
 		this.pictech = pictech;
 	}
-	public Date getPicTime() {
+	public Timestamp getPicTime() {
 		return picTime;
 	}
-	public void setPicTime(Date picTime) {
+	public void setPicTime(Timestamp picTime) {
 		this.picTime = picTime;
 	}
+	public Date getPictime2() {
+		return pictime2;
+	}
+	public void setPictime2(Date pictime2) {
+		this.pictime2 = pictime2;
+	}
+	
+	
 	
 	
 	

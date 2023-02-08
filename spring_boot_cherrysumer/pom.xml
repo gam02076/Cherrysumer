@@ -94,6 +94,21 @@
             <version>4.0.4.RELEASE</version>
         </dependency>
       <!-- WebSocket End-->
+      
+      <!-- 이메일 인증코드 -->
+      <!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+		<dependency>
+		    <groupId>javax.mail</groupId>
+		    <artifactId>mail</artifactId>
+		    <version>1.4.7</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context-support -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>4.0.4.RELEASE</version>
+		</dependency>
+		
    </dependencies>
 
    <build>

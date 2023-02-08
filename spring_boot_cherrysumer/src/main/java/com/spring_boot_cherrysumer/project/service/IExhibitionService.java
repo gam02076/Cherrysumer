@@ -8,4 +8,8 @@ public interface IExhibitionService {
 	
 	// 전시회 상세 출력에 필요한 메소드
 	public MemberVO getMemberInfo(String memId);
+	
+	
+	// 전시회 신청서에 회원 정보 상세 출력에 필요한 메소드
+	public MemberVO ExhRequest_MemberInfo(String memId);
 }

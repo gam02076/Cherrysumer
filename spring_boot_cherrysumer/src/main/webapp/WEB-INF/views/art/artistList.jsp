@@ -23,8 +23,8 @@
 	    	<div class="intro"> <h1>ARTIST</h1>
 	    	<hr>
 	    	<h3>소개</H3></div>
-	    	<button onclick="location.href='/exhibitionList'" class="intro2"> <h1>시 선 </h1>
-	    	<h3>전시회 보러 가기     ----></H3></button>
+	    	<!-- <button onclick="location.href='/exhibitionList'" class="intro2"> <h1>시 선 </h1>
+	    	<h3>전시회 보러 가기   </H3></button> -->
     	</div>
     	
 	    <c:forEach var="art" items="${artList }" >

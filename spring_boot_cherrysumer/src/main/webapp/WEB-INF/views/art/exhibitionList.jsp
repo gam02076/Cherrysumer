@@ -28,6 +28,11 @@
 							</div>
 						</div>
 					</section>
+					<div id="exArt">
+					<div class="exBestArt" style="background-image:url(/image/명화05.jpg); background-size:cover">
+					<%--  <img alt="" src="<c:url value='/image/명화05.jpg'/>"> --%>
+					</div>
+					</div>
 
 				<!-- Main -->
 				

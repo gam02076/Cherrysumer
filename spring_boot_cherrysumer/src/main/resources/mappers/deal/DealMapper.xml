@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  
+  
+
+<mapper namespace="com.spring_boot_cherrysumer.project.dao.IDealDAO">
+
+
+	<resultMap id="resultpic" type="com.spring_boot_cherrysumer.project.model.DealVO" >
+  		
+  		<result property="buyerNo"  column="buyerNo"  />
+  		<result property="buyerName"  column="buyerName"  />
+  		<result property="totalamount"  column="totalamount"  />
+  		<result property="buyerEmail"  column="buyerEmail"  />
+  		<result property="buyerHP"  column="buyerHP"  />
+  		<result property="buyerZipcode"  column="buyerZipcode"  />
+		<result property="buyeraddress1"  column="buyeraddress1"  />
+		<result property="buyeraddress2"  column="buyeraddress2"  />
+	
+	
+  	</resultMap>
+
+
+
+	<select id="DealCheck" parameterType="string"
+		resultType="com.spring_boot_cherrysumer.project.model.PictureVO">
+		select * from picture where picNo=#{picNo}
+	</select>
+	
+	
+	<select id="Dealinfo" parameterType="string"
+resultType="com.spring_boot_cherrysumer.project.model.MypageVO">
+SELECT * FROM member WHERE memId = #{memId}
+</select>
+
+
+
+<!-- 등록 -->
+ <insert id="insertdeal" parameterType="com.spring_boot_cherrysumer.project.model.DealVO">
+  		insert into buyer(buyerNo, buyerName,totalamount, buyerEmail, buyerHP,buyerZipcode,buyeraddress1,buyeraddress2)
+  		values (#{buyerNo},#{buyerName},#{totalamount},#{buyerEmail},#{buyerHP},#{buyerZipcode},#{buyeraddress1},#{buyeraddress2})
+ </insert>
+
+
+</mapper>

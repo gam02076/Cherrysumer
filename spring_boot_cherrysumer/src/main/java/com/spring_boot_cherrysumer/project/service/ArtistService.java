@@ -59,18 +59,10 @@ public class ArtistService implements IArtistDAO {
 		return dao.exList();
 	}
 
-	
-		/*
-		 * @Override public ArrayList<ArtistVO> ArtistAll() { return dao.ArtistAll(); }
-		 * 
-		 * @Override public ArrayList<ArtDetailVO> ArtList() { return dao.ArtList(); }
-		 * 
-		 * @Override public ArtDetailVO ArtDetail(String picNo) { return
-		 * dao.ArtDetail(picNo); }
-		 * 
-		 * @Override public MemberVO ArtName(String memId) { return dao.ArtName(memId);
-		 * }
-		 */
+	@Override
+	public void ArtUpdate(PictureVO vo) {
+		dao.ArtUpdate(vo);
+	}
 	 
 
 }

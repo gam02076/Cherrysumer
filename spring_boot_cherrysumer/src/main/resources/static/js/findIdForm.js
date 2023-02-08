@@ -19,7 +19,7 @@
  			dataType:"text",
  			success:function(result) {
  				if (result != "fail") {
- 					alert("ID : " + result);
+ 					alert("회원님의 ID는 '" + result + "' 입니다.");
  					location.href="/member/searchAfterLoginForm?memId=" + result;
  				} else {
  					alert("ID 찾기를 실패했습니다 이름과 이메일을 확인해주세요");
@@ -33,6 +33,11 @@
  				// alert("작업 완료");
  			}
  		}); // ajax 종료
+ 		
  	}); // submit 종료
+ 	
  }); 
+ 
+ 
+ 
  

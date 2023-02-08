@@ -10,7 +10,8 @@
    </head>
     <body>
     
-    
+  <form id="register" action="/dealcheck" method="post">  
+  <input type="hidden" name="picNo" value="${art.picNo}">
     <div class="product">
         <div class="product_image">
             <img src="<c:url value='/image/${art.picimg }'/>" class="image">
@@ -24,19 +25,47 @@
                     <td class="underline">${art.picauthor }</td>
                 </tr>
                 <tr>
-                    <th>제작년도</th>
-                    <td class="underline"></td>
+                    <th>소재/기법</th>
+                    <td class="underline">${art.pictech }</td>
                     <th>가격</th>
-                    <td class="underline">${art.picPrice }</td>
+                    <td class="underline">${art.picPrice }원</td>
                 </tr>
+                <tr>
+                    <th>사이즈</th>
+                    <td class="underline">${art.picSize }</td>
+                    <th>등록일자</th>
+                    <td class="underline">${art.pictime2 }</td>
+                </tr>
+                
             </table>
             <div class="underline">작품소개</div>
-            <div id="artInfo">작품 소개입니다.</div>
+            <div id="artInfo">${art.piccontent }</div>
             
-            <div><a href="#" class="myButton">구매하기</a></div>
+            <c:if test="${empty sessionScope.sid }">
+				<div><botton><a class="" href="/member/login"> 로그인 후 구매하기 </a></botton> </div>
+			</c:if>
+            
+          
+         
+         <!--    <div><a class="myButton">구매하기</a></div> -->
+         
+			<c:if test="${not empty sessionScope.sid }">
+				<div><button type="submit" value="등록" class="myButton">구매하기</button></div>
+			</c:if>	 
+         
+         
+         
+         
+         
+         
         </div>
     </div>
 		    
-		  
+		  </form>
     </body>
+    
+    <script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
+	<script src="<c:url value='/js/deal/deal.js'/>"></script>
+    
+    
   </html>

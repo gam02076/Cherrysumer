@@ -24,6 +24,18 @@ body {
     object-fit: scale-down;
 }
 
+.waterMark{
+	position: absolute;
+    height: 100%;
+    width: 100%;
+    color: #ffffff5e;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 60px;
+    margin: 0;
+}
+
 #productInfo{
 	color:white
 	

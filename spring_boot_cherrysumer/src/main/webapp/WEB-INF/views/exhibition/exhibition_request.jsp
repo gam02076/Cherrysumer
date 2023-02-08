@@ -34,7 +34,7 @@
 					</tr>
 					<tr>
 						<td width="150" height="60" class="item">작가 성명</td>
-						<td width="220" colspan="4"> ${memVo.memName}  </td>
+						<td width="220" colspan="4"> ${request_memVo.memName}  </td>
 					</tr>
 					<tr>
 						<td width="80" height="60" class="item"><label for="nickName">활동명</label></td>
@@ -42,11 +42,11 @@
 					</tr>
 					<tr>
 						<td width="80" height="60" class="item">연락처</td>
-						<td colspan="3">${memVo.memHP}</td>
+						<td colspan="3">${request_memVo.memHP}</td>
 					</tr>
 					<tr>
 						<td height="60" class="item">E-mail</td>
-						<td colspan="3">${memVo.memEmail}</td>
+						<td colspan="3">${request_memVo.memEmail}</td>
 					</tr>
 					<tr><td colspan="4" ></td></tr>
 					<tr>

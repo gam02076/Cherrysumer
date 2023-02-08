@@ -18,7 +18,7 @@ public interface IArtistDAO {
 	  
 	  public ArrayList<ArtVO> exList(); // 그림 아티스트 ID
 	  
-	  
+	  public void ArtUpdate(PictureVO vo); // 내 그럼 정보 업데이트
 	  
 	 
 	
