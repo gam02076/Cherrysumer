@@ -5,6 +5,15 @@ body{
 body::-webkit-scrollbar {
     display: none;
 }
+
+ul{
+	list-style:none;  /* type 없음 */
+	
+}
+a{
+	text-decoration-line: none;
+	color:black;
+}
 .header{
     position:fixed;
     left:50%;
@@ -24,6 +33,7 @@ body::-webkit-scrollbar {
 }
 
 .logo{
+	position: fixed;
     width: 140px;
     z-index: 20;
     transform:translateY(10%);
@@ -46,6 +56,7 @@ body::-webkit-scrollbar {
 .menuList{
 	text-align: right;
     margin-top: 10px;
+        height: 50px;
 }
 
 .menuList a{
@@ -74,7 +85,7 @@ body::-webkit-scrollbar {
     width:30px;
     float:right;
 }
-header a{
+.menuList li, .header a{
     text-decoration-line: none;
     /* font-family: 'Noto Serif KR', serif; */
     font-family: 'Titillium Web', sans-serif;
@@ -87,3 +98,74 @@ header a{
     position: relative;
 }
 
+/***********  MAIN MENU *****************/
+#mainMenuBox {
+	/* width:1280px; */
+	height:35px;
+}
+
+#mainMenuBox ul {
+	margin:0;
+	/* position: absolute; */
+}
+
+#mainMenuBox ul li{
+	    float: right;
+    line-height: 30px;
+    /* text-align: center; */
+    /* width: 120px; */
+    margin-right: 40px;
+}
+
+#mainMenuBox ul li a{
+	text-decoration:none; /* <a> 태그 밑줄 없애기 */
+	color:black;
+	font-size:14px;
+	    margin: 0;
+}
+
+#mainMenuBox ul li a:hover{	
+	color:red;	
+}
+
+/***********  SUB MENU *****************/
+
+#subMenuBox {
+	right: 130px;
+	background-color:#ffffff;
+	z-index:10; /* 스크롤 시 위에 오도록 */
+	text-align:center;
+	position:absolute;
+	padding-bottom:0;
+	visibility:hidden; /* 시작 시 sub 메뉴 항목 숨김 */
+}
+.subMenuItem ul {
+	padding: 0;
+   /*  margin: 0; */
+}
+.subMenuItem ul li {
+	height: 35px; 
+	line-height:35px;
+}
+
+.subMenuItem ul li a {
+	color:#333333;
+	text-decoration:none;
+}
+
+/* 위 버튼  */
+#upBtnBox{
+	position: fixed;
+	bottom:10%;
+	right:10%;
+    z-index: 11;
+}
+#upBtn{
+	width:45px;
+	height:45px;
+	color:black;
+	background-color: #dbf0e9;
+	border-radius:50%;
+	border:none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}

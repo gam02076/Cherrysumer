@@ -1,21 +1,17 @@
 package com.spring_boot_cherrysumer.project.model;
 
 import java.util.Date;
-
 import org.springframework.format.annotation.DateTimeFormat;
 
-import java.util.Date;
-import org.springframework.format.annotation.DateTimeFormat;
+public class Exhibition2VO {
 
-public class ExhibitionVO {
 	private String exhNo;
 	private String exhTitle_eng;
 	private String exhTitle_kr;
 	private String exhNickname;
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date exhStartDate;
-	@DateTimeFormat(pattern="yyyy-MM-dd")
-	private Date exhEndDate;
+	private String exhEndDate;
 	private String exhSummary;
 	private String exhInterview1;
 	private String exhInterview2;
@@ -23,9 +19,16 @@ public class ExhibitionVO {
 	private String exhClosingWords;
 	private String exhConfirm;
 	private String memId;
-	
-	
-	// getter + setter
+	private String artNo;
+	private String artImg;
+    private String artName_kr;
+    private String artName_eng;
+    private int artPrice;
+	private int artDate;
+	private String artSize;
+	private String artExplain;
+	private String artMain;
+    private String ctgId;
 	public String getExhNo() {
 		return exhNo;
 	}
@@ -56,10 +59,10 @@ public class ExhibitionVO {
 	public void setExhStartDate(Date exhStartDate) {
 		this.exhStartDate = exhStartDate;
 	}
-	public Date getExhEndDate() {
+	public String getExhEndDate() {
 		return exhEndDate;
 	}
-	public void setExhEndDate(Date exhEndDate) {
+	public void setExhEndDate(String exhEndDate) {
 		this.exhEndDate = exhEndDate;
 	}
 	public String getExhSummary() {
@@ -104,6 +107,66 @@ public class ExhibitionVO {
 	public void setMemId(String memId) {
 		this.memId = memId;
 	}
-	
-	
+	public String getArtNo() {
+		return artNo;
+	}
+	public void setArtNo(String artNo) {
+		this.artNo = artNo;
+	}
+	public String getArtImg() {
+		return artImg;
+	}
+	public void setArtImg(String artImg) {
+		this.artImg = artImg;
+	}
+	public String getArtName_kr() {
+		return artName_kr;
+	}
+	public void setArtName_kr(String artName_kr) {
+		this.artName_kr = artName_kr;
+	}
+	public String getArtName_eng() {
+		return artName_eng;
+	}
+	public void setArtName_eng(String artName_eng) {
+		this.artName_eng = artName_eng;
+	}
+	public int getArtPrice() {
+		return artPrice;
+	}
+	public void setArtPrice(int artPrice) {
+		this.artPrice = artPrice;
+	}
+	public int getArtDate() {
+		return artDate;
+	}
+	public void setArtDate(int artDate) {
+		this.artDate = artDate;
+	}
+	public String getArtSize() {
+		return artSize;
+	}
+	public void setArtSize(String artSize) {
+		this.artSize = artSize;
+	}
+	public String getArtExplain() {
+		return artExplain;
+	}
+	public void setArtExplain(String artExplain) {
+		this.artExplain = artExplain;
+	}
+	public String getArtMain() {
+		return artMain;
+	}
+	public void setArtMain(String artMain) {
+		this.artMain = artMain;
+	}
+	public String getCtgId() {
+		return ctgId;
+	}
+	public void setCtgId(String ctgId) {
+		this.ctgId = ctgId;
+	}
+    
+    
 }
