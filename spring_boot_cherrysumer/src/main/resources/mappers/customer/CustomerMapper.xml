@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+    <mapper namespace="com.spring_boot_cherrysumer.project.dao.ICustomerDAO">
+  	<resultMap id="cusResult" type="com.spring_boot_cherrysumer.project.model.CustomerVO" >
+  		<result property="cusNo"  column="cusNo"  />
+  		<result property="custitle"  column="custitle"  />
+  		<result property="cusdate"  column="cusdate"  />
+  		<result property="custext"  column="custext"  />
+  		<result property="cuspublic"  column="cuspublic"  />
+  		<result property="memId"  column="memId"  />
+  	</resultMap>
+  	<!-- 전체게시판조회 -->
+  	  <select id="CustomerAll" resultMap="cusResult">
+  		SELECT * FROM customer ORDER BY cusNo
+  </select>
+  <insert id="insertCustomer" parameterType="com.spring_boot_cherrysumer.project.model.CustomerVO">
+  INSERT INTO customer (cusNo, custitle, cusdate, custext, cuspublic, memId, cusabc, cus)
+  		VALUES (#{cusNo}, #{custitle}, #{cusdate}, #{custext}, #{cuspublic}, #{memId}, #{cusabc}, #{cus})
+  </insert>
+  	<select id="detailCustomer" parameterType="string" 
+  	resultType="com.spring_boot_cherrysumer.project.model.CustomerVO">
+  	select * from customer where cusNo=#{cusNo}
+  	</select>
+  	<delete id="deleteCustomer" parameterType="string">
+  	delete from customer where cusNo=#{cusNo}
+  	</delete>
+
+  	</mapper>

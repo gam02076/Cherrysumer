@@ -1,0 +1,10 @@
+@charset "UTF-8";
+#warp{
+	width:100%;
+	height:100%
+}
+	
+textarea{
+	width:500px;
+	height:500px;
+}
