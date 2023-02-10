@@ -21,7 +21,8 @@ public interface IExhibitionDAO {
 	// 신청서
 	// 관리자페이지(신청완료)에 신청 정보 저장
 	public void insertExhRequest(ExhibitionVO Evo);
-	public void insertArtRequest(ArtVO Avo);
+	// public void insertArtRequest(ArtVO Avo); 작품을 여러 개 보내야하는데, 이건 하나만 된다.
+	public void insertArtRequestArt(ArtVO Avo); 
 	
 	
 	// 전시회 신청서에 회원 정보 상세 출력에 필요한 메소드

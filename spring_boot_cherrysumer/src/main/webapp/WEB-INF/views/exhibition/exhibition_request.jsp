@@ -13,6 +13,7 @@
 <%-- 		<script src="<c:url value='/js/imageFileUpload.js'/>"></script> --%> <%--등록버튼으로 올리는 방법. --%>
 		<script src="<c:url value='/js/imageUpload.js'/>"></script>
 		<script src="<c:url value='/js/exhibition_checkBox.js'/>"></script>
+		<script src="<c:url value='/js/exhibition_request.js'/>"></script>
 		<style>
   			@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 		</style>
@@ -134,17 +135,17 @@
 								</div>
 							</td>
 						</tr> -->
-						<c:forEach varStatus="status" begin="1" end="13">
+						<c:forEach varStatus="status" begin="1" end="3">
 							<tr>
 								<td><center>대표 작품 여부</center></td>							
 								<td>작품명(한글)</td>
 								<td><input type="text" name="artName_kr" id="exhibitName_kr" placeholder="Name of an Exhibit (Kr)"></td>
 							</tr>
 							<tr>
-								<td><input type="checkbox" name="artMain" value='1' id="artMain" onclick='checkOnlyOne(this)'/>
-									<input type="hidden" name="artMain" value='0' id="artMain_hidden" /></td>
+								<td><input type="checkbox" name="artMain" value='1' id="artMain"  onclick='checkOnlyOne(this)'/>
+									<input type="hidden" name="artMain"  value='0' id="artMain_hidden" /></td>
 								<td>작품명(영문)</td>
-								<td><input type="text" name="artName_eng" id="exhibitName_eng" placeholder="Name of an Exhibit (eng)"></td>
+								<td><input type="text" name="artName_eng" id="exhibitName_eng"  placeholder="Name of an Exhibit (eng)"></td>
 							</tr>
 							<tr>
 								<td rowspan="5"><input type="file" id="upload-image1" class="uploadImage" name="upload-image" accept="image/*" style="display:none;">
@@ -171,7 +172,7 @@
 							<tr>				
 								<td>작품 유형<br></td>
 								<td>Type of work  :  
-									<select name="exhibitType">
+									<select name="ctgId">
 										<option selected value="1">유화</option>
 										<option value="2">수채화</option>									
 										<option value="3">사진</option>
