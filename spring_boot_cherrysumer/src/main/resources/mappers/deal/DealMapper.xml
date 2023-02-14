@@ -19,6 +19,8 @@
   		<result property="buyerZipcode"  column="buyerZipcode"  />
 		<result property="buyeraddress1"  column="buyeraddress1"  />
 		<result property="buyeraddress2"  column="buyeraddress2"  />
+		<result property="picNo"  column="picNo"  />
+		<result property="memId"  column="memId"  />
 	
 	
   	</resultMap>
@@ -40,8 +42,8 @@ SELECT * FROM member WHERE memId = #{memId}
 
 <!-- 등록 -->
  <insert id="insertdeal" parameterType="com.spring_boot_cherrysumer.project.model.DealVO">
-  		insert into buyer(buyerNo, buyerName,totalamount, buyerEmail, buyerHP,buyerZipcode,buyeraddress1,buyeraddress2)
-  		values (#{buyerNo},#{buyerName},#{totalamount},#{buyerEmail},#{buyerHP},#{buyerZipcode},#{buyeraddress1},#{buyeraddress2})
+  		insert into buyer(buyerNo, buyerName,totalamount, buyerEmail, buyerHP,buyerZipcode,buyeraddress1,buyeraddress2,picNo,memId)
+  		values (#{buyerNo},#{buyerName},#{totalamount},#{buyerEmail},#{buyerHP},#{buyerZipcode},#{buyeraddress1},#{buyeraddress2},#{picNo},#{memId})
  </insert>
 
 

@@ -42,7 +42,7 @@
             <div id="artInfo">${art.piccontent }</div>
             
             <c:if test="${empty sessionScope.sid }">
-				<div><botton><a class="" href="/member/login"> 로그인 후 구매하기 </a></botton> </div>
+				<div><botton><a class="myButton" href="/member/login"> 로그인 후 구매하기 </a></botton> </div>
 			</c:if>
             
           

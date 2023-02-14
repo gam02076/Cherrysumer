@@ -10,6 +10,8 @@ package com.spring_boot_cherrysumer.project.model;
 		public String buyerZipcode ;
 		public String buyeraddress1;
 		public String buyeraddress2;
+		public String picNo;
+		public String memId;
 		public String getBuyerNo() {
 			return buyerNo;
 		}
@@ -40,11 +42,11 @@ package com.spring_boot_cherrysumer.project.model;
 		public void setBuyerHP(String buyerHP) {
 			this.buyerHP = buyerHP;
 		}
-		public String getMemZipcode() {
+		public String getBuyerZipcode() {
 			return buyerZipcode;
 		}
-		public void setMemZipcode(String memZipcode) {
-			this.buyerZipcode = memZipcode;
+		public void setBuyerZipcode(String buyerZipcode) {
+			this.buyerZipcode = buyerZipcode;
 		}
 		public String getBuyeraddress1() {
 			return buyeraddress1;
@@ -58,6 +60,19 @@ package com.spring_boot_cherrysumer.project.model;
 		public void setBuyeraddress2(String buyeraddress2) {
 			this.buyeraddress2 = buyeraddress2;
 		}
+		public String getPicNo() {
+			return picNo;
+		}
+		public void setPicNo(String picNo) {
+			this.picNo = picNo;
+		}
+		public String getMemId() {
+			return memId;
+		}
+		public void setMemId(String memId) {
+			this.memId = memId;
+		}
+		
 		
 		
 

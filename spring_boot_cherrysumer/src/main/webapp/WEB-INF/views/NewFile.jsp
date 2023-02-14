@@ -62,6 +62,23 @@ background-color:white;
 
 <body>
 <c:import url = "/WEB-INF/views/layout/top.jsp"/>
+
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/picture/main.css' />">
+<script src="<c:url value='/js/picture/main.js' />"></script> 
+
+<!-- 커서 --><!-- 커서 --><!-- 커서 --><!-- 커서 --><!-- 커서 -->
+
+<div class="main_body">
+
+<div class="cursor">
+
+</div>
+
+
+ </div>
+
+<!-- 커서 --><!-- 커서 --><!-- 커서 --><!-- 커서 --><!-- 커서 --><!-- 커서 -->
+
 <div id="warp">
 <div id="a"><div class="wrapper">
     <div class="typing-demo">
