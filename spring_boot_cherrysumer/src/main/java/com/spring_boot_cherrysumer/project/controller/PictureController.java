@@ -103,7 +103,10 @@ String uploadPath = "C:/springWorkspace/upload/";
 			
 		}
 		
-		
+		@RequestMapping("/main") 
+		public String main() {
+			return "/picture/main"; 
+		}
 ////		삭제
 //		@RequestMapping("/picture/Delete")
 //		public String Delete(@RequestParam String memId,

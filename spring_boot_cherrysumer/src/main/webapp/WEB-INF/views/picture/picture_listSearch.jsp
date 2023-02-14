@@ -9,24 +9,15 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="<c:url value='/css/picture/picture.css'/>" rel="stylesheet" type="text/css" />
-<link href="<c:url value='/css/picture/list.css'/>" rel="stylesheet" type="text/css" />
-<link href="<c:url value='/css/picture/modal.css'/>" rel="stylesheet" type="text/css" />
-<link href="<c:url value='/css/picture/menu.css'/>" rel="stylesheet" type="text/css" />
-<link href="<c:url value='/css/picture/modal_register.css'/>" rel="stylesheet" type="text/css" />
-	
-	
-<link rel="stylesheet" type="text/css" href="<c:url value='/css/artList.css' />"><!-- 모달 (Detail)  -->
-<link rel="stylesheet" type="text/css" href="<c:url value='/css/header.css'/>">
-<link rel="stylesheet" type="text/css" href="<c:url value='/css/bottom.css'/>">
 
 <title>목록리스트</title>
 </head>
 
 
-<body>
-
+<body class="listbody">
+<c:import url="/WEB-INF/views/layout/head_sim.jsp" />
 <c:import url="/WEB-INF/views/layout/top.jsp" />
+
 
 	
 
@@ -41,7 +32,7 @@
 	</div>
 
 
-<div class="container">
+<div class="list_container">
 
 		<c:forEach var="pict" items="${searchList}">
 			<div class="box">
@@ -76,41 +67,6 @@
 			</div>
 		</c:forEach>
 </div>
-
-
-
-
-
-		<%-- <div class="main_grid_container02">
-
-
-
-			<c:forEach var="pict" items="${pic}">
-
-				<div class="card_list">
-					<input type="hidden" class="cardNO" value="${pict.picNo}">
-					<div class="item  item1">
-						<div class="image" value="${pict.picNo}">
-							<img src="<c:url value="/image/${pict.picimg}"/>" alt="img"
-								class="image" />
-						</div>
-
-						<div class="cont">
-							<strong class="card_title">${pict.picTitle}</strong>
-							<p class="card_price">가격:${pict.picPrice}</p>
-							<p class="card_price">작가: 심 규 민</p>
-							<a href="#" class="list_btn">구매하기</a>
-						</div>
-					</div>
-				</div>
-			</c:forEach>
-		</div>
-
-	</div> --%>
-
-
-
-
 
 
 
@@ -232,26 +188,5 @@
 
 </body>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
-<script src="<c:url value='/js/picture/picture.js'/>"></script>
-<script src="<c:url value='/js/picture/menu.js'/>"></script>
-<script src="<c:url value='/js/picture/modal.js'/>"></script>
-<script src="<c:url value='/js/picture/file.js'/>"></script>
 
 </html>
