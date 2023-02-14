@@ -12,19 +12,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-<script src="https://kit.fontawesome.com/bb34e32cb3.js"crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="<c:url value='/css/picture/picture2.css'/>">
-
-
-<link rel="stylesheet" type="text/css" href="<c:url value='/css/header.css'/>">
-<link rel="stylesheet" type="text/css" href="<c:url value='/css/bottom.css'/>">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" />
-<link rel="stylesheet" type="text/css" href="<c:url value='/css/picture/button.css'/>">
-
-
-
-
 
 <title>사진,그림 판매 목록</title>
 </head>
@@ -32,6 +19,7 @@
 
 <body class="container">
 
+<c:import url="/WEB-INF/views/layout/head_sim.jsp" />
 <c:import url="/WEB-INF/views/layout/top.jsp" />
 
 
@@ -69,6 +57,5 @@
  
  
  
-<script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
 
 </html>

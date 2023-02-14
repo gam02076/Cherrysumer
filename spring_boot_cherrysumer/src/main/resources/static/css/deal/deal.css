@@ -22,22 +22,65 @@
 	
 }
 
-.buyerinfo{
-	display:grid;
-	grid-template-row: repeat(10,1fr);
-	grid-template-columns: repeat(5,-1fr);
-
-}
-
 .infotitle{
 	    text-align: center;
+	        font-size: xx-large;
 }
 
 .buyimginfo{
 	display:flex;
 }
 .conteiner{
-	    margin: 0 5%;
+	   
     padding-top: 30px;
 }
+
+
+.buyerinfo_list{
+	display: flex;
+}
+.meminfo{
+	display: inline-flex;
+    width: 140px;
+    padding: 6px 10px;
+    
+    font-weight: 700;
+}
+#searchpost{
+	height: 60px;
+    width: 56px;
+    position: relative;
+    left: 5px;
+}
+
+.infobox{
+	    display: flex;
+	        position: relative;
+    left: 17.8%;
+	    
+}
+.buyerbox{
+	border-left: 1px solid;
+}
+
+.buyerbox1{
+	margin-right: 5%;
+}
+
+.tb th{
+	font-size: 25px;
+	    padding-right: 25px;
+}
+#btn-kakaopay{
+width: 18%;
+    height: 52px;
+
+}
+.total{
+	text-align: center;
+}
+.buybtn{
+	text-align: center;
+}
+
 }

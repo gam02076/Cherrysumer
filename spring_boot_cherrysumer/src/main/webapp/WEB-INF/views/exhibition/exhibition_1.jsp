@@ -11,7 +11,7 @@
 	    <script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
 		<script src="<c:url value='/js/exhibition_1.js'/>"></script>
 	    <style> 
-	        @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Kaisei+Tokumin:wght@500&family=Noto+Serif+KR&family=Sofia+Sans+Semi+Condensed&family=Titillium+Web&display=swap'); 
+	        @import url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Kaisei+Tokumin:wght@500&family=Noto+Serif+KR&family=Sofia+Sans+Semi+Condensed&family=Titillium+Web&display=swap');  	
 	    </style>
 	</head>
 	
@@ -127,6 +127,28 @@
 	                작가 보러 가기
 	            </div>
 	        </div>
+	        <table border="1">
+					<tr>
+						<th>상품번호</th>
+						<th>상품명</th>
+						<th>가격</th>
+						<th>제조사</th>
+						<th>재고</th>
+						<th>제조일</th>
+						<th>사진</th>
+					</tr>
+					<c:forEach var="prd" items="${prdList }">
+			            <tr>
+			               <td><a href="<c:url value='/product/detailViewProduct/${prd.prdNo}'/>" >${prd.prdNo }</a></td>
+			               <td>${prd.prdName }</td>
+			               <td>${prd.prdPrice }</td>
+			               <td>${prd.prdCompany }</td>
+			               <td>${prd.prdStock }</td>			               
+			               <td><fmt:formatDate value="${prd.prdDate}"  pattern="yyyy-MM-dd" /></td>
+			               <td><img src="<c:url value='/images/${prd.prdNo}.PNG' />" width="30" height="20"></td>			               
+			            </tr>
+			         </c:forEach>
+				</table><br><br>
 	    </section>  
 	
 	</body>

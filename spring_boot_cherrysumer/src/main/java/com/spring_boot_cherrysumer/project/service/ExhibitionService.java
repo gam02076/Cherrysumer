@@ -1,11 +1,17 @@
 package com.spring_boot_cherrysumer.project.service;
+import java.util.ArrayList;
+
+import javax.servlet.http.HttpSession;
+
 //
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.spring_boot_cherrysumer.project.dao.IExhibitionDAO;
+import com.spring_boot_cherrysumer.project.model.ArtVO;
 import com.spring_boot_cherrysumer.project.model.ExhibitionVO;
+import com.spring_boot_cherrysumer.project.model.Exhibition_requestVO;
 import com.spring_boot_cherrysumer.project.model.MemberVO;
 
 @Service
@@ -25,8 +31,53 @@ public class ExhibitionService implements IExhibitionService {
 	}
 
 	@Override
+	public ArrayList<ArtVO> getArtInfo(String memId) {
+		return dao.getArtInfo(memId);
+	}
+
+	@Override
 	public MemberVO ExhRequest_MemberInfo(String memId) {
 		return dao.ExhRequest_MemberInfo(memId);
 	}
-}
+
+//	@Override
+//	public void insertExhRequest(ExhibitionVO Evo, ArtVO Avo) {
+//		dao.insertExhRequest(Evo);
+//		dao.insertArtRequest(Avo);
+//		
+//	}
+
+//	@Override
+//	public void insertExhRequest(ExhibitionVO Evo, HashMap<String, Object> map) {
+//		dao.insertExhRequest(Evo);
+//		dao.insertArtRequest(map);
+//	}
+
+	@Override
+	public void insertExhRequest(ExhibitionVO Evo) {
+		// 전시회 정보 저장
+		dao.insertExhRequest(Evo);				
+	}
+	
+	@Override
+	public void insertExhRequestArt(ArtVO Avo) {			
+			dao.insertArtRequestArt(Avo);
+	}
+
+
+
+
+//	@Override
+//	public void insertExhInfo(ExhibitionVO ExhibitionVO) { // exhibitionVO 받아옴.
+//		// (1) 신청 정보 저장 (Exhibition 테이블)
+//		dao.insertExhInfo(ExhibitionVO);
+//	}
 //
+//	@Override
+//	public void insertArtInfo(ArtVO ArtVO) {
+//		// (2) 신청 작품 내용 저장 (ArtVO 테이블)
+//		dao.insertArtInfo(ArtVO);	
+//	}
+
+
+}

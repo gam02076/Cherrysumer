@@ -4,9 +4,6 @@ import java.util.Date;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import java.util.Date;
-import org.springframework.format.annotation.DateTimeFormat;
-
 public class ExhibitionVO {
 	private String exhNo;
 	private String exhTitle_eng;

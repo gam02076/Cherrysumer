@@ -22,7 +22,7 @@ body {
 .background.first{
     position: relative;
     /* background-image: linear-gradient(rgba(0,0,0,0.6, rgba(0,0,0,0.6)),url("/image/exh_bg_header.jpg")); */
-    background-image: url(/image/exh_bg_header.jpg);
+    /* background-image: url(/image/exh_bg_header.jpg); */
     opacity: 60%;
 }
 

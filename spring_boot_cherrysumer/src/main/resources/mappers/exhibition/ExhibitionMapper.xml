@@ -20,6 +20,33 @@
   		WHERE memId=#{memId}
   	</select>
   	
+  <!-- 전시회에 출력할 작품 정보 반환 -->
+  	<select id="getArtInfo" parameterType="string"
+  			resultType="com.spring_boot_cherrysumer.project.model.ArtVO">
+  		SELECT artImg
+  		FROM art
+  		WHERE memId=#{memId}
+  	</select>  	
+  	
+
+
+<!-- 전시회 신청  -->
+	<!-- 전시회 신청 정보 (전시회테이블, 작품테이블) 저장 (다중 테이블 INSERT하려 했는데 안됨.) -->
+	<!--  파라미터는 하나만 되서, 다중 안됨. -->
+	<insert id="insertExhRequest" parameterType="com.spring_boot_cherrysumer.project.model.ExhibitionVO">
+		INSERT
+		INTO exhibition (exhNo, exhTitle_eng, exhTitle_kr, exhNickname, exhStartDate, exhEndDate, exhSummary,
+								exhInterview1, exhInterview2, exhInterview3, exhClosingWords,memId)
+		VALUES (#{exhNo}, #{exhTitle_eng}, #{exhTitle_kr}, #{exhNickname}, #{exhStartDate}, #{exhEndDate}, #{exhSummary},
+								#{exhInterview1}, #{exhInterview2}, #{exhInterview3}, #{exhClosingWords}, #{memId})
+	</insert>
+		
+	<insert id="insertArtRequest" parameterType="com.spring_boot_cherrysumer.project.model.ArtVO">
+		INTO art (artNo, artImg, artName_kr, artName_eng, artPrice, artDate, artSize, artExplain, artMain, memId ,ctgId)
+		VALUES (#{artNo}, #{artImg}, #{artName_kr}, #{artName_eng}, #{artPrice}, #{artDate}, #{artSize}, #{artExplain}, 
+				#{artMain}, #{memId}, #{ctgId})
+	</insert>
+	
   	<!-- 전시회 신청서에 출력할 회원 정보 반환 -->
   	<select id="ExhRequest_MemberInfo" parameterType="string"
   			resultType="com.spring_boot_cherrysumer.project.model.MemberVO">
@@ -29,4 +56,17 @@
 	</select>
 	
 	
+	  <!--  작품 등록 -->
+  <insert id="insertArtRequestArt" parameterType="com.spring_boot_cherrysumer.project.model.ArtVO">
+  		INSERT INTO art (artImg, artName_kr, artName_eng, artPrice, artDate, artSize, artExplain, artMain, memId, ctgId)
+  		VALUES (#{artImg}, #{artName_kr}, #{artName_eng}, #{artPrice}, #{artDate}, #{artSize}, #{artExplain}, #{artMain}, #{memId}, #{ctgId})
+  </insert>
+
+
+
+	<!-- 신청된 전시회 전체 조회 -->
+<!-- 	<select id="listAllRequest" resultMap="exhResult"> IExhibitionDAO랑 매핑
+	SELECT * FROM Exhibition ORDER BY exhNO exhNo로 정렬.(ORDER BY)
+	</select>  -->
+
   </mapper>

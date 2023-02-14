@@ -2,11 +2,10 @@ body{
     margin: 0;
 }
 #wrapper{
-	/* width:100vw; */
-
-	height:2300px;
-
+	background-image: url(/image/exh_museum.jpg);
+	background-attachment: fixed;
 }
+
 .logoForm{
 	max-width:80%;
 	margin:0 auto;
@@ -18,8 +17,8 @@ body{
 }
 
 .logoBox{
-    height: 400px;
-    background-color: blueviolet;
+    height: 350px;
+    /* background-color: blueviolet; */
     display: flex;
 }
 .logoBox img{
@@ -36,15 +35,10 @@ body{
     left:20%;
 }
 
-/* .requestForm{
-    background-color: rgb(240, 240, 240);
-} */
-/* #tableBox{
-	background-color:red;
-} */
 table{
     margin:0 auto;
     margin-top: 50px;
+    background-color:rgba(245,245,245,0.9)
 }
 th, td{
 	padding: 10px; /* 테두리와 내용 사이 간격*/
@@ -56,33 +50,35 @@ input{
 	border-bottom: 2px solid silver;
 }
 
-#imageBox{
+.imageView{
+	background-image: url(/image/upload_Icon.png);
+	background-size: 40px;
+	background-position: center;
+	background-repeat: no-repeat;
 	object-fit:cover;
-	height: 740px;
-	line-height:740px;
-	width:660px;
-	line-width:660px;
+	height: 250px;
+	line-height:250px;
+	width:250px;
+	line-width:250px;
 	border:3px solid rgb(240,240,240);
 	text-align:center;
 	display:flex;
 	justify-content: center;
 	border-radius:15px;
+	overflow:hidden;
 }
-#imageBox img{
+.imageView img{
 	max-width:660px;
 	max-height: 740px;
 	object-fit:contain;
 }
 
-#multiListBox{
-	height:130px;
-	margin:0 auto;
-}
 #listBox{
 	width:190px;
 }
 #imageFileForm{
-	width: 200px;
+	width: 100px;
+	background-color: red;
 }
 
  textarea {

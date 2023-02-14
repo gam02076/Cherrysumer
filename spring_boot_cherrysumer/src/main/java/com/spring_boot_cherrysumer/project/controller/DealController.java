@@ -59,8 +59,9 @@ public class DealController {
 		
 		
 		service.insertdeal(vo);
+
 		
-		return "redirect:/picture/picture_list/"; 
+		return "/picture/picture2"; 
 		
 	}
 	

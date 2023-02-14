@@ -1,9 +1,6 @@
 @charset "UTF-8";
 
-body {
-	margin: 0;
-	background-image: url(<c:url value='/js/picture/picture.js'/>);
-}
+
 
 .container {
     margin-left: 14%;
@@ -37,10 +34,11 @@ body {
 	object-fit: scale-down;
 }
 
-table {
+#register_table {
 	min-width: 500px;
-	border-spacing: 20px;
+	border-spacing: 55px;
 }
+
 
 .underline {
 	border-style: none;
@@ -49,21 +47,27 @@ table {
 	background: transparent;
 }
 
-.textarea {
+.register_textarea  {
 	height: 50%;
 	border-style: none;
 	text-align: center;
 }
 
-textarea {
-	height: 89%;
-	width: 96%;
-	border: none;
-	background: #f7f7f7;
+#piccontent {
+    height: 109%;
+    width: 99%;
+    border: none;
+    background: #f7f7f7;
+    position: relative;
+    left: 8px;
 }
 
-.btn {
+.register_btn {
 	text-align: center;
+	display: flex;
+	position: relative;
+	top: 32px;
+    left: 8px;
 }
 
 /* 다시시작 */

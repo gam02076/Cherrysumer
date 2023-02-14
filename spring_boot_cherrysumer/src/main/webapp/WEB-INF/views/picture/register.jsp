@@ -10,13 +10,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+<script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
+
 <link href="<c:url value='/css/picture/register.css'/>" rel="stylesheet" type="text/css" />
 <script src="<c:url value='/js/picture/picture.js'/>"></script>
 <script src="<c:url value='/js/picture/picture.js'/>"></script>
 <script src="<c:url value='/js/picture/pirce.js'/>"></script>
 <script src="<c:url value='/js/picture/register.js'/>"></script>
-
-<script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
 
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/header.css'/>">
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/bottom.css'/>">
@@ -28,8 +29,9 @@
 </head>
 
 <body>
-
+<c:import url="/WEB-INF/views/layout/head_sim.jsp" />
 <c:import url="/WEB-INF/views/layout/top.jsp" />
+
 
 
 	<form id="register" action="/register" method="post" enctype="multipart/form-data" >
@@ -44,7 +46,7 @@
 					<img src="" id="preview" >
 				</div>
 				<div class="productInfo">
-					<table>
+					<table class="register_table">
 						<tr>
 							<th>작품명</th>
 							<td><input type="text" name="picTitle"class="underline" id="picTitle"></td>
@@ -52,7 +54,7 @@
 							<td></td>
 						</tr>
 												<tr>
-							<th>소재/기법</th>
+							<th style="pading:10px">소재/기법</th>
 							<td><input type="text" name="pictech"class="underline" id="pictech"></td>
 							<th>작가명</th>
 							<td><input type="text" name="picauthor" class="underline" id="picauthor"></td>
@@ -74,10 +76,10 @@
 					<div class="file">
 						<input type="file" id="upload" name="upload" multiple>
 					</div>
-					<div class="textarea">
+					<div class="register_textarea" >
 						<textarea placeholder=" 작품을 소개해주세요." name="piccontent" id="piccontent"></textarea>
 					</div>
-					<div class="btn">
+					<div class="register_btn">
 						<button type="submit" value="등록" class="btn_1" onclick="submit1">등록</button>
 						<button type="button" class="btn_1">취소</button>
 					</div>
@@ -107,7 +109,7 @@
 
 
 
-	<script>
+<script>
         function readImage(input) {
             if (input.files && input.files[0]) {
                 const reader = new FileReader();
@@ -127,7 +129,7 @@
     </script>
     
     
-    <script>
+<!--     <script>
     $(document).ready(function(){
     
     	var fileInput = document.getElementById("upload");
@@ -144,17 +146,17 @@
     	}
     }) 
   
-    </script>
+    </script> -->
     
 
        
-    <script>
+<script>
     
   
     
     
     
-		 let sf = document.getElementById("register");
+		/*  let sf = document.getElementById("register");
     	sf.addEventListener("submit", function(e){
     		
 
@@ -199,8 +201,7 @@
    	
    	
     </script>
-    
-    
+   
     
     
     
