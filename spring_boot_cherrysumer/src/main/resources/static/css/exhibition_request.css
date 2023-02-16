@@ -2,7 +2,7 @@ body{
     margin: 0;
 }
 #wrapper{
-	background-image: url(/image/exh_museum.jpg);
+	background-image: url(/images/exh_museum.jpg);
 	background-attachment: fixed;
 }
 
@@ -25,6 +25,7 @@ body{
 	display: block; margin: 0px auto; /* 이미지 가운데 정렬 */
 	margin-top:80px;
 	margin-bottom:80px;
+	background-color: rgba(245,245,245,0.6);
 }
 
 .textBox{
@@ -79,7 +80,9 @@ input{
 }
 
 .imageView{
-	background-image: url(/image/upload_Icon.png);
+	background-image: url(/images/upload_Icon.png);
+	background-color: rgba(180,180,180,0.5);
+	border: 8px double rgb(240,240,240);
 	background-size: 40px;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -88,7 +91,7 @@ input{
 	line-height:250px;
 	width:250px;
 	line-width:250px;
-	border:3px solid rgb(240,240,240);
+/* 	border:3px solid rgb(240,240,240); */
 	text-align:center;
 	display:flex;
 	justify-content: center;
