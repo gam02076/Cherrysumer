@@ -130,7 +130,8 @@ public class Exhibition_RequestController {
 			// String uploadPath = "C:/upload/";
 			// String uploadPath = "C:/springWorkspace/upload/";
 			// String uploadPath="/Users/shimgyumin/java_class/cherrysumer_upload/";
-			String uploadPath = "/Users/pizza/STS3/SpringWorkspace/cherrysumer_upload/";
+			// String uploadPath = "/Users/pizza/STS3/SpringWorkspace/cherrysumer_upload/";
+			String uploadPath =  "file:/usr/local/project/upload/upload/";
 			// 마지막에 / 있어야 함
 			
 			// 2. 원본 파일 이름 알아오기
@@ -178,19 +179,26 @@ public class Exhibition_RequestController {
 	
 	// 전시회 신청 목록 (관리자 페이지)
 	@RequestMapping("/exhibition/requestList")
-	public String viewRequestListAll(@RequestParam String memId, Model model) {		
+	public String viewRequestListAll(Model model) {		// @RequestParam은 post 방식으로 받아야 된다.
 		ArrayList<ExhibitionVO> exhList = service.listAllRequest();
-		// 신청자 정보 가져오기.
-		MemberVO memVO = service.getMemberInfo2(memId);
-
+		
+		
+		// 전시회 정보를 for문을 돌려서 
+		for(int i=0; i<exhList.size(); i++) {
+			//memId를 가져와서 
+			String memId = exhList.get(i).getMemId(); // 갖고오는 memId
+			// MemberVO 정보를 찾아서 갖고옴.(getMemberInfo2)
+			MemberVO memVO = service.getMemberInfo2(memId);
+			// 원하는 정보만 전시회 정보에 넣어줌.
+			exhList.get(i).setMemName(memVO.getMemName()); 
+		}
+		
 		model.addAttribute("exhList",exhList);
 		// 신청 목록에 신청자 정보 출력하기 위해 model에 저장.
-		model.addAttribute("memVO",memVO);
+		
 		return "exhibition/exhibition_requestListForm";
 	}
 	
-	
-		
 }
 
 

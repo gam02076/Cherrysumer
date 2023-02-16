@@ -22,33 +22,33 @@ body {
 .background.first{
     position: relative;
     /* background-image: linear-gradient(rgba(0,0,0,0.6, rgba(0,0,0,0.6)),url("/image/exh_bg_header.jpg")); */
-    /* background-image: url(/image/exh_bg_header.jpg); */
+    background-image: url(/images/exh_bg_header.jpg);
     opacity: 60%;
 }
 
 .background.bg-pic1{
-    background-image: url(/image/exh_bg2.jpg);
+    background-image: url(/images/exh_bg2.jpg);
 }
 .background.bg-pic2{
-    background-image: url(/image/exh_glass.jpg);
+    background-image: url(/images/exh_glass.jpg);
     opacity:60%;
     height: 400px;
 }
 .background.bg-pic3{
-    background-image: url(/image/exh_bg-lines.jpg);
+    background-image: url(/images/exh_bg-lines.jpg);
 }
 .background.bg-pic4{
-    background-image: url(/image/exh_bg.jpeg);
+    background-image: url(/images/exh_bg.jpeg);
     height:500px;
 }
 
 .background.bg-pic5{
-    background-image: url(/image/exh_bg-leaves4.jpg);
+    background-image: url(/images/exh_bg-leaves4.jpg);
     opacity: 80%;
 }
 
 .background.bg-textPic{
-    background-image: url(/image/exh_bg-flower.webp);
+    background-image: url(/images/exh_bg-flower.webp);
     height:100%;
     /* background-size: contain; */
     background-repeat: no-repeat;
@@ -60,11 +60,11 @@ body {
     position : relative;
 }
 .background.end{
-    background-image: url(/image/exh_bg-river.png);
+    background-image: url(/images/exh_bg-river.png);
 }
 .background.exhibition{
     background-color: rgb(240, 243, 242);
-    /* background-image: url(/image/exh_bg-frame3.png);
+    /* background-image: url(/images/exh_bg-frame3.png);
     background-size: 100% 100%; */
 }
 .background.exhibition2{
@@ -197,10 +197,10 @@ body {
     background-repeat: no-repeat;
 }
 .bigPaint.bp1{
-    background-image: url(/image/exh_bg-branch.jpg);
+    background-image: url(/images/exh_bg-branch.jpg);
 }
 .bigPaint.bp2{
-    background-image: url(/image/exh_bg-leaves4.jpg);
+    background-image: url(/images/exh_bg-leaves4.jpg);
 }
 
 .interview2{
@@ -274,34 +274,34 @@ body {
     background-repeat: no-repeat;
 }
 .paint.paint1{
-    background-image: url(/image/exh_cat1.webp);
+    background-image: url(/images/exh_cat1.webp);
     object-fit: cover;
     background-position: 63%;
 }
 .paint.paint2{
-    background-image: url(/image/exh_flower2.jpg);
+    background-image: url(/images/exh_flower2.jpg);
 }
 .paint.paint3{
-    background-image: url(/image/exh_leaf1.jpg);
+    background-image: url(/images/exh_leaf1.jpg);
 }
 .paint.paint4{
-    background-image: url(/image/exh_flower4.png);
+    background-image: url(/images/exh_flower4.png);
 }
 .paint.paint5{
-    background-image: url(/image/exh_bg-leaves.png);
+    background-image: url(/images/exh_bg-leaves.png);
     background-color: white;
     background-position: 40%;
 }
 .paint.paint6{
-    background-image: url(/image/exh_bg-flower3.png);
+    background-image: url(/images/exh_bg-flower3.png);
     background-color: rgb(49, 52, 51);
     background-position: 43%;
 }
 .paint.paint7{
-    background-image: url(/image/exh_bg-blue.jpg);
+    background-image: url(/images/exh_bg-blue.jpg);
 }
 .paint.paint8{
-    background-image: url(/image/exh_bg-blue.jpg);
+    background-image: url(/images/exh_bg-blue.jpg);
 }
 
 .ending{

@@ -45,7 +45,11 @@
   		SELECT * FROM  picture ORDER BY picNo DESC
   	</select>
   	
-  	
+  		<!--memId로 작가 사진 목록 불러오기 -->
+	<select id="ListPicture2" parameterType="string"
+		resultType="com.spring_boot_cherrysumer.project.model.ExhibitionVO">
+		select * from exhibition where exhNo=#{exhNo}
+	</select>
   	
   <!-- 댓글 삭제 -->
   	<!-- <delete id="Delete" parameterType="string">

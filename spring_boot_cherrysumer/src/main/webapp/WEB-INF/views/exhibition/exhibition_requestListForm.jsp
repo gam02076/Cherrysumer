@@ -36,8 +36,8 @@
 				<c:forEach var="exhb" items="${exhList }">
 					<tr>
 						<td>${exhb.exhNo}</td>
-						<td>${memVO.memId }</td>
-						<td>${memVO.memName }</td>
+						<td>${exhb.memId }</td>
+						<td>${exhb.memName }</td>
 						<td>${exhb.exhTitle_kr}</td>
 						<td>${exhb.exhStartDate }</td>
 						<td>${exhb.exhEndDate }</td>

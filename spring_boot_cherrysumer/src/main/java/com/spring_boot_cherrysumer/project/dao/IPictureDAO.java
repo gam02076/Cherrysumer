@@ -2,6 +2,7 @@ package com.spring_boot_cherrysumer.project.dao;
 
 import java.util.ArrayList;
 
+import com.spring_boot_cherrysumer.project.model.ExhibitionVO;
 import com.spring_boot_cherrysumer.project.model.PictureVO;
 
 public interface IPictureDAO {
@@ -13,6 +14,7 @@ public interface IPictureDAO {
 
 	public ArrayList<PictureVO> ListPicture1();
 
+	public ExhibitionVO ListPicture2(String exhNo);
 
 //	public void Delete(String picNo); //삭제
 	
