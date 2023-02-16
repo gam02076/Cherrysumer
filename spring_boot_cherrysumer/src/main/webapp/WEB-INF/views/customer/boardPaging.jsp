@@ -61,13 +61,13 @@
 	border-radius: 30px;
 	}
 </style>
+<body>
 <script>
 	function selChange() {
 		var sel = document.getElementById('cntPerPage').value;
 		location.href="boardList?nowPage=${paging.nowPage}&cntPerPage="+sel;
 	}
 </script>
-<body>
 <div id="warp">
 <c:import url = "/WEB-INF/views/layout/top.jsp"/>
 <div id="upBtnBox2">
