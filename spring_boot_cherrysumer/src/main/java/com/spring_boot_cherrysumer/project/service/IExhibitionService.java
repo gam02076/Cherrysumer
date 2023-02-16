@@ -29,5 +29,13 @@ public interface IExhibitionService {
 	
 	// 전시회 신청서에 회원 정보 상세 출력에 필요한 메소드
 	public MemberVO ExhRequest_MemberInfo(String memId);
+	
+	
+	// 신청서 목록 관리자 페이지
+	// 관리자 페이지에서 전체 조회
+	public ArrayList<ExhibitionVO> listAllRequest();
+	
+	// 전시회 신청 목록에 출력할 회원 정보
+	public MemberVO getMemberInfo2(String memId);
 
 }

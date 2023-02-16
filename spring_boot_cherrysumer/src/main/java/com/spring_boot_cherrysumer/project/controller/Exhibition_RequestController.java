@@ -3,6 +3,7 @@ package com.spring_boot_cherrysumer.project.controller;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 import javax.servlet.http.HttpSession;
@@ -37,26 +38,18 @@ public class Exhibition_RequestController {
 		return "exhibition/exhibition_request";
 	}
 	
-	
-	
+
 	// 전시회 신청 완료되었다고 메시지 출력해주는 페이지.
 	@RequestMapping("/exhibition/exhibitionRequest")
 	public String exhibitionRequest(Model model) {
 		return "exhibition/exhibition_requestResultView";
 	}
 	
-	
-	
-	
-	
 	// 전시회 신청하면 DB에 저장되어 완료.
 	// exhNo는 전달하지 않음 : DB에서 자동 입력.
 	// exhConfirm 기본으로 X 두기.
 	
-	// 읽어오는 컨트롤러가 없다.
-	// DB에서 불러올 수 있도록.
-	// 파일 업로드도 안되고 있음.
-	
+	// form이 submit 했을 때 일어나는 기본 이벤트.
 	@RequestMapping("/exhibition/insertRequest")
 	public String insertRequest(ExhibitionVO Evo, HttpSession session,
 								//ArtVO Avo, // ArtVo는 배열로.			
@@ -95,6 +88,7 @@ public class Exhibition_RequestController {
 	}
 	
 	// 작품 업로드 및 저장
+	// 기본 이벤트 두고 ajax로 추가 이벤트 일으킴.
 	@ResponseBody
 	@RequestMapping("/insert_exhibition_request_art")
 	public String art(@RequestParam("upload-image") MultipartFile[] file,
@@ -169,16 +163,36 @@ public class Exhibition_RequestController {
 		
 		return "등록 성공";
 	}	
+	// 1. 관리자가 전시회 신청내역 보기.
+	// 링크 걸고 select해서  전시 테이블에서 컨펌이 안 된 것만 출력. 
+	// MyBatis에서 (mapper에서) select해서 뿌리는 것. 하나든 두개든 컨펌 말고 (전체 상품 보기)
+	 
+
+	// 2. AroVO 배열 바꾸기.
+	// 작품을 여러 개 보내는데, 현재컨트롤러에서는한 개만 됨.
+	// 자바스크립트에서 동일    배열로 만들어서 Ajax로 보낼 때 배열로 보내기. 
+	// 혹은 json에서 string으로 파싱해도 됨.
+
+	
+	
+	
+	// 전시회 신청 목록 (관리자 페이지)
+	@RequestMapping("/exhibition/requestList")
+	public String viewRequestListAll(@RequestParam String memId, Model model) {		
+		ArrayList<ExhibitionVO> exhList = service.listAllRequest();
+		// 신청자 정보 가져오기.
+		MemberVO memVO = service.getMemberInfo2(memId);
+
+		model.addAttribute("exhList",exhList);
+		// 신청 목록에 신청자 정보 출력하기 위해 model에 저장.
+		model.addAttribute("memVO",memVO);
+		return "exhibition/exhibition_requestListForm";
+	}
+	
+	
 		
 }
 
 
-// 1. 관리자가 전시회 신청내역 보기.
-// 링크 걸고 select해서  전시 테이블에서 컨펌이 안 된 것만 출력. 
-// MyBatis에서 (mapper에서) select해서 뿌리는 것. 하나든 두개든 컨펌 말고 (전체 상품 보기)
- 
 
-// 2. AroVO 배열 바꾸기.
-// 작품을 여러 개 보내는데, 현재컨트롤러에서는한 개만 됨.
-// 자바스크립트에서 동일    배열로 만들어서 Ajax로 보낼 때 배열로 보내기. 
-// 혹은 json에서 string으로 파싱해도 됨.
+
