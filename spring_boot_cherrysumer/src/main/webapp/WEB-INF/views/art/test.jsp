@@ -15,7 +15,7 @@
 	      <c:forEach var="art" items="${art}">
 		      	<form method="post">
 					<ul class="myart">
-						<li><img src="<c:url value="/image/${art.picimg}"/>" class="myimage"></li>
+						<li><img src="<c:url value="/images/${art.picimg}"/>" class="myimage"></li>
 						<li><input type="button" value="수정하기" class="update" id="${art.picNo}">
 						<input type="button" value="삭제하기" class="delete" id="${art.picNo}"></li>
 					</ul>

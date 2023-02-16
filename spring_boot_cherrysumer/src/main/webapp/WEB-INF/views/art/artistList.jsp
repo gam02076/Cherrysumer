@@ -37,8 +37,8 @@
 							<article class="item thumb artist-list" id="${art.memId}">
 								<h2>${art.memName }작가</h2>
 								<a href="#" class="image"><img
-									src="<c:url value='/image/${art.memImg }'/>" alt=""
-									onError="this.onerror=null; this.src='<c:url value='/image/2.png'/>'"></a>
+									src="<c:url value='/images/${art.memImg }'/>" alt=""
+									onError="this.onerror=null; this.src='<c:url value='/images/2.png'/>'"></a>
 							</article>
 						</c:when>
 					</c:choose>
@@ -55,7 +55,7 @@
 							<article class="item thumb artist-list" id="${art.memId}">
 								<h2>${art.memName }작가</h2>
 								<a href="#" class="image"><img
-									src="<c:url value='/image/${art.memImg }'/>" alt=""
+									src="<c:url value='/images/${art.memImg }'/>" alt=""
 									onError="this.onerror=null;"></a>
 							</article>
 						</c:when>
