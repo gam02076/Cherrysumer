@@ -9,7 +9,7 @@
 width:100%;
 height:100%;
 text-align:center;
-background-image:url("../image/바탕화면.png");
+background-image:url("../images/바탕화면.png");
 background-size:100% 100%;
 color:white;
 }
@@ -18,7 +18,7 @@ color:white;
   height: 100px;
 background-color:#999999;
 margin-left:130px;
-background-image:url("../image/사람.jpg");
+background-image:url("../images/사람.jpg");
 background-size:cover;
 }
 #my{
