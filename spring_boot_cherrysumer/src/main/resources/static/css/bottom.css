@@ -1,99 +1,86 @@
 @charset "UTF-8";
-/* .background{
-    height: 380px;
-    width: 100vw;
-    background-size: cover;
-    overflow: hidden;
-    background-attachment: fixed;
-    background-color:rgb(245,245,245);
-    background-image: url("/image/sand.jpg");
+
+/* footer */
+#end{
+	    height: 7em;
+    margin: 2em 1em;
 }
-
-#two{
-	display: flex;
-    background: cadetblue;
-    padding: 4em 0;
-}
-
-.inner2{
-	width: calc(100% - 6em);
-    font-size: 18px;
-    width: 100%;
-    height: 250px;
-    margin: 0 auto;
-    max-width: 65em;
-    
-}
-
-.actions{
-	cursor: default;
-    list-style: none;
-}
- */
-
-@charset "UTF-8";
-
-footer{
-    width: 100%;
+#footer {
     display: flex;
-    justify-content: center;
-    padding: 70px 0px;
-    background-color: #6e6e6e;
-}
-
-#footerHr{
-    margin: 10px 50px;
-
-}
-#footerABox{
-    margin-bottom: 10px;
-    font-size: 30px;
-}
-
-#footerABox a:first-child{
-    margin-right: 50px;
-    float: left;
-}
-#footerAT{
-    margin-left: 50px;
-}
-#footerABox hr{
-    float: left;
-    width: 1px;
-    height: 20px;
-    margin-top: 10px;
-}
-#footerABox a{
-    font-weight: 600;
-    text-decoration-line: none;
+    justify-content: space-between;
+    position: relative;
     color: black;
+    /* height: 5em;
+    margin: 2em 1em; */
+    height: 100%;
 }
-
-#footerRightBox{
-    display: flex;
-    align-items: center;
-}
-#footerRightBox div{
-    margin-right: 30px;
-}
-
-#footerRightBox img{
-    width: 150px;
-    height: 150px;
-}
-
-.footerLeftBoxDiv{
-    font-size: 23px;
-    margin-bottom: 20px;
-    font-weight: 500;
-}
-
-#callNumber{
-    font-size: 50px;
+#footName{
+        float: left;
+    margin: 5px 21px;
+    font-size: 40px;
     font-weight: 600;
 }
+.footIndex{
+    width: 800px;
+    margin: 0px 10px;
+    font-size: 14px;
+}
 
-#callDate{
-    font-size: 30px;
-    font-weight: 400;
+/* #footer>section:first-child {
+	text-align: left;
+	max-width: 36em;
+	padding-right: 2em;
+} */
+
+#footer>section:last-child {
+	text-align: right;
+	max-width: 36em;
+	width: 390px;
+}
+
+.icons{
+	margin: 0;
+    padding: 0;
+	height:50%;
+	    width: 100%;
+}
+
+.icons li{
+	float: left;
+    width: 40px;
+    height: 30px;
+    margin: 0px 10px;
+}
+
+.icon1 img{
+	width:100%;
+	
+}
+
+.copyright{
+	margin: 0;
+    padding: 0;
+    height: 50%;
+        text-align: left;
+            width: 230px;
+}
+
+.copyright li{
+    font-size: 14px;
+}
+
+.qna{
+	width: 160px;
+    display: flex;
+    right: 20px;
+    position: absolute;
+    top: 0px;
+    margin: auto;
+    height: 140px;
+    bottom: 20px;
+}
+
+.qna img{
+	width:100%;
+	
 }

@@ -40,19 +40,6 @@ public class ExhibitionService implements IExhibitionService {
 		return dao.ExhRequest_MemberInfo(memId);
 	}
 
-//	@Override
-//	public void insertExhRequest(ExhibitionVO Evo, ArtVO Avo) {
-//		dao.insertExhRequest(Evo);
-//		dao.insertArtRequest(Avo);
-//		
-//	}
-
-//	@Override
-//	public void insertExhRequest(ExhibitionVO Evo, HashMap<String, Object> map) {
-//		dao.insertExhRequest(Evo);
-//		dao.insertArtRequest(map);
-//	}
-
 	@Override
 	public void insertExhRequest(ExhibitionVO Evo) {
 		// 전시회 정보 저장
@@ -60,24 +47,23 @@ public class ExhibitionService implements IExhibitionService {
 	}
 	
 	@Override
-	public void insertExhRequestArt(ArtVO Avo) {			
-			dao.insertArtRequestArt(Avo);
+	public void insertExhRequestArt(ArtVO Avo) {
+		// 전시회 작품 저장
+		dao.insertArtRequestArt(Avo);
 	}
 
+	@Override
+	public ArrayList<ExhibitionVO> listAllRequest() {
+		return dao.listAllRequest();
+	}
 
+	@Override
+	public MemberVO getMemberInfo2(String memId) {
+		return dao.getMemberInfo2(memId);
+	}
+	
+	
 
-
-//	@Override
-//	public void insertExhInfo(ExhibitionVO ExhibitionVO) { // exhibitionVO 받아옴.
-//		// (1) 신청 정보 저장 (Exhibition 테이블)
-//		dao.insertExhInfo(ExhibitionVO);
-//	}
-//
-//	@Override
-//	public void insertArtInfo(ArtVO ArtVO) {
-//		// (2) 신청 작품 내용 저장 (ArtVO 테이블)
-//		dao.insertArtInfo(ArtVO);	
-//	}
 
 
 }

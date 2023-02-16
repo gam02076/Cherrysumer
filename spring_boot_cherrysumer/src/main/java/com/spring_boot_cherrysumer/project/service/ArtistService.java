@@ -37,12 +37,6 @@ public class ArtistService implements IArtistDAO {
 	}
 
 	@Override
-	public ArrayList<PictureVO> ArtListALL() {
-		// TODO Auto-generated method stub
-		return dao.ArtListALL();
-	}
-
-	@Override
 	public PictureVO picDetail(String picNo) {
 		// TODO Auto-generated method stub
 		return dao.picDetail(picNo);
@@ -54,11 +48,6 @@ public class ArtistService implements IArtistDAO {
 		return dao.picMemId(picNo);
 	}
 
-	@Override
-	public ArrayList<ArtVO> exList() {
-		// TODO Auto-generated method stub
-		return dao.exList();
-	}
 
 	@Override
 	public void ArtUpdate(PictureVO vo) {
@@ -85,6 +74,11 @@ public class ArtistService implements IArtistDAO {
 	@Override
 	public ArrayList<Exhibition2VO> comingList(String today) {
 		return dao.comingList(today);
+	}
+
+	@Override
+	public String artistName(String memId) {
+		return dao.artistName(memId);
 	}
 	 
 

@@ -9,13 +9,7 @@
 	<!-- 작가들 조회 -->
 	<select id="ArtistAll"
 		resultType="com.spring_boot_cherrysumer.project.model.MemberVO">
-		SELECT * FROM member where memType='작가'
-	</select>
-
-	<!-- 모든 작가들 사진 조회 -->
-	<select id="ArtListALL"
-		resultType="com.spring_boot_cherrysumer.project.model.PictureVO">
-		SELECT * FROM picture
+		select * from member where memImg is not null and memName is not null; 
 	</select>
 
 	<!--memId로 작가 사진 목록 불러오기 -->
@@ -40,24 +34,23 @@
 	<select id="picMemId" parameterType="string" resultType="string">
 		select memId from picture where picNo=#{picNo}
 	</select>
-
-
-	<!-- 전시회 대표 사진 불러오기 -->
-	<select id="exList"
-		resultType="com.spring_boot_cherrysumer.project.model.ArtVO">
-		SELECT * FROM art where artMain="O"
-	</select>
 	
 	<!-- 전시회 상세 정보 불러오기 -->
 	<select id="exList2" parameterType="string"
 		resultType="com.spring_boot_cherrysumer.project.model.Exhibition2VO">
-		SELECT * FROM art JOIN exhibition ON exhibition.memId = art.memId where #{today}>=exhibition.exhStartDate and art.artMain="O" and exhConfirm="O";
+		SELECT * FROM art JOIN exhibition ON exhibition.memId = art.memId where #{today}>=exhibition.exhStartDate and exhibition.exhEndDate>#{today} and art.artMain="O" and exhConfirm="O";
+	</select>
+	
+	<!-- memId로 작가 이름 가져오기 -->
+	<select id="artistName" parameterType="string"
+		resultType="string">
+		SELECT memName FROM member where memId=#{memId}
 	</select>
 	
 	<!-- coming Soon 전시회 불러오기 -->
 	<select id="comingList" parameterType="string"
 		resultType="com.spring_boot_cherrysumer.project.model.Exhibition2VO">
-		SELECT * FROM art JOIN exhibition ON exhibition.memId = art.memId where exhibition.exhStartDate>=#{today} and art.artMain="O" and exhConfirm="O";
+		SELECT * FROM art JOIN exhibition ON exhibition.memId = art.memId where exhibition.exhStartDate>#{today} and art.artMain="O" and exhConfirm="O";
 	</select>
 
 	<!-- 작품 업데이트 -->
