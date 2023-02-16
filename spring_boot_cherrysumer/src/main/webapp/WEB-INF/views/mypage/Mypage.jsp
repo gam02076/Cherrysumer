@@ -75,7 +75,7 @@ img{
 <div id="my">
 <table id="propil">
 <tr><th>프로필 사진</th>
- <td><div id="b"><img src="/image/${vo.memimg2}"></div></td></tr>
+ <td><div id="b"><img src="/images/${vo.memimg2}"></div></td></tr>
 <tr><th>아이디</th><td>${vo.memId}</td></tr>
 <tr><th>이름</th><td> ${vo.memName}</td></tr>
 <tr><th>이메일</th><td> ${vo.memEmail} </td></tr>
