@@ -15,17 +15,27 @@
   	<!-- 전체게시판조회 -->
   	  <select id="CustomerAll" resultMap="cusResult">
   		SELECT * FROM customer ORDER BY cusNo
+  		LIMIT #{start},#{end}
   </select>
   <insert id="insertCustomer" parameterType="com.spring_boot_cherrysumer.project.model.CustomerVO">
   INSERT INTO customer (cusNo, custitle, cusdate, custext, cuspublic, memId, cusabc, cus)
   		VALUES (#{cusNo}, #{custitle}, #{cusdate}, #{custext}, #{cuspublic}, #{memId}, #{cusabc}, #{cus})
   </insert>
-  	<select id="detailCustomer" parameterType="string" 
+  	<select id="detailCustomer" parameterType="int" 
   	resultType="com.spring_boot_cherrysumer.project.model.CustomerVO">
   	select * from customer where cusNo=#{cusNo}
   	</select>
   	<delete id="deleteCustomer" parameterType="string">
   	delete from customer where cusNo=#{cusNo}
   	</delete>
+  	<select id="countBoard" resultType="int">
+	SELECT COUNT(*) FROM customer
+</select>
+<select id="CustomerSearch" parameterType="string"
+        resultType="com.spring_boot_cherrysumer.project.model.CustomerVO">
+        SELECT * FROM customer WHERE custitle Like
+        CONCAT('%', #{keyword},'%')
+    </select>
+
 
   	</mapper>

@@ -8,6 +8,7 @@
 <result property="memId"  column="memId"  />
 <result property="memPwd"  column="memPwd"  />
 <result property="memName"  column="memName"  />
+<result property="memimg"  column="memimg"  />
 <result property="memEmail"  column="memEmail"  />
 <result property="memHP"  column="memHP"  />
 <result property="memZipcode"  column="memZipcode"  />
@@ -21,7 +22,7 @@ SELECT * FROM member WHERE memId = #{memId}
 </select>
 <update id="updatepage"  parameterType="com.spring_boot_cherrysumer.project.model.MypageVO">
   		UPDATE member
-  		SET memName=#{memName}, memEmail=#{memEmail}, memHP=#{memHP}, memZipcode=#{memZipcode},
+  		SET memName=#{memName}, memimg2=#{memimg2}, memEmail=#{memEmail}, memHP=#{memHP}, memZipcode=#{memZipcode},
   		memAddress1=#{memAddress1},memAddress2=#{memAddress2},memType=#{memType}
   	    WHERE memId=#{memId}
 </update>

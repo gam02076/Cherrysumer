@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.spring_boot_cherrysumer.project.dao.ICustomerDAO;
 import com.spring_boot_cherrysumer.project.model.CustomerVO;
-
+import com.spring_boot_cherrysumer.project.model.PagingVO;
 @Service
 public class CustomerService implements ICustomerService {
 	  @Autowired
@@ -16,9 +16,9 @@ public class CustomerService implements ICustomerService {
 	  private ICustomerDAO dao;
 
 	@Override
-	public ArrayList<CustomerVO> CustomerAll() {
+	public ArrayList<CustomerVO> CustomerAll(PagingVO vo) {
 		
-		return dao.CustomerAll();
+		return dao.CustomerAll(vo);
 	}
 
 	@Override
@@ -40,9 +40,19 @@ public class CustomerService implements ICustomerService {
 	}
 
 	@Override
-	public CustomerVO detailCustomer(String cusNo) {
+	public CustomerVO detailCustomer(int cusNo) {
 		// TODO Auto-generated method stub
 		return dao.detailCustomer(cusNo);
 		
 	}
+	public int countBoard() {
+		return dao.countBoard();
+	}
+
+	@Override
+	public ArrayList<CustomerVO> CustomerSearch(String keyword) {
+		// TODO Auto-generated method stub
+		return dao.CustomerSearch(keyword);
+	}
+
 }

@@ -42,22 +42,32 @@ background-color:#999999;
 border-radius:50px;
 opacity: 0.5;
 }
+#upload{
+border:5px;
+background-color:#999999;
+border-radius:50px;
+opacity: 0.5;
+}
 #button:hover{
 opacity:1;
 }
 </style>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-
+<script src="<c:url value='/js/jquery-3.6.1.min.js' />"></script>
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/header.css'/>">
 </head>
 <body>
 <div id="wrap">
+<c:import url = "/WEB-INF/views/layout/top.jsp"/>
 <br /><br /><br />
-<form method="post" action="<c:url value='/Mypage2/update'/>">
+<form method="post" action="<c:url value='/Mypage2/update'/>" enctype="multipart/form-data" >
 <table id="propil">
 <tr><th>프로필 사진</th>
- <td><div id="b"></div><br/><input id="button" type="button" value="수정하기">
- <input id="button" type="button" value="삭제하기"></button></td></tr>
+ <td><div id="b"></div><br/><div class="file">
+						<input type="file" id="upload" name="upload" multiple>
+					</div>
+ <input id="button" type="button" value="삭제하기"></td></tr>
 <tr><th>아이디</th><td><input type="text" id="memId" name="memId" value="${vo.memId}" readonly ></td></tr>
 <tr><th>이름</th><td><input type="text" id="memName" name="memName" value="${vo.memName}"></td></tr>
 <tr><th>이메일</th><td><input type="text" id="memEmail" name="memEmail" value="${vo.memEmail}"></td></tr>
@@ -69,6 +79,7 @@ opacity:1;
 <tr><th>상세 주소</th><td><span class="input_area"><input type="text" name="memAddress2" class="postcodify_details" id="memAddress2" value="${vo.memAddress2}"></span></td></tr>
 <tr><th>회원유형</th><td><input type='radio' name='memType' id='memType' value='normal'/>일반 <input type='radio' name='memType' id='memType' value='artist'/>아티스트</td></tr>
 </table><br/>
+
 <input id="button" type="submit" value="수정하기">
 <input id="button" type="reset" value="취소">
 </form>
