@@ -83,11 +83,8 @@
 			<version>3.0.1</version>
 			<scope>provided</scope>
 		</dependency>
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>jstl</artifactId>
-			<version>1.2</version>
-		</dependency>
+		<!-- <dependency> <groupId>javax.servlet</groupId> <artifactId>jstl</artifactId> 
+			<version>1.2</version> </dependency> -->
 		<!-- websocket -->
 		<dependency>
 			<groupId>javax.websocket</groupId>
@@ -129,6 +126,13 @@
 			<version>3.1.0</version>
 			<type>maven-plugin</type>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.30</version>
+		</dependency>
+
 	</dependencies>
 
 	<!-- <build> <plugins> <plugin> <groupId>org.springframework.boot</groupId> 
