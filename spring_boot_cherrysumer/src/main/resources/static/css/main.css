@@ -24,7 +24,7 @@ background-attachment: fixed;
 }
 #show1{
 width:100%;
-height:918px;
+
 }
 
 
@@ -67,7 +67,10 @@ width:100%;
 #show3{
 display: inline-block;
 width:100%;
-height:1000px;
+
+    position: relative;
+    z-index: 10;
+
 text-align: center;
 
 }
@@ -84,11 +87,12 @@ height:300px;
   position:relative;
   width: 200px;
   height: 200px;
-  margin: 50px;
+  margin: 14px;
 }
 .show3-2{
-	margin-top:200px;
-	border:5px solid;
+margin-top: 2%;
+    margin-bottom: 10%;
+    border: 1px solid;
 }
 
 .show3-1::before{

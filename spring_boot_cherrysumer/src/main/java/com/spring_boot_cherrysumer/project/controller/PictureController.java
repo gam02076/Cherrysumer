@@ -29,6 +29,19 @@ public class PictureController {
 
 		
 		
+		
+		@RequestMapping("/")
+		
+		public String pictureList1(Model model) {
+		
+		ArrayList<PictureVO> pic = service.ListPicture1();
+
+		model.addAttribute("pic",pic);
+		
+			return "NewFile"; 	
+		}
+			
+		
 		@RequestMapping("/picture/picture_list/")
 	
 		public String pictureList(Model model) {

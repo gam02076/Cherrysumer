@@ -11,6 +11,7 @@ public interface IPictureDAO {
 
 	public ArrayList<PictureVO> Search(String keyword);
 
+	public ArrayList<PictureVO> ListPicture1();
 
 
 //	public void Delete(String picNo); //삭제

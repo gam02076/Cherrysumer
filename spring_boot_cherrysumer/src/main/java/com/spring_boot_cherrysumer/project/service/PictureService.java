@@ -20,6 +20,16 @@ public class PictureService implements IPictureService {
 		
 		return dao.ListPicture() ;
 	}
+	
+	@Override
+	
+	public ArrayList<PictureVO> ListPicture1() {
+		
+		
+		return dao.ListPicture1() ;
+	}
+	
+	
 	@Override
 	public void insert(PictureVO vo ) {
 	

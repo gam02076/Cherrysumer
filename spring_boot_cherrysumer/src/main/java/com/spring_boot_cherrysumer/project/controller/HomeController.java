@@ -14,13 +14,13 @@ import com.spring_boot_cherrysumer.project.service.HomeService;
 public class HomeController {
 	@Autowired
 	HomeService service;
-	@RequestMapping("/")
-	public String index(Model model) {
-		ArrayList<HomeVO> list = service.listMember();
-		model.addAttribute("list", list);
-		return "NewFile";
-	}
-	
+//	@RequestMapping("/")
+//	public String index(Model model) {
+//		ArrayList<HomeVO> list = service.listMember();
+//		model.addAttribute("list", list);
+//		return "NewFile";
+//	}
+//	
 	@RequestMapping("/member/signup")
 	public String signUp() {
 
