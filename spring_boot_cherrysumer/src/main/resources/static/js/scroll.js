@@ -3,7 +3,7 @@
  */
   $(window).on("load", function () {
     function fade() {
-      let animation_height = $(window).innerHeight() * 0.7;
+      let animation_height = $(window).innerHeight() * 1;
       let ratio = Math.round((1 / animation_height) * 10000) / 10000;
       $(".left").each(function () {
         let objectTop = $(this).offset().top;
