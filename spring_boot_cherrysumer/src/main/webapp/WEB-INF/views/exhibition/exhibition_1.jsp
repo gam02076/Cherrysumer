@@ -1,22 +1,23 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>전시회1</title>
-<link rel="stylesheet" type="text/css" href="<c:url value='/css/exhibition_1.css'/>">
-<link rel="stylesheet" type="text/css"href="<c:url value='/css/header.css'/>">
- 	 <link rel="stylesheet" type="text/css" href="<c:url value='/css/exArtModal.css' />"><!-- 모달 (Detail)  -->
-<script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
+	<meta charset="UTF-8">
+	<title>전시회1</title>
+	<link rel="stylesheet" type="text/css" href="<c:url value='/css/exhibition_1.css'/>">
+	<link rel="stylesheet" type="text/css"href="<c:url value='/css/header.css'/>">
+	<link rel="stylesheet" type="text/css" href="<c:url value='/css/exArtModal.css' />"><!-- 모달 (Detail)  -->
+	<script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
 	<script src="<c:url value='/js/exArtModal.js' />"></script> <!-- 모달 (Detail)  -->
-<script src="<c:url value='/js/exhibition_1.js'/>"></script>
-<style>
-@import
-	url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Kaisei+Tokumin:wght@500&family=Noto+Serif+KR&family=Sofia+Sans+Semi+Condensed&family=Titillium+Web&display=swap')
-	;
-</style>
+	<script src="<c:url value='/js/exhibition_1.js'/>"></script>
+	<style>
+	@import
+		url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Kaisei+Tokumin:wght@500&family=Noto+Serif+KR&family=Sofia+Sans+Semi+Condensed&family=Titillium+Web&display=swap')
+		;
+	</style>
 </head>
 
 <body>
@@ -27,7 +28,7 @@
 			<div id="painter">${evo.exhNickname }</div>
 			<div class="title eng">${evo.exhTitle_eng } |</div>
 			<div class="title kor">${evo.exhTitle_kr }</div>
-			<div id="date">${evo.exhEndDate}</div>
+			<div id="date"><fmt:formatDate var="date" value="${evo.exhEndDate}" pattern="yyyy년 MM월 dd일" /> ${date }</div>
 		</div>
 	</section>
 
