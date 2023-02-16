@@ -27,13 +27,15 @@ public class ExhibitionController {
 									   	 // @RequestParam("artNo") String artNo, // url로 전달 안할꺼니까? //post 방식이라 같이 못 씀.
 									     Model model){
 		
+		System.out.printf(exhNo);
+		System.out.printf(memId);
 		ExhibitionVO evo = service.detailViewExhibibition(exhNo);
-		MemberVO memVo = service.getMemberInfo(memId);
+		MemberVO memVo = service.getMemberInfo(evo.getMemId());
 	
 		// ArratList로.
 		// artvo. 타입으로 서비스 호출하고, 결과 받으면 모델에서 addAttribute으로 artList함.
 		// 상품 여러개 받듯이 artList로 뷰페이지에서 출력. view페이지에서 for문. artList. ~~
-		ArrayList<ArtVO> artList = service.getArtInfo(memId); // 전시회 번호 없이 작가꺼 다 나옴.
+		ArrayList<ArtVO> artList = service.getArtInfo(evo.getMemId()); // 전시회 번호 없이 작가꺼 다 나옴.
 		
 		// memId와 exhNo와 해시맵으로 넘겨서 매퍼로 보냄.
 	

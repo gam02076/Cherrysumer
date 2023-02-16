@@ -15,18 +15,17 @@ a{
 	color:black;
 }
 .header{
-    position:fixed;
-    left:50%;
+    position: fixed;
+    left: 50%;
     width: 100%;
-    padding:10px 0;
+    padding: 10px 0;
     text-align: center;
-    transform:translateX(-50%);
+    transform: translateX(-50%);
     transition: all .3s;
     z-index: 101;
-    /* border-bottom: 1px solid ; */
-    /* color: rgb(82,86,86); */
     background-color: rgba(255,255,255,1);
-    height: 120px;
+    height: 90px;
+    font-size: 13px;
 }
 .down{
     background-color: rgba(255,255,255,1);
@@ -34,11 +33,14 @@ a{
 
 .logo{
 	position: fixed;
-    width: 140px;
+    width: 110px;
     z-index: 20;
-    transform:translateY(10%);
-    transform: translateX(201%);
-    z-index:30;
+    z-index: 30;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 #headerRight{
 	    float: right;
@@ -56,7 +58,7 @@ a{
 .menuList{
 	text-align: right;
     margin-top: 10px;
-        height: 50px;
+        height: 40px;
 }
 
 .menuList a{
@@ -92,7 +94,7 @@ a{
     color:#595959;
 }
 #headerHeight{
-    height:130px;
+    height:110px;
 /*     background-color: yellow; */
     width:100%;
     position: relative;
@@ -156,8 +158,8 @@ a{
 /* 위 버튼  */
 #upBtnBox{
 	position: fixed;
-	bottom:10%;
-	right:10%;
+	bottom: 15%;
+    left: 10%;
     z-index: 11;
 }
 #upBtn{
