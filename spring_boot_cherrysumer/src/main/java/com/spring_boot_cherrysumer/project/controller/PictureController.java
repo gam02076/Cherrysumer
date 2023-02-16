@@ -2,6 +2,8 @@ package com.spring_boot_cherrysumer.project.controller;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.UUID;
 
@@ -14,13 +16,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.spring_boot_cherrysumer.project.model.Exhibition2VO;
+import com.spring_boot_cherrysumer.project.model.ExhibitionVO;
+import com.spring_boot_cherrysumer.project.model.MemberVO;
 import com.spring_boot_cherrysumer.project.model.PictureVO;
+import com.spring_boot_cherrysumer.project.service.ArtistService;
+import com.spring_boot_cherrysumer.project.service.ExhibitionService;
 import com.spring_boot_cherrysumer.project.service.PictureService;
 @Controller
 public class PictureController {
 	@Autowired
 	PictureService service;	
 	
+	@Autowired
+    ArtistService service2;
 	
 		@RequestMapping("/picture") 
 		public String picture() {
@@ -29,18 +38,39 @@ public class PictureController {
 
 		
 		
-		
+//		메인 컨트롤러//	메인 컨트롤러//	메인 컨트롤러//	메인 컨트롤러//	메인 컨트롤러//	메인 컨트롤러	
 		@RequestMapping("/")
 		
 		public String pictureList1(Model model) {
-		
-		ArrayList<PictureVO> pic = service.ListPicture1();
+			
 
+			// 현재 날짜 구하기
+			LocalDate now = LocalDate.now();
+
+			// 포맷 정의
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+
+			// 포맷 적용
+			String today = now.format(formatter);
+
+
+			ArrayList<Exhibition2VO> ex = service2.exList3(today); //현재 전시중
+			
+			 
+			model.addAttribute("ex", ex);
+
+
+			
+		ArrayList<PictureVO> pic = service.ListPicture1();
 		model.addAttribute("pic",pic);
 		
+		
+		System.out.println(ex.get(0).getArtImg());
 			return "NewFile"; 	
 		}
-			
+//		메인 컨트롤러//	메인 컨트롤러//	메인 컨트롤러//	메인 컨트롤러//	메인 컨트롤러//	메인 컨트롤러			
+		
+		
 		
 		@RequestMapping("/picture/picture_list/")
 	
@@ -72,8 +102,8 @@ public class PictureController {
 			
 //			 String uploadPath="/Users/shimgyumin/java_class/cherrysumer_upload/";
 //	String uploadPath = "/Users/pizza/STS3/SpringWorkspace/cherrysumer_upload/";
-String uploadPath = "C:/springWorkspace/upload/";
-		
+//String uploadPath = "C:/springWorkspace/upload/";
+String uploadPath =  "file:///usr/local/project/upload/upload/";
 			 
 			 
 			String orgName=file.getOriginalFilename();

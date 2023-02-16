@@ -73,4 +73,16 @@
 		select pointTotal from point_all where memId=#{memId}
 	</select>
 
+
+
+
+	<!-- 메인 페이지 전시회관-->
+	<select id="exList3" parameterType="string"
+		resultType="com.spring_boot_cherrysumer.project.model.Exhibition2VO">
+		SELECT * FROM art JOIN exhibition ON exhibition.memId = art.memId where #{today}>=exhibition.exhStartDate and exhibition.exhEndDate>#{today};
+	</select>
+
+
+
+
 </mapper>

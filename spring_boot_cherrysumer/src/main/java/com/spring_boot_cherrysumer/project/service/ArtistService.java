@@ -82,4 +82,9 @@ public class ArtistService implements IArtistDAO {
 	}
 	 
 
+	@Override
+	public ArrayList<Exhibition2VO> exList3(String today) {
+		return dao.exList3(today);
+	}
+
 }

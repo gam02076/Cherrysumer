@@ -38,7 +38,7 @@
 			<div class="box">
 				<input type="hidden" class="cardNO" value="${pict.picNo}">
 				<div class="img" value="${pict.picNo}">
-					<img src="<c:url value="/image/${pict.picimg}"/>" alt="Hover Effect">
+					<img src="<c:url value="/images/${pict.picimg}"/>" alt="Hover Effect">
 				</div>
 				<div class="info">
 					<table >
@@ -97,7 +97,7 @@
 					<div class="product">
 						<div class="product_image"
 							onError="this.style.visibility='hidden'">
-							<img src="/image/file.png" id="preview">
+							<img src="/images/file.png" id="preview">
 						</div>
 						<div class="productInfo">
 							<table class="Infotable">
