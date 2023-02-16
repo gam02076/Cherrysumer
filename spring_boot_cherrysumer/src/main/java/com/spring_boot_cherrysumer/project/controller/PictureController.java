@@ -103,7 +103,7 @@ public class PictureController {
 //			 String uploadPath="/Users/shimgyumin/java_class/cherrysumer_upload/";
 //	String uploadPath = "/Users/pizza/STS3/SpringWorkspace/cherrysumer_upload/";
 //String uploadPath = "C:/springWorkspace/upload/";
-String uploadPath =  "file:///usr/local/project/upload/upload/";
+String uploadPath =  "/usr/local/project/upload/upload/";
 			 
 			 
 			String orgName=file.getOriginalFilename();
