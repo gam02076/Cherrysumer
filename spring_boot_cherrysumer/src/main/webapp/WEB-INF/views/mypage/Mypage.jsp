@@ -7,6 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <title>마이페이지</title>
+<script src="<c:url value='/js/jquery-3.6.1.min.js' />"></script>
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/header.css'/>">
 <style>
 #wrap{
 width:100%;
@@ -59,16 +61,21 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
+img{
+ width : 100px;
+  height: 100px;
+}
 </style>
 </head>
 <body>
 <div id="wrap">
+<c:import url = "/WEB-INF/views/layout/top.jsp"/>
 <br/><br/><br/>
 <h1>마이페이지</h1>
 <div id="my">
 <table id="propil">
 <tr><th>프로필 사진</th>
- <td><div id="b"></div></td></tr>
+ <td><div id="b"><img src="/image/${vo.memimg2}"></div></td></tr>
 <tr><th>아이디</th><td>${vo.memId}</td></tr>
 <tr><th>이름</th><td> ${vo.memName}</td></tr>
 <tr><th>이메일</th><td> ${vo.memEmail} </td></tr>
@@ -80,18 +87,6 @@ ${vo.memAddress2} </td></tr>
 </table><br />
  <a href="<c:url value='Mypage2' />"><input id="button" type="button" value="회원정보 수정"></a>
 </div>
-<div id="picture">
-<div id="a">
-</div>
-<div id="a">
-</div>
-<div id="a">
-</div>
-<div id="a">
-</div><br/><br/><br/><br/>
-</div>
-<br/><br/>
-<a href="<c:url value='Mypage2' />"><input id="button" type="button" value="내 그림 더 보기"></a>
 <br/><br/><br/><br/>
 </div>
 

@@ -5,6 +5,13 @@ public class MypageVO {
 	private String memId;
 	private String memPwd;
 	private String memName;
+	private String memimg2;
+	public String getMemimg2() {
+		return memimg2;
+	}
+	public void setMemimg2(String memimg2) {
+		this.memimg2 = memimg2;
+	}
 	private String memEmail;
 	private String memHP;
 	private String memZipcode;

@@ -7,7 +7,28 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-
+<style>
+textarea{
+	width:500px;
+	height:500px;
+}
+	#warp{
+	margin: auto;
+	width: 100%;
+	height:100%;
+	text-align: center;
+	background-image: url("../image/꽃그림.jpg");        
+	background-size : 100% 100%;
+	background-attachment: fixed;
+			}
+			table{
+				margin: auto;
+				border-collapse: collapse;
+				text-align: center;
+				font-family: Georgia;
+				font-weight: 600;
+			}
+</style>
 <script src="<c:url value='/js/jquery-3.6.1.min.js' />"></script>
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/header.css'/>">
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/customer.css'/>">
@@ -17,6 +38,7 @@
 <c:import url = "/WEB-INF/views/layout/top.jsp"/>
 			<form method="post" action="<c:url value='/customerinsert2' />">
 <br /><br />
+
 <table>
 					<tr><td>아이디 </td><td><input type="text" name="memId" id="memId" value="${memId}" readonly> </td></tr>
 					<tr><td>제목  </td><td><input type="text" name="custitle" id="custitle" ></td></tr>
@@ -29,6 +51,11 @@
 										</table>
 										</form>
 </div>
+<form id="fileUploadFormMulti" method="post" action="<c:url value='/fileUploadMultiple'/>"
+																			  enctype="multipart/form-data">
+			파일 : <input type="file" id="uploadFileMulti"	 name="uploadFileMulti"	multiple="multiple">	
+			<input type="submit"	 value="업로드"	>		
+		</form>
 <script>
 /*  $(document).ready(function() {
 	$("#cus").hide();
