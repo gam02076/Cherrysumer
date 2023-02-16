@@ -7,7 +7,7 @@ body {
 #wrap {
 	width: 1050px;
     height: 1050px;
-	background-image: url("/image/signup_image1.png");
+	background-image: url("/images/signup_image1.png");
 	background-size:100% 100%;
 	margin: auto;
 }
