@@ -29,7 +29,7 @@
 
 			<div class="product">
 				<div class="product_image" onError="this.style.visibility='hidden'">
-					<img src="<c:url value='/image/${deal.picimg }'/>" alt="img"
+					<img src="<c:url value='/images/${deal.picimg }'/>" alt="img"
 						id="preview" />
 				</div>
 

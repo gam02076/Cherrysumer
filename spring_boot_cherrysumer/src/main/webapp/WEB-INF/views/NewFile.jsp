@@ -149,50 +149,11 @@ color:white;
 			</div>
 
 		</div>
-<%-- 		<div id="show2">
-			<div id="show2-1"></div>
-			<c:forEach var="list" items="${list}">
-				<c:if test="${ list.memNo mod 2 ne 0 }">
-					<div class="left">
-						<div class="imgBx">
-							<img src="image/${list.memPicture}">
-						</div>
-						<div class="details">
-							<h2>${list.memName}</h2>
-							<p>
-								인스타 : ${list.memInstargram}<br />
-								<br /> 페이스북 : ${list.memFacebook}<br />
-								<br /> 블로그 : ${list.memBlog}<br />
-							</p>
-						</div>
-					</div>
-				</c:if>
-				
-				<c:if test="${ list.memNo mod 2 eq 0 }">
-					<div class="right">
-						<div class="imgBx">
-							<img src="image/${list.memPicture}">
-						</div>
-						<div class="details">
-							<h2>${list.memName}</h2>
-							<p>
-								인스타 : ${list.memInstargram}<br />
-								<br /> 페이스북 : ${list.memFacebook}<br />
-								<br /> 블로그 : ${list.memBlog}<br />
-							</p>
-						</div>
-					</div>
-				</c:if>
-			</c:forEach>
-		</div> --%>
 
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-<button type="button" class="button">전시회 입장</button>
-<button class="button">전시회 신청 바로가기</button>
+
+
+<button type="button" class="button"><a href="/exhibition/detailViewExhibibition/1/eee">전시회 입장</a></button>
+<button class="button"><a href="/exhibition_requestForm">전시회 신청 바로가기</a></button>
 
 <hr>
 <h1 class="main_text">미술관</h1>
@@ -200,7 +161,7 @@ color:white;
 
 			<div class="show3-2">
 	
-				<c:forEach var="pict" items="${pic}">
+				<c:forEach var="pict" items="${pic}"><a href="/picture/picture_list/">
 					<c:if test="${pict.picType eq '1' }">
 						<br />
 						<div class="show3-1">
@@ -208,7 +169,7 @@ color:white;
 					</div>
 					</c:if>
 
-				
+				</a>
 				</c:forEach>
 			</div>
 		</div>
@@ -231,7 +192,7 @@ color:white;
 				</c:forEach>
 			</div>
 		</div>
-	
+	  <button class="button"><a href="/picture/registerform/">판매등록</a></button>
 	
 	<hr>
 	<h1 class="main_text">전시회 특별관</h1>	
@@ -253,7 +214,7 @@ color:white;
 		</div>
 	
 
-  <button class="button">판매등록</button>
+
 
 	
 	
