@@ -21,7 +21,7 @@
 	width: 100%;
 	height:100%;
 	text-align: center;
-	background-image: url("../image/꽃그림.jpg");        
+	background-image: url("../images/꽃그림.jpg");        
 	background-size : 100% 100%;
 	background-attachment: fixed;
 			}
@@ -71,7 +71,7 @@
 <div id="warp">
 <c:import url = "/WEB-INF/views/layout/top.jsp"/>
 <div id="upBtnBox2">
-		<button id="upBtn2" onclick="customerCheck(${memId});">글쓰기</button>
+		<button id="upBtn2" onclick="customerCheck('${memId}');">글쓰기</button>
 </div><br/>
 
 <form action="">
