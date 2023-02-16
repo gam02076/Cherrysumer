@@ -45,22 +45,22 @@
   	LeftMoving();
   
   }, function() {
-        $('#artists').stop();
+        $('#main').stop();
         
     }); //mouseover 종료
   
   function LeftMoving(){
   	
-  	 var _scrollX = $('#artists').scrollLeft();
-  	 $('#artists').animate({'scrollLeft':_scrollX + 1500},2000, null, function () { 
+  	 var _scrollX = $('#main').scrollLeft();
+  	 $('#main').animate({'scrollLeft':_scrollX + 1500},2000, null, function () { 
 		LeftMoving(); })
 		
   	 };
   	 
   	 function RightMoving(){
   	
-  	 var _scrollX = $('#artists').scrollLeft();
-  	 $('#artists').animate({'scrollLeft':_scrollX - 1500},2000, null, function () { 
+  	 var _scrollX = $('#main').scrollLeft();
+  	 $('#main').animate({'scrollLeft':_scrollX - 1500},2000, null, function () { 
 		RightMoving(); })
 		
   	 };
@@ -71,7 +71,7 @@
   	RightMoving();
   
   }, function() {
-        $('#artists').stop();
+        $('#main').stop();
         
     });
     

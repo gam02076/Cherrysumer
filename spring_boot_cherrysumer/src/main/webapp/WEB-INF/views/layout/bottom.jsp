@@ -1,36 +1,34 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-  <footer>
-  	<!-- <section class="background bg-pic3">
-    	Two
-		<section id="two">
-			<div class="inner2">
-				<header class="major">
-					<h2>Massa libero</h2>
-				</header>
-				<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus.</p>
-				<ul class="actions">
-					<li><a href="landing.html" class="button next">Get Started</a></li>
-				</ul>
-			</div>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<footer id="end">
+	<!-- Footer -->
+	<section id="footer">
+		<section style="margin: auto 0;">
+			<span id="footName">시선</span>
+			<p class="footIndex">Leeum(재)삼성문화재단 유문형 110-82-05953 서울시 용산구
+				이태원로55길 60-16 (한남동) Leeum Museum of Art 60-16 Itaewon-ro 55-gil,
+				Yongsan-gu, Seoul, Korea 04348</p>
+			<hr>
+			<p class="footIndex">© Leeum Museum of Art. All Rights reserved.</p>
 		</section>
-  	</section> -->
-  	
-    <div id="footerImgBox">
-        <img src="">
-    </div>
-    <div id="footerLeftBox">
-        <div id="footerABox"><a href="#" id="footerAO">개인정보처리방침</a><hr/><a href="#" id="footerAT">고객센터</a></div>
-        <div class="footerLeftBoxDiv">전화번호:02-1111-2222 </div>
-        <div class="footerLeftBoxDiv">사업자등록번호 : 000-00-00000</div>
-        <div class="footerLeftBoxDiv">COPYRIGHT © 2023  ALL RIGHTS RESERVED. CREATED BY ㅎㅎ</div>
-    </div>
-    <hr id="footerHr"/>
-    <div id="footerRightBox">
-        <div>
-            <div id="callNumber">02-1234-5678</div>
-            <div id="callDate">고객 센터 문의 평일 09:00 - 18:00</div>
-        </div>
-    </div>
-  </footer>   
+		<section id="footerSNS">
+			<ul class="icons">
+				<li><a href="https://twitter.com/?lang=ko" target="_blank"
+					class="icon1"><img src="<c:url value='/image/twitter.png'/>">
+				</a></li>
+				<li><a href="https://www.instagram.com/" target="_blank"
+					class="icon1"><img src="<c:url value='/image/Instagram.png'/>"></a></li>
+				<li><a href="https://ko-kr.facebook.com/" target="_blank"
+					class="icon1"><img src="<c:url value='/image/Facebook.png'/>">
+				</a></li>
+			</ul>
+				<a href="#" class="qna"><img
+						src="<c:url value='/image/qna.png'/>"></a>
+			<ul class="copyright">
+				<li>문의 번호 : 02-5115-1351</li>
+				<li>문의 번호 : 02-246-2318</li>
+			</ul>
+		</section>
+	</section>
+</footer>

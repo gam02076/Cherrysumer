@@ -6,7 +6,6 @@
 //var End = document.getElementByclass("EndDate").value;
 var EndDate = $('.EndDate').get();
 var sample03 = $('.sample03').get()
- alert(EndDate.length);
 
 const countDownTimer = function (index, date) {
 		var _vDate = new Date(date); // 전달 받은 일자

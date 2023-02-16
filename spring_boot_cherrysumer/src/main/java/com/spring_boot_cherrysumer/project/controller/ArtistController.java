@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.spring_boot_cherrysumer.project.model.ArtVO;
 import com.spring_boot_cherrysumer.project.model.Exhibition2VO;
 import com.spring_boot_cherrysumer.project.model.MemberVO;
 import com.spring_boot_cherrysumer.project.model.PictureVO;
@@ -29,14 +30,12 @@ public class ArtistController {
 
 	@Autowired
 	PictureService service2;
-
+   
+	
+	
 	/* test */
 	@RequestMapping("/test")
 	public String test(Model model) {
-		ArrayList<PictureVO> art = service2.ListPicture();
-		System.out.println(art);
-		model.addAttribute("art", art);
-
 		return "art/test";
 	}
 
@@ -63,7 +62,7 @@ public class ArtistController {
 		return "art/artistList";
 	}
 
-	/* 아티스트 모달창 DB전송 */
+	/* 아티스트 상세정보 불러오기 */
 	@RequestMapping("/artistModal")
 	public String artistModal(@RequestParam String memId, Model model) {
 
@@ -76,7 +75,7 @@ public class ArtistController {
 		return "art/artistModal";
 	}
 
-	/* 사진상세정보 DB전송 */
+	/* 사진상세정보 불러오기 */
 	@RequestMapping("/artDetail")
 	public String artDetail(@RequestParam String picNo, Model model) {
 		PictureVO art = service.picDetail(picNo);
@@ -105,6 +104,11 @@ public class ArtistController {
 
 
 		ArrayList<Exhibition2VO> art = service.exList2(today); //현재 전시중
+		
+		  for(int i=0; i<art.size(); i++) {
+		  art.get(i).setMemId(service.artistName(art.get(i).getMemId()));
+		  }
+		 
 		model.addAttribute("art", art);
 		
 		ArrayList<Exhibition2VO> comingart = service.comingList(today); //전시 예정 Coming Soon
@@ -113,7 +117,16 @@ public class ArtistController {
 		return "art/exhibitionList";
 	}
 
-	/* 마이페이지 내 작품 리스트 */
+	/* 전시회 사진상세정보 불러오기 */
+	@RequestMapping("/exArt")
+	public String exArt(@RequestParam String artImg, Model model) {
+		
+		model.addAttribute("artImg", artImg);
+
+		return "art/exArtBig";
+	}
+	
+	/* 마이페이지 내 작품 불러오기 */
 	@RequestMapping("/myArt")
 	public String myArt(Model model, HttpSession session) {
 
@@ -151,15 +164,6 @@ public class ArtistController {
 	public String delete(@RequestParam String picNo, Model model, HttpSession session) {
 
 		service.myArtDelete(picNo);
-
-		/*
-		 * String memId = (String)session.getAttribute("sid");
-		 * 
-		 * ArrayList<PictureVO> art = service.ArtList(memId);
-		 * 
-		 * model.addAttribute("art", art);
-		 */
-
 		return "result";
 
 	}

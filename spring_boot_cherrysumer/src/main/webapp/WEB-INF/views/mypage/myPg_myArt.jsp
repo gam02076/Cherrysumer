@@ -22,7 +22,7 @@
 					<article class="box" style="background-image:url(/image/${art.picimg});">
 						<div id="title">${art.picTitle}</div>
 						<div class="info">
-							<input type="button" value="수정하기" class="update" id="${art.picNo}" style="margin-top:90px">
+							<input type="button" value="수정하기" class="update" id="${art.picNo}" style="margin-top:55px">
 							<input type="button" value="삭제하기" class="delete" id="${art.picNo}">
 						</div>
 					</article>
