@@ -131,7 +131,7 @@ public class Exhibition_RequestController {
 			// String uploadPath = "C:/springWorkspace/upload/";
 			// String uploadPath="/Users/shimgyumin/java_class/cherrysumer_upload/";
 			// String uploadPath = "/Users/pizza/STS3/SpringWorkspace/cherrysumer_upload/";
-			String uploadPath =  "file:/usr/local/project/upload/upload/";
+			 String uploadPath = "/usr/local/project/upload/upload/";
 			// 마지막에 / 있어야 함
 			
 			// 2. 원본 파일 이름 알아오기
