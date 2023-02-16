@@ -66,8 +66,8 @@
 						href="/exhibition/detailViewExhibibition/${art.exhNo }/${art.memId }">
 						<div class="event7 banner_img">
 							<input type="hidden" value="${art.exhEndDate }" class="EndDate" />
-							<img src="<c:url value='/image/${art.artImg }'/>" alt="전시회 사진"
-								onError="this.onerror=null; this.src='<c:url value='/image/2.png'/>'">
+							<img src="<c:url value='/images/${art.artImg }'/>" alt="전시회 사진"
+								onError="this.onerror=null; this.src='<c:url value='/images/2.png'/>'">
 
 							<div class="hover_text">
 								<p class="p1">${art.exhTitle_kr }</p>
@@ -85,8 +85,8 @@
 						href="/exhibition/detailViewExhibibition/${art.exhNo }/${art.memId }">
 						<div class="event7 banner_img2">
 							<input type="hidden" value="${art.exhEndDate }" class="EndDate" />
-							<img src="<c:url value='/image/${art.artImg }'/>" alt="전시회 사진"
-								onError="this.onerror=null; this.src='<c:url value='/image/2.png'/>'">
+							<img src="<c:url value='/images/${art.artImg }'/>" alt="전시회 사진"
+								onError="this.onerror=null; this.src='<c:url value='/images/2.png'/>'">
 
 							<div class="hover_text">
 								<p class="p1">${art.exhTitle_kr }</p>
@@ -104,8 +104,8 @@
 						href="/exhibition/detailViewExhibibition/${art.exhNo }/${art.memId }">
 						<div class="event7 banner_img">
 							<input type="hidden" value="${art.exhEndDate }" class="EndDate" />
-							<img src="<c:url value='/image/${art.artImg }'/>" alt="전시회 사진"
-								onError="this.onerror=null; this.src='<c:url value='/image/2.png'/>'">
+							<img src="<c:url value='/images/${art.artImg }'/>" alt="전시회 사진"
+								onError="this.onerror=null; this.src='<c:url value='/images/2.png'/>'">
 
 							<div class="hover_text">
 								<p class="p1">${art.exhTitle_kr }</p>
@@ -122,8 +122,8 @@
 					<a
 						href="/exhibition/detailViewExhibibition/${art.exhNo }/${art.memId }">
 						<div class="event7 banner_img2">
-							<img src="<c:url value='/image/${art.artImg }'/>" alt="전시회 사진"
-								onError="this.onerror=null; this.src='<c:url value='/image/2.png'/>'">
+							<img src="<c:url value='/images/${art.artImg }'/>" alt="전시회 사진"
+								onError="this.onerror=null; this.src='<c:url value='/images/2.png'/>'">
 							<input type="hidden" value="${art.exhEndDate }" class="EndDate" />
 							<div class="hover_text">
 								<p class="p1">${art.exhTitle_kr }</p>
@@ -154,7 +154,7 @@
 			<c:forEach var="comingart" items="${comingart }">
 				<div class="imgHoverEvent event2">
 					<div class="imgBox"
-						style="background-image:url(/image/${comingart.artImg });">
+						style="background-image:url(/images/${comingart.artImg });">
 					</div>
 					<div class="hoverBox">
 						<span>

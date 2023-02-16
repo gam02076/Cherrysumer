@@ -19,7 +19,7 @@
 
 		<div id="detail">
 			<div class="modal_imgbox">
-				<img src="<c:url value='/image/${name.memImg }'/>" id="modal_img">
+				<img src="<c:url value='/images/${name.memImg }'/>" id="modal_img">
 				<div id="history">${name.memName }</div>
 			</div>
 			<div id="profile">
@@ -42,10 +42,10 @@
 				<div id="pfiletitle"><span style="width: 190px;">Recent</span><span style="width: 190px;">Exhibition</span></div>
 				<div class="pflieindtro" style="justify-content: space-between; height: 30%;">
 					<span class="ArtNEx"><img
-						src="<c:url value='/image/04.jpg'/>" class="artImgs"
+						src="<c:url value='/images/04.jpg'/>" class="artImgs"
 						onerror="this.style.display='none';">
 					</span> <span class="ArtNEx"><img
-						src="<c:url value='/image/exh_painting.jpg'/>" class="artImgs"
+						src="<c:url value='/images/exh_painting.jpg'/>" class="artImgs"
 						onerror="this.style.display='none';"></span>
 				</div>
 			</div>
@@ -55,7 +55,7 @@
 	<%-- <div id="art">
 		<c:forEach var="art" items="${art }" begin="0" end="3">
 			<div class="artImg">
-				<img src="<c:url value='/image/${art.picimg }'/>" class="artImgs"
+				<img src="<c:url value='/images/${art.picimg }'/>" class="artImgs"
 					onerror="this.style.display='none';">
 			</div>
 		</c:forEach>

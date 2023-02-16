@@ -14,7 +14,7 @@
   <input type="hidden" name="picNo" value="${art.picNo}">
     <div class="product">
         <div class="product_image">
-            <img src="<c:url value='/image/${art.picimg }'/>" class="image">
+            <img src="<c:url value='/images/${art.picimg }'/>" class="image">
         </div>
         <div id="productInfo">
             <table id="TbModal">

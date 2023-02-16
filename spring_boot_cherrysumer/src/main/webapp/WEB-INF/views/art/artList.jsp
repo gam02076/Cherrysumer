@@ -22,7 +22,7 @@
     <div id="wrap">
     <c:forEach var="art" items="${art}">
     <div class="box" id="${art.picNo}">
-      <img src="<c:url value='/image/${art.picimg }'/>"class="photo">
+      <img src="<c:url value='/images/${art.picimg }'/>"class="photo">
       </div>
       </c:forEach>
       </div>

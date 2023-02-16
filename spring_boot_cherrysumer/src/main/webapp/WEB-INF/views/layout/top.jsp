@@ -4,7 +4,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <header>
     <div class="header">
-        <a href="/"><img src="<c:url value='/image/exh_logo(text2).png'/>" class="logo"></a>
+        <a href="/"><img src="<c:url value='/images/exh_logo(text2).png'/>" class="logo"></a>
         <div id="headerRight">
         <div class="menuList" id="memList">
         	<c:if test="${empty sessionScope.sid }">
@@ -38,7 +38,7 @@
             <a href="/artist">Artists</a>
             <a href="/exhibitionList">Exhibition</a>
             <a href="/picture">Painting & Photo</a>
-          <%--   <img src="<c:url value='/image/exh_menu_icon.png'/>" class="icon"> --%>
+          <%--   <img src="<c:url value='/images/exh_menu_icon.png'/>" class="icon"> --%>
         </div>
         </div>
     </div>
