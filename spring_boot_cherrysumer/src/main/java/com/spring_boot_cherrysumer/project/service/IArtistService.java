@@ -23,4 +23,8 @@ public interface IArtistService {
 	  public void ArtUpdate(PictureVO vo); // 내 그럼 정보 업데이트
 	  public void myArtDelete(String picNo); //삭제버튼 클릭시 데이터 삭제
 	  public int NowMyPoint(String memId); //현재 내 포인트 사용 내역
+	  
+	  
+	  public ArrayList<Exhibition2VO> exList3(String today); // 메인 전시회관
+	  
 	}

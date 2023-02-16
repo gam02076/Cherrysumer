@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.spring_boot_cherrysumer.project.dao.IPictureDAO;
+import com.spring_boot_cherrysumer.project.model.ExhibitionVO;
+import com.spring_boot_cherrysumer.project.model.MemberVO;
 import com.spring_boot_cherrysumer.project.model.PictureVO;
 @Service
 public class PictureService implements IPictureService {
@@ -46,6 +48,15 @@ public class PictureService implements IPictureService {
 		
 	}
 	
+	
+	//전시회 메인 출력 	
+	@Override
+	public ExhibitionVO ListPicture2(String exhNo) {
+		
+		return dao.ListPicture2(exhNo); 
+	
+	
+	}
 	
 ////	삭제
 //	@Override

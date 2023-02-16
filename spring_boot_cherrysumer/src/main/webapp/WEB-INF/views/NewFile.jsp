@@ -31,6 +31,9 @@
 <script src="<c:url value='/js/picture/main_button.js' />"></script>
 
 
+
+<script src="<c:url value='/js/exhibition_1.js'/>"></script>
+
 <style>
 #a {
 	width: 100%;
@@ -113,68 +116,7 @@ color:white;
 		href="<c:url value='/css/picture/main.css' />">
 	<script src="<c:url value='/js/picture/main.js' />"></script>
 
-	<!-- 커서 -->
-	<!-- 커서 -->
-	<!-- 커서 -->
-	<!-- 커서 -->
-	<!-- 커서 -->
 
-
-
-	<!-- 커서 -->
-	<!-- 커서 -->
-	<!-- 커서 -->
-	<!-- 커서 -->
-	<!-- 커서 -->
-	<!-- 커서 -->
-
-	<div id="warp">
-	
-		<!-- <div id="show">
-		 	<section class='section'>
-				<div class='masthead-image' id='master-container'>
-					<div class='content center'>
-						<h1 id='master'>
-							<div>시 선 은</div>
-							<br />
-							<div id='master-container-scroller'>
-								<div class='master-container-scroller_item'>
-									<a class='cta-link' href='#'>어머님</a>
-								</div>
-								<div class='master-container-scroller_item'>
-									<a class='cta-link' href='#'>아버님</a>
-								</div>
-								<div class='master-container-scroller_item'>
-									<a class='cta-link' href='#'>할아버지</a>
-								</div>
-								<div class='master-container-scroller_item'>
-									<a class='cta-link' href='#'>할머니</a>
-								</div>
-								<div class='master-container-scroller_item'>
-									<a class='cta-link' href='#'>삼촌</a>
-								</div>
-								<div class='master-container-scroller_item'>
-									<a class='cta-link' href='#'>누나</a>
-								</div>
-								<div class='master-container-scroller_item'>
-									<a class='cta-link' href='#'>형</a>
-								</div>
-								<div class='master-container-scroller_item'>
-									<a class='cta-link' href='#'>심규민</a>
-								</div>
-								<div class='master-container-scroller_item'>
-									<a class='cta-link' href='#'>최성빈</a>
-								</div>
-								<div class='master-container-scroller_item'>박은빈</div>
-							</div>
-							<br />
-							<div>모 두 가 작 가 가 될 수 있 습 니 다</div>
-						</h1>
-						
-					</div>
-				</div> -->
-			</section>
-		</div>
 		<div id="show1">
 		
 		
@@ -262,7 +204,7 @@ color:white;
 					<c:if test="${pict.picType eq '1' }">
 						<br />
 						<div class="show3-1">
-						<img src="<c:url value="/image/${pict.picimg}"/>">
+						<img src="<c:url value="/images/${pict.picimg}"/>">
 					</div>
 					</c:if>
 
@@ -282,7 +224,7 @@ color:white;
 						
 					<div class="show3-1">
 					
-						<img src="<c:url value="/image/${pict.picimg}"/>">
+						<img src="<c:url value="/images/${pict.picimg}"/>">
 					</div>
 					</c:if>
 
@@ -297,16 +239,15 @@ color:white;
 		<div id="show3">
 			<div class="show3-2">
 
-				<c:forEach var="pict" items="${pic}">
-					<c:if test="${pict.picType eq '2' }">
+				<c:forEach var="pict1" items="${ex}">
+					
 						<br />
 						
 					<div class="show3-1">
 					
-						<img src="<c:url value="/image/${pict.picimg}"/>">
+						<img src="<c:url value="/images/${pict1.artImg}"/>">
 					</div>
-					</c:if>
-
+					
 				</c:forEach>
 			</div>
 		</div>
