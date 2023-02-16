@@ -108,7 +108,7 @@ color:white;
 <body>
 	
 	<c:import url="/WEB-INF/views/layout/top.jsp" />
-
+	<c:import url="/WEB-INF/views/layout/head.jsp" />
 	<link rel="stylesheet" type="text/css"
 		href="<c:url value='/css/picture/main.css' />">
 	<script src="<c:url value='/js/picture/main.js' />"></script>
@@ -173,7 +173,7 @@ color:white;
 						
 					</div>
 				</div> -->
-			</section> -->
+			</section>
 		</div>
 		<div id="show1">
 		
@@ -289,20 +289,27 @@ color:white;
 				</c:forEach>
 			</div>
 		</div>
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-	<button type="button" class="btn btn-secondary c-btn-2" data-dismiss="modal">작품 판매하기</button>
+	
+	
+	<hr>
+	<h1 class="main_text">전시회 특별관</h1>	
+		
+		<div id="show3">
+			<div class="show3-2">
+
+				<c:forEach var="pict" items="${pic}">
+					<c:if test="${pict.picType eq '2' }">
+						<br />
+						
+					<div class="show3-1">
+					
+						<img src="<c:url value="/image/${pict.picimg}"/>">
+					</div>
+					</c:if>
+
+				</c:forEach>
+			</div>
+		</div>
 	
 
   <button class="button">판매등록</button>
