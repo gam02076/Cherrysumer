@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -37,7 +39,8 @@
 				<c:if test="${not empty sessionScope.sid }">
 					<!-- 로고 이미지 -->
 					<div class="logoBox">
-						<img src="<c:url value='/image/logo2.png'/>">
+						<%-- <img src="<c:url value='/images/logo2.png'/>"> --%>
+						<img src="<c:url value='/images/exh_logo(opacity).png'/>">
 					</div>
 				
 					<!-- 전시회 신청 폼 -->
@@ -48,8 +51,10 @@
 									<tr>
 										<td colspan="4" width="600" height="200" class="item" style="padding:0 0 0 80px;"><font size="6">전시회 참가 신청서<br>Exhibition Request Form</font></td>
 									</tr>
+									<!-- 공백 -->		
+									<tr><td colspan="4" height="35" style="border-top:1px solid grey;"></td></tr>
 									<tr>
-										<td colspan="4" class="item" style="border-bottom:1 solid grey;">1. 작가 정보</td>
+										<td colspan="4" class="item" style="border-bottom:1 solid grey;"><b>1. 작가 정보</b></td>
 									</tr>
 									<tr>
 										<td width="150" height="60" class="item">작가 성명</td>
@@ -67,9 +72,10 @@
 										<td height="60" class="item">E-mail</td>
 										<td colspan="3">${request_memVo.memEmail}</td>
 									</tr>
-									<tr><td colspan="4" ></td></tr>
+									<!-- 공백 -->		
+									<tr><td colspan="4" height="35" style="border-top:1px solid grey;"></td></tr>
 									<tr>
-										<td colspan="4">2. 전시회 정보</td>
+										<td colspan="4"><b>2. 전시회 정보</b></td>
 									</tr>
 									<tr>
 										<td><label for="title" class="item">전시회 주제</label></td>
@@ -156,6 +162,8 @@
 										<td colspan="5" height="50"></td>
 									</tr>
 									<c:forEach varStatus="status" begin="1" end="3">
+										<!-- 공백 -->		
+										<tr><td colspan="5" height="35" style="border-top:1px solid grey;"></td></tr>
 										<tr>
 											<td><center>대표 작품 여부</center></td>							
 											<td>작품명(한글)</td>
@@ -199,14 +207,13 @@
 													<option value="4">아크릴</option>
 												</select>
 											</td>
-												
-												
 										</tr>
+										<!-- 공백 -->		
+										<tr><td colspan="5" height="35"></td></tr>
 										
-									</c:forEach>				
-									<tr><!-- 공백 -->
-										<td colspan="5" height="50"></td>
-									</tr>
+									</c:forEach>		
+									<!-- 공백 -->		
+									<tr><td colspan="5" height="50" style="border-top:1px solid grey;"></td></tr>
 									<tr>
 										<td colspan="3" style="text-align:center;"> 한글로 계약 조건 어쩌고 저쩌고</td>
 									</tr>		
@@ -226,6 +233,24 @@
 												<br>				
 											</div>
 										</td>
+									</tr>
+									<!-- 공백 -->
+									<tr><td colspan="3" height="50"></td></tr>
+									<tr>
+										<td colspan="5" style="text-align: center"  height="100">위와 같이 시선 전시회에 참가를 신청합니다.<br>I confirm that the above information is correct.</td>
+									</tr>
+									<tr>
+										<td colspan="5" style="text-align: right">신청인 (Signature): ${request_memVo.memName}</td>
+									</tr>
+									<tr>
+										<!-- <td colspan="5" style="text-align: right"><div style="width:200px; text-align:right; display:inline-block;">동의합니다.<br>I agree.<input type="checkbox" style="display:inline-block;"></div></td> -->
+										<td colspan="5" style="text-align: right"><label>동의합니다.<br>I agree.<input type="checkbox" name="check" value="check"></label></td>
+										
+									</tr>
+									<tr>
+										<td colspan="3" style="text-align: center">
+										<c:set var="ymd" value="<%=new java.util.Date()%>" />
+										<fmt:formatDate value="${ymd}" pattern="yyyy년 MM월 dd일" /></td>
 									</tr>
 									
 									
@@ -263,27 +288,14 @@
 								<tr>
 									<td colspan="5"><hr></td>
 								</tr>
-								<tr>
-									<td colspan="5" style="text-align: center"  height="100">위와 같이 시선 전시회에 참가를 신청합니다.<br>
-									I confirm that the above information is correct.</td>
-								</tr>
-								<tr>
-									<td colspan="5" style="text-align: center"> 2023 년 몇 월 몇 일 </td>
-								</tr>
-								<tr>
-									<td colspan="5" style="text-align: right">신청인 (Signature): 누구누구</td>
-								</tr>
-								<tr>
-									<td colspan="5" style="text-align: right"><input type="checkbox">동의합니다.<br>
-									I agree.</td>
-								</tr>
+
 								<tr>
 									<td colspan="5" style="text-align: right">
 										<button id="requestSubmit"><a href="<c:url value='/exhibition/requestList/${rvo.rNo}'/>">신청하기<br>(submit)</a></button>
 									</td>
 								</tr>--%>
 									<tr>
-										<td>
+										<td colspan="3" style="text-align: center">
 											<input type="submit" id="insertRequest" value="신청하기"> 
 										</td>
 									</tr>
