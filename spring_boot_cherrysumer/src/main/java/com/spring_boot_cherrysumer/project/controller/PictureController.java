@@ -65,7 +65,6 @@ public class PictureController {
 		model.addAttribute("pic",pic);
 		
 		
-		System.out.println(ex.get(0).getArtImg());
 			return "NewFile"; 	
 		}
 //		메인 컨트롤러//	메인 컨트롤러//	메인 컨트롤러//	메인 컨트롤러//	메인 컨트롤러//	메인 컨트롤러			
