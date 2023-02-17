@@ -23,7 +23,7 @@
 			</div>
 			<input type="hidden" name="picNo" value="${art.picNo }">
 			<div class="product">
-				<div class="product_image" style="background-image:url(/image/${art.picimg });">
+				<div class="product_image" style="background-image:url(/images/${art.picimg });">
 				</div>
 				<div class="productInfo">
 					<table>

@@ -71,7 +71,7 @@
 <div id="warp">
 <c:import url = "/WEB-INF/views/layout/top.jsp"/>
 <div id="upBtnBox2">
-		<button id="upBtn2" onclick="customerCheck('${memId}');">글쓰기</button>
+		<button id="upBtn2" onclick="customerCheck(${memId});">글쓰기</button>
 </div><br/>
 
 <form action="">

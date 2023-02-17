@@ -3,8 +3,17 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <header>
+<style>
+.adminbtn{
+	    position: absolute;
+    right: 89%;
+    top: 37%;
+}
+</style>
+
+
     <div class="header">
-        <a href="/"><img src="<c:url value='/image/exh_logo(text2).png'/>" class="logo"></a>
+        <a href="/"><img src="<c:url value='/images/exh_logo(text2).png'/>" class="logo"></a>
         <div id="headerRight">
         <div class="menuList" id="memList">
         	<c:if test="${empty sessionScope.sid }">
@@ -31,14 +40,21 @@
 	            		</ul>
 	               	</div>
                	</div>
-			</c:if>	 
+			</c:if>
+			
+			<c:if test="${sessionScope.sid=='둘리'}">
+			
+			  <button class="adminbtn"><a href="/picture/registerform/">관리자 목록</a></button>
+			</c:if>
+			
+			
             </div>
             
         <div class="menuList">
             <a href="/artist">Artists</a>
             <a href="/exhibitionList">Exhibition</a>
             <a href="/picture">Painting & Photo</a>
-          <%--   <img src="<c:url value='/image/exh_menu_icon.png'/>" class="icon"> --%>
+          <%--   <img src="<c:url value='/images/exh_menu_icon.png'/>" class="icon"> --%>
         </div>
         </div>
     </div>

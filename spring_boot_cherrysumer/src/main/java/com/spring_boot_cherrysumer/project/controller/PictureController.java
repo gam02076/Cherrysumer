@@ -65,7 +65,6 @@ public class PictureController {
 		model.addAttribute("pic",pic);
 		
 		
-		System.out.println(ex.get(0).getArtImg());
 			return "NewFile"; 	
 		}
 //		메인 컨트롤러//	메인 컨트롤러//	메인 컨트롤러//	메인 컨트롤러//	메인 컨트롤러//	메인 컨트롤러			
@@ -99,11 +98,10 @@ public class PictureController {
 		@RequestMapping("/register")
 		public String insert (PictureVO vo,
 							@RequestParam("upload")MultipartFile file, Model model) throws IOException{
-			
-//			 String uploadPath="/Users/shimgyumin/java_class/cherrysumer_upload/";
+// String uploadPath="/Users/shimgyumin/java_class/cherrysumer_upload/";
 //	String uploadPath = "/Users/pizza/STS3/SpringWorkspace/cherrysumer_upload/";
 //String uploadPath = "C:/springWorkspace/upload/";
-String uploadPath =  "file:///usr/local/project/upload/upload/";
+String uploadPath =  "/usr/local/project/upload/upload/";
 			 
 			 
 			String orgName=file.getOriginalFilename();

@@ -23,8 +23,8 @@
 			</div>
 			<input type="hidden" name="picNo" value="${art.picNo }">
 			<div class="product">
-				<div class="product_image" style="background-image:url(/image/${art.picimg }); background-size:cover;">
-					 <%-- <img src="<c:url value='/image/${art.picimg }'/>" id="image"> --%>
+				<div class="product_image" style="background-image:url(/images/${art.picimg }); background-size:cover;">
+					 <%-- <img src="<c:url value='/images/${art.picimg }'/>" id="image"> --%>
 				</div>
 				<div class="productInfo">
 					<table>
