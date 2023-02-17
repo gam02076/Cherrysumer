@@ -21,7 +21,7 @@
 	width: 100%;
 	height:100%;
 	text-align: center;
-	background-image: url("<c:url value='/images/꽃그림.jpg'/ >");        
+	background-image: url("/images/꽃그림.jpg");        
 	background-size : 100% 100%;
 	background-attachment: fixed;
 			}
