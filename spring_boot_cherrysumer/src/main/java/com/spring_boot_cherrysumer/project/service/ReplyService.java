@@ -44,4 +44,10 @@ public class ReplyService implements IReplyService{
 		return dao.replySelect(vo);
 	}
 
+	@Override
+	public ArrayList<ReplyVO> replyList2(String memId) {
+		// TODO Auto-generated method stub
+		return dao.replyList2(memId);
+	}
+
 }

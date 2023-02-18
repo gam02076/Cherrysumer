@@ -44,7 +44,7 @@ public class MypageController {
 			  Model model) throws IOException {
 		// 1. 파일 저장 경로 설정 : C:/springWorkspace/upload/
 				// 마지막에 / 있어야 함
-				String uploadPath = "C:/springWorkspace/upload/";
+				String uploadPath = "/usr/local/project/upload/upload/";
 				
 				// 2. 원본 파일 이름 저장
 				String originalFileName = file.getOriginalFilename();

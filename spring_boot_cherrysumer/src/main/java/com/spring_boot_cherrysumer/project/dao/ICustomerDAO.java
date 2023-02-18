@@ -7,6 +7,7 @@ import com.spring_boot_cherrysumer.project.model.PagingVO;
 
 public interface ICustomerDAO {
 	public ArrayList<CustomerVO> CustomerAll(PagingVO vo);
+	public ArrayList<CustomerVO> CustomerAll2(String memId);
 	public void insertCustomer(CustomerVO cus);
 	public void updateCustomer(CustomerVO cus);
 	public void deleteCustomer(String cusNo);

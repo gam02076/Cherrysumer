@@ -13,6 +13,8 @@
 <script src="<c:url value='/js/customer.js' />"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/header.css'/>">
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/bottom.css'/>">
+
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/customer.css'/>">
 </head>
 <style>

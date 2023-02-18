@@ -57,34 +57,25 @@ a {
 		<br />
 		<div>
 			<table>
-				<tr>
-					<th style="width: 100px">번호</th>
-					<th style="width: 300px">제목</th>
-					<th style="width: 300px">등록일</th>
-					<th style="width: 100px">공개글 여부</th>
-					<th style="width: 200px">아이디</th>
-					<th style="width: 100px">수정</th>
-					<th style="width: 100px">삭제</th>
-				</tr>
-				<c:forEach var="cus" items="${cusList}">
-					<tr>
-						<td><a
-							href="<c:url value='/customer/customerdetailview/${cus.cusNo }' />">${cus.cusNo }</a></td>
-						<td>${cus.custitle }</td>
-						<td>${cus.cusdate }</td>
-						<td>${cus.cusabc}</td>
-						<td>${cus.memId}</td>
-						<td><a
-							href="<c:url value='/custumer/custumer/${cus.cusNo }'/>"><input
+			<tr><th>게시물번호</th><th>아이디</th><th>내용</th><th>날짜</th><th>수정</th><th>삭제</th></tr>
+				<c:forEach var="rep" items="${rep}">
+<tr><td style="width:100px;"><a
+							href="<c:url value='/customer/customerdetailview/${rep.cusNo }' />">${rep.cusNo }</a></td>
+<td style="width:100px;">${rep.writer}</td>
+<td style="width:500px;">${rep.content }</td>
+<td style="width:100px;">${rep.regDate}</td>
+<td><a
+							href="<c:url value='/custumer/custumer/${rep.cusNo }'/>"><input
 								type="button" value="수정하기"></a></td>
-						<td><a href="javascript:deleteCheck2('${cus.cusNo }');"><input
+						<td><a href="javascript:deleteCheck3('${rep.cusNo }');"><input
 								type="button" value="삭제하기"></a></td>
-					</tr>
+</tr>
+
 				</c:forEach>
 			</table>
 		</div>
 		<script>
-			function deleteCheck2(cusNo) {
+			function deleteCheck3(cusNo) {
 				var answer = confirm("삭제하시겠습니까?");
 				if (answer) {
 					location.href = "/custumer/deletecustumer/?cusNo=" + cusNo

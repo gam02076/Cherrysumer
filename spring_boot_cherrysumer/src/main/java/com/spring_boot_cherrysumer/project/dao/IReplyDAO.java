@@ -7,6 +7,8 @@ import com.spring_boot_cherrysumer.project.model.ReplyVO;
 public interface IReplyDAO {
 	// 댓글 조회
 	public ArrayList<ReplyVO> replyList(int cusNo);
+	
+	public ArrayList<ReplyVO> replyList2(String memId);
 
 	// 댓글 조회
 	public void replyWrite(ReplyVO vo);
