@@ -10,6 +10,7 @@
 </head>
 <body>
 <div>
+<h2>게시물 비밀번호 입력</h2>
 <form method="post" action="<c:url value='/confirm2/${cusNo}' />">
 <input type="text" id="cus2" name="cus2">
 <input type="submit" value="등록">

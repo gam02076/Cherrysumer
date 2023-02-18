@@ -4,11 +4,23 @@
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
     <mapper namespace="com.spring_boot_cherrysumer.project.dao.IReplyDAO">
+    <resultMap id="repResult" type="com.spring_boot_cherrysumer.project.model.ReplyVO" >
+  		<result property="rno"  column="rno"  />
+  		<result property="cusNo"  column="cusNo"  />
+  		<result property="writer"  column="writer"  />
+  		<result property="content"  column="content"  />
+  		<result property="regDate"  column="regDate"  />
+  	</resultMap>
     <!-- 댓글 조회 -->
 <select id="replyList" parameterType="int" resultType="com.spring_boot_cherrysumer.project.model.ReplyVO">
 	select *
 	from reply
 		where cusNo = #{cusNo}		
+</select>
+
+<select id="replyList2" parameterType="String" resultType="com.spring_boot_cherrysumer.project.model.ReplyVO">
+	select * from reply
+		where writer = #{memId}		
 </select>
 
 <!-- 댓글 작성 -->

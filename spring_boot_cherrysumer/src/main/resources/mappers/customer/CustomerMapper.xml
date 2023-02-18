@@ -17,6 +17,10 @@
   		SELECT * FROM customer ORDER BY cusNo
   		LIMIT #{start},#{end}
   </select>
+  <select id="CustomerAll2" parameterType="String" resultMap="cusResult">
+  		SELECT * FROM customer
+  		where memId=#{memId}
+  </select>
   <insert id="insertCustomer" parameterType="com.spring_boot_cherrysumer.project.model.CustomerVO">
   INSERT INTO customer (cusNo, custitle, cusdate, custext, cuspublic, memId, cusabc, cus)
   		VALUES (#{cusNo}, #{custitle}, #{cusdate}, #{custext}, #{cuspublic}, #{memId}, #{cusabc}, #{cus})
@@ -36,6 +40,11 @@
         SELECT * FROM customer WHERE custitle Like
         CONCAT('%', #{keyword},'%')
     </select>
+    <update id="updateCustomer"  parameterType="com.spring_boot_cherrysumer.project.model.CustomerVO">
+  		UPDATE customer
+  		SET custitle=#{custitle}, custext=#{custext}
+  	    where cusNo=#{cusNo}
+  </update>
 
 
   	</mapper>

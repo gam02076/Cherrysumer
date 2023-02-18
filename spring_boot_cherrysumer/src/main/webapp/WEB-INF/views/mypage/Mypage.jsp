@@ -85,7 +85,9 @@ ${vo.memAddress2} </td></tr>
 
 <tr><th>회원유형</th><td> ${vo.memType} </td></tr>
 </table><br />
- <a href="<c:url value='Mypage2' />"><input id="button" type="button" value="회원정보 수정"></a>
+ <a href="<c:url value='Mypage2' />"><input id="button" type="button" value="회원정보 수정"></a><br/><br/>
+ <a href="<c:url value='/customer/customerListAll' />"><input id="button" type="button" value="내가 쓴 글"></a>
+ <a href="<c:url value='/customer/customerreplyAll' />"><input id="button" type="button" value="내가 쓴 댓글"></a>
 </div>
 <br/><br/><br/><br/>
 </div>
