@@ -30,7 +30,7 @@ public class CustomerService implements ICustomerService {
 	@Override
 	public void updateCustomer(CustomerVO cus) {
 		// TODO Auto-generated method stub
-		
+		dao.updateCustomer(cus);
 	}
 
 	@Override
@@ -53,6 +53,12 @@ public class CustomerService implements ICustomerService {
 	public ArrayList<CustomerVO> CustomerSearch(String keyword) {
 		// TODO Auto-generated method stub
 		return dao.CustomerSearch(keyword);
+	}
+
+	@Override
+	public ArrayList<CustomerVO> CustomerAll2(String memId) {
+		// TODO Auto-generated method stub
+		return dao.CustomerAll2(memId);
 	}
 
 }
