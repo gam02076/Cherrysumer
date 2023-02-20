@@ -18,6 +18,7 @@ public class PictureVO {
 	public String pictech;
 	public Timestamp picTime;
 	public Date pictime2;
+	public int good;
 	
 	
 	
@@ -92,6 +93,12 @@ public class PictureVO {
 	}
 	public void setPictime2(Date pictime2) {
 		this.pictime2 = pictime2;
+	}
+	public int getGood() {
+		return good;
+	}
+	public void setGood(int good) {
+		this.good = good;
 	}
 	
 	

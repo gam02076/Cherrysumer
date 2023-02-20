@@ -17,18 +17,24 @@
 		<result property="picauthor"  column="picauthor"  />
 		<result property="piccontent"  column="piccontent"  />
 		<result property="pictech"  column="pictech"  />	
+		<result property="good"  column="good"  />	
 
   	</resultMap>
   	
 
   	<select id="ListPicture" resultMap="resultpic">
-  		SELECT * FROM  picture ORDER BY picNo DESC
+  		SELECT * FROM  picture where good="1" ORDER BY picNo DESC
+  	</select>
+  	
+  	<!-- 승인 안된 사진(관리자) -->
+  	<select id="greenEyeFilter" resultMap="resultpic">
+  		SELECT * FROM  picture where good="2" ORDER BY picNo DESC
   	</select>
   	
   	<!-- 등록 -->
  <insert id="insert" parameterType="com.spring_boot_cherrysumer.project.model.PictureVO">
-  		insert into picture(picTitle, picNo, picPrice, picType, picSize,picimg,picauthor,piccontent,pictech)
-  		values (#{picTitle},#{picNo},#{picPrice},#{picType},#{picSize},#{picimg},#{picauthor},#{piccontent},#{pictech})
+  		insert into picture(picTitle, picNo, picPrice, picType, picSize,picimg,picauthor,piccontent,pictech,good)
+  		values (#{picTitle},#{picNo},#{picPrice},#{picType},#{picSize},#{picimg},#{picauthor},#{piccontent},#{pictech},#{good})
  </insert>
   	
   	<!-- 검색 -->
@@ -50,6 +56,18 @@
 		resultType="com.spring_boot_cherrysumer.project.model.ExhibitionVO">
 		select * from exhibition where exhNo=#{exhNo}
 	</select>
+  	
+  	<!-- 불통과된 사진 삭제 -->
+	<delete id="PicNopass" parameterType="int">
+		DELETE FROM picture
+		WHERE picNo=#{picNo}
+	</delete>
+
+	<!-- 통과된 사진 조회 -->
+	<update id="PicPass" parameterType="int">
+		UPDATE picture SET good='1' WHERE picNo=#{picNo};
+	</update>
+	
   	
   <!-- 댓글 삭제 -->
   	<!-- <delete id="Delete" parameterType="string">

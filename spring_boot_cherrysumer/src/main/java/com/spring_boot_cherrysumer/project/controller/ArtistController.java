@@ -43,9 +43,7 @@ public class ArtistController {
 	@RequestMapping("/point")
 	public String point(HttpSession session, Model model) {
 		String memId = (String) session.getAttribute("sid");
-		System.out.println(memId);
 		int mypoint = service.NowMyPoint(memId);
-		System.out.println(mypoint);
 
 		model.addAttribute("point", mypoint);
 
@@ -71,6 +69,9 @@ public class ArtistController {
 
 		ArrayList<PictureVO> art = service.ArtList(memId);
 		model.addAttribute("art", art);
+		
+		Exhibition2VO ex=service.artDetailEX(memId);
+		model.addAttribute("ex", ex);
 
 		return "art/artistModal";
 	}
@@ -108,6 +109,10 @@ public class ArtistController {
 		  for(int i=0; i<art.size(); i++) {
 		  art.get(i).setMemId(service.artistName(art.get(i).getMemId()));
 		  }
+		  
+		  Exhibition2VO bestart=service.exList1(today);
+		  bestart.setMemId(service.artistName(bestart.getMemId()));
+		  model.addAttribute("bestart", bestart);
 		 
 		model.addAttribute("art", art);
 		
@@ -142,7 +147,7 @@ public class ArtistController {
 	/* 마이페이지 내 작품 상세정보 불러오기 */
 	@RequestMapping("/myArtDate")
 	public String myArtDate(@RequestParam String picNo, Model model) {
-		System.out.println(picNo);
+		
 		PictureVO art = service.picDetail(picNo);
 		model.addAttribute("art", art);
 

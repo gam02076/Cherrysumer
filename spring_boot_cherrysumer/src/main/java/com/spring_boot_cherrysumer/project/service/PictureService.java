@@ -57,6 +57,23 @@ public class PictureService implements IPictureService {
 	
 	
 	}
+
+	@Override
+	public ArrayList<PictureVO> greenEyeFilter() {
+		return dao.greenEyeFilter() ;
+	}
+
+	@Override
+	public void PicNopass(int picNo) {
+		dao.PicNopass(picNo);
+		
+	}
+
+	@Override
+	public void PicPass(int picNo) {
+		dao.PicPass(picNo);
+		
+	}
 	
 ////	삭제
 //	@Override
