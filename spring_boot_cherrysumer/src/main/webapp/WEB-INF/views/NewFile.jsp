@@ -102,7 +102,7 @@
 			<div class="show3-2">
 
 				<c:forEach var="pict" items="${pic}"><a href="/picture/photo_list/">
-					<c:if test="${pict.picType eq '1' }">
+					<c:if test="${pict.picType eq '2' }">
 						<br />
 						
 					<div class="show3-1">
