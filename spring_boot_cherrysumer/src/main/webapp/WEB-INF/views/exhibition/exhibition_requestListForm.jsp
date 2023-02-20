@@ -25,7 +25,8 @@
 		<!-- 검색 결과 출력 -->
 		<div id="searchResultBox"></div>
 		
-		
+			
+		<form method="post" action="">
 			<table border="1">
 				<tr>
 					<td rowspan="2">신청 번호</td><td rowspan="2">작가 이름</td><td rowspan="2">회원 ID</td><td rowspan="2">전시회 제목</td><td colspan="2">전시일</td><td rowspan="2">승인 여부</td><td rowspan="2">미리보기</td>
@@ -41,11 +42,17 @@
 						<td>${exhb.exhTitle_kr}</td>
 						<td>${exhb.exhStartDate }</td>
 						<td>${exhb.exhEndDate }</td>
-						<td>${exhConfirm}</td>
+						<td><select id="exhConfirm" name="exhConfirm" style="text-align:center;">
+				       			<option value="" selected></option>
+				        		<option value="1"> 미승인 </option>
+				        		<option value="2"> 승인 </option>
+				        		<option value="3"> 대표 이미지 </option>
+				        	</select>
+				        </td>
 						<td></td>
 					</tr>
 				</c:forEach>
 			</table>
-
+		</form>
 	</body>
 </html>

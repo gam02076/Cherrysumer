@@ -240,6 +240,11 @@
 										<td colspan="5" style="text-align: center"  height="100">위와 같이 시선 전시회에 참가를 신청합니다.<br>I confirm that the above information is correct.</td>
 									</tr>
 									<tr>
+										<td colspan="3" style="text-align: right">
+										<c:set var="ymd" value="<%=new java.util.Date()%>" />
+										<fmt:formatDate value="${ymd}" pattern="yyyy년 MM월 dd일" /></td>
+									</tr>
+									<tr>
 										<td colspan="5" style="text-align: right">신청인 (Signature): ${request_memVo.memName}</td>
 									</tr>
 									<tr>
@@ -247,11 +252,7 @@
 										<td colspan="5" style="text-align: right"><label>동의합니다.<br>I agree.<input type="checkbox" name="check" value="check"></label></td>
 										
 									</tr>
-									<tr>
-										<td colspan="3" style="text-align: center">
-										<c:set var="ymd" value="<%=new java.util.Date()%>" />
-										<fmt:formatDate value="${ymd}" pattern="yyyy년 MM월 dd일" /></td>
-									</tr>
+									
 									
 									
 			
