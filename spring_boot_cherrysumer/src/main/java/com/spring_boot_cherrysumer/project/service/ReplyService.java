@@ -50,4 +50,10 @@ public class ReplyService implements IReplyService{
 		return dao.replyList2(memId);
 	}
 
+	@Override
+	public void replyDelete2(String cusNo) {
+		dao.replyDelete2(cusNo);
+		
+	}
+
 }
