@@ -79,6 +79,7 @@
 					<div class="register_textarea" >
 						<textarea placeholder=" 작품을 소개해주세요." name="piccontent" id="piccontent"></textarea>
 					</div>
+					<input type="hidden" name="good" value="1">
 					<div class="register_btn">
 						<button type="submit" value="등록" class="btn_1" onclick="submit1">등록</button>
 						<button type="button" class="btn_1">취소</button>
@@ -127,27 +128,7 @@
         })
 
     </script>
-    
-    
-<!--     <script>
-    $(document).ready(function(){
-    
-    	var fileInput = document.getElementById("upload");
-    	
-    	var files = fileInput.files;
-    	var file;
-    	
-    	for (var i = 0; i < files.length; i++){
-    		
-    		file = files[i];
-    		
-    		
-    		
-    	}
-    }) 
-  
-    </script> -->
-    
+
 
        
 <script>
@@ -156,7 +137,7 @@
     
     
     
-		/*  let sf = document.getElementById("register");
+		let sf = document.getElementById("register");
     	sf.addEventListener("submit", function(e){
     		
 
