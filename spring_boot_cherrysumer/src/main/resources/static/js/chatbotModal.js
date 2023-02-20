@@ -16,7 +16,7 @@
   });
   
   
-  $(".modal").click(function(){
+  $("#btnClose").click(function(){
     $(".modal").fadeOut();
   });
 
