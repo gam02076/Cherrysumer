@@ -7,113 +7,35 @@
 <head>
 <meta charset="UTF-8">
 <title>이게 뜨길 비시면 됩니다.</title>
-<link rel="stylesheet" type="text/css"
-	href="<c:url value='/css/main.css'/>">
-<link rel="stylesheet" type="text/css"
-	href="<c:url value='/css/text.css'/>">
-<link rel="stylesheet" type="text/css"
-	href="<c:url value='/css/slides.css'/>">
-<link rel="stylesheet" type="text/css"
-	href="<c:url value='/css/scroll.css'/>">
-<link rel="stylesheet" type="text/css"
-	href="<c:url value='/css/slides.css'/>">
-<link rel="stylesheet" type="text/css"
-	href="<c:url value='/css/header.css'/>">
-	<link rel="stylesheet" type="text/css"
-	href="<c:url value='/css/picture/main_button.css'/>">
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/main.css'/>">
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/text.css'/>">
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/slides.css'/>">
+
+
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/slides.css'/>">
+
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/header.css'/>">
+
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/mainnnn.css'/>">
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/picture/main_button.css'/>">
 	
-	<script src="<c:url value='/js/picture/main_button.js' />"></script>
+<script src="<c:url value='/js/picture/main_button.js' />"></script>
 <script src="<c:url value='/js/jquery-3.6.1.min.js' />"></script>
 <script src="<c:url value='/js/scroll.js' />"></script>
 <script src="<c:url value='/js/scroll2.js' />"></script>
 <script src="<c:url value='/js/slides.js' />"></script>
 <script src="<c:url value='/js/text.js' />"></script>
 <script src="<c:url value='/js/picture/main_button.js' />"></script>
-
-
-
 <script src="<c:url value='/js/exhibition_1.js'/>"></script>
 
-<style>
-#a {
-	width: 100%;
-	height: 70px;
-	background-color: white;
-}
 
-a {
-	text-decoration: none;
-	color: black;
-}
-
-a:visited {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: none;
-}
-
-a:focus {
-	text-decoration: none;
-}
-
-a:hover, a:active {
-	text-decoration: none;
-}
-
-.wrapper {
-	/*This part is important for centering*/
-	display: grid;
-	place-items: center;
-}
-
-.typing-demo {
-	width: 28ch;
-	animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-	white-space: nowrap;
-	overflow: hidden;
-	border-right: 3px solid;
-	font-family: monospace;
-	font-size: 50px;
-}
-
-@
-keyframes typing {from { width:0
-	
-}
-
-}
-@
-keyframes blink { 50% {
-	border-color: transparent
-}
-}
-
-.show3-2{
-display: flex;
-
-}
-
-.main_text {
-position: relative;
-z-index: 10;
-color:white;
-}
-hr{
-position: relative;
-z-index: 10;
-color:white;
-}
-</style>
 </head>
 
 <body>
 	
 	<c:import url="/WEB-INF/views/layout/top.jsp" />
 	<c:import url="/WEB-INF/views/layout/head.jsp" />
-	<link rel="stylesheet" type="text/css"
-		href="<c:url value='/css/picture/main.css' />">
+	<link rel="stylesheet" type="text/css" href="<c:url value='/css/picture/main.css' />">
 	<script src="<c:url value='/js/picture/main.js' />"></script>
 
 
@@ -130,7 +52,7 @@ color:white;
 							
 							</div>
 
-							<img src="image/exh_person1.png" alt="Original" style="height: 600px;">
+							<img src="<c:url value="image/main.png"/>" alt="Original" style="height: 500px; width:700px;">
 						</div>
 					</div>
 				</a> <a href="/">
@@ -140,8 +62,8 @@ color:white;
 								<h1>신명숙 작가의 <br>세계로 초대합니다.	</h1>
 								<br />
 							</div>
-<img src="image/exh_person1.png" alt="Original" style="height: 400px;">
-							<img src="image/bg_header.jpg" alt="Duotone">
+<img src="" alt="Original" style="height: 200px;">
+							<img src="image/maim02.jpg" alt="Duotone">
 						</div>
 					</div>
 				</a>
@@ -152,8 +74,8 @@ color:white;
 
 
 
-<button type="button" class="button"><a href="/exhibition/detailViewExhibibition/1/eee">전시회 입장</a></button>
-<button class="button"><a href="/exhibition_requestForm">전시회 신청 바로가기</a></button>
+<a href="/exhibitionList"><button type="button" class="button" style="left: 79%;">전시회 입장</button></a>
+<a href="/exhibition_requestForm"><button class="button" style="left: 79%;">전시회 신청 바로가기</button></a>
 
 <hr>
 <h1 class="main_text">미술관</h1>
@@ -179,8 +101,8 @@ color:white;
 		<div id="show3">
 			<div class="show3-2">
 
-				<c:forEach var="pict" items="${pic}">
-					<c:if test="${pict.picType eq '2' }">
+				<c:forEach var="pict" items="${pic}"><a href="/picture/photo_list/">
+					<c:if test="${pict.picType eq '1' }">
 						<br />
 						
 					<div class="show3-1">
@@ -188,11 +110,11 @@ color:white;
 						<img src="<c:url value="/images/${pict.picimg}"/>">
 					</div>
 					</c:if>
-
+	</a>
 				</c:forEach>
 			</div>
 		</div>
-	  <button class="button"><a href="/picture/registerform/">판매등록</a></button>
+	  <a href="/picture/registerform/"><button class="button">판매등록</button></a>
 	
 	<hr>
 	<h1 class="main_text">전시회 특별관</h1>	
@@ -200,7 +122,7 @@ color:white;
 		<div id="show3">
 			<div class="show3-2">
 
-				<c:forEach var="pict1" items="${ex}">
+				<c:forEach var="pict1" items="${ex}"> <a href="/exhibition/detailViewExhibibition/1/eee">
 					
 						<br />
 						
@@ -208,7 +130,7 @@ color:white;
 					
 						<img src="<c:url value="/images/${pict1.artImg}"/>">
 					</div>
-					
+					</a>
 				</c:forEach>
 			</div>
 		</div>
@@ -225,9 +147,12 @@ color:white;
 
 	</div> 
 	
-	<c:import url="/WEB-INF/views/layout/bottom.jsp" />
+	<c:import url="/WEB-INF/views/layout/main_bottom.jsp" />
 	
 	
 	
 </body>
+
+
+
 </html>

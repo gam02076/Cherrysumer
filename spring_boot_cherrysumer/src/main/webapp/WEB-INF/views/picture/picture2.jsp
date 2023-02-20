@@ -28,6 +28,8 @@
 
 <li>
 <a href="<c:url value='/picture/picture_list/'/>">Art</a>
+
+
 </li>
 <li>
 <a href="<c:url value='/picture/photo_list/'/>">PHOTO</a>

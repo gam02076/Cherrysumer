@@ -3,6 +3,24 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <header>
+<style>
+.adminbtn{
+	    position: absolute;
+    right: 89%;
+    top: 37%;
+}
+
+.adminbtn_01{
+	    position: absolute;
+    right: 80%;
+    top: 37%;
+}
+</style>
+
+
+
+
+
 	<div class="header">
 		<a href="/"><img
 			src="<c:url value='/images/exh_logo(text2).png'/>" class="logo"></a>
@@ -35,6 +53,14 @@
 						</div>
 					</div>
 				</c:if>
+				
+				<c:if test="${sessionScope.sid=='심규민'}">
+			
+			  <button class="adminbtn"><a href="/picture/registerform/">관리자 목록</a></button>
+			   <button class="adminbtn_01"><a href="/PhotoFilter">사진 승인</a></button>
+			</c:if>
+				
+				
 			</div>
 
 			<div class="menuList">

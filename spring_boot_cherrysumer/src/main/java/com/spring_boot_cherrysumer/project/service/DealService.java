@@ -5,7 +5,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import com.spring_boot_cherrysumer.project.dao.IDealDAO;
+import com.spring_boot_cherrysumer.project.model.ArtVO;
 import com.spring_boot_cherrysumer.project.model.DealVO;
+import com.spring_boot_cherrysumer.project.model.MemberVO;
 import com.spring_boot_cherrysumer.project.model.MypageVO;
 import com.spring_boot_cherrysumer.project.model.PictureVO;
 
@@ -34,4 +36,39 @@ public class DealService implements IDealDAO {
 		dao.insertdeal(vo);
 		
 	}
+	@Override
+	public ArtVO exhDetail(String exhNo) {
+	 
+		return dao.exhDetail(exhNo);
+	}
+	
+	@Override
+	public String picMemId(String exhNo) {
+		// TODO Auto-generated method stub
+		return dao.picMemId(exhNo);
+	}
+
+	@Override
+	public MemberVO Artist(String memId) {
+		// TODO Auto-generated method stub
+		return dao.Artist(memId);
+	}
+
+	public ArtVO Noexh(String artImg) {
+		
+		return dao.Noexh(artImg);
+	}
+
+	@Override
+	public ArtVO exDealCheck(String artNo) {
+		
+		
+		return dao.exDealCheck(artNo);
+	}
+
+	public MemberVO memCheck(String memId) {
+	
+		return dao.memCheck(memId);
+	}
+
 }
