@@ -34,7 +34,7 @@
 	<div class="list_container">
 
 		<c:forEach var="pict" items="${pic}">
-		<c:if test="${pict.picType eq '2' }">
+		<c:if test="${pict.picType eq '1' }">
 			<div class="box" id="${pict.picNo}">
 				<input type="hidden" class="cardNO" value="${pict.picNo}">
 				<div class="img" value="${pict.picNo}">
@@ -72,29 +72,19 @@
 		</c:forEach>
 	</div>
 
-
-
-	<!-- 모달 -->
-	<!-- 모달 -->
-	<!-- 모달 -->
-	<!-- 모달 -->
-	<!-- 모달 -->
 	<!-- 모달 -->
 
-
-	<div class="modal">
+	<%-- <div class="modal">
 
 		<div class="modal_content" title="클릭하면 창이 닫힘">
 			<!--<input type="hidden" id="selectmemId">-->
 
 
-			<form id="register" action="/register" method="post"
-				enctype="multipart/form-data">
+			<form id="register" action="/register" method="post" enctype="multipart/form-data">
 				<div class="modal_container">
 					<div class="title_box">
 						<div>
-							<h1
-								style="letter-spacing: 15px; font-size: 52px; margin-bottom: 0px;">작품등록</h1>
+							<h1 style="letter-spacing: 15px; font-size: 52px; margin-bottom: 0px;">작품등록</h1>
 						</div>
 					</div>
 					<div class="product">
@@ -153,7 +143,7 @@
 		</div>
 	</div>
 
-
+ --%>
 
 
 
@@ -185,13 +175,7 @@
 </c:if>
 </div>
 
+<c:import url="/WEB-INF/views/layout/bottom.jsp" />
 </body>
 
-<%-- 
-<script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
-<script src="<c:url value='/js/picture/picture.js'/>"></script>
-<script src="<c:url value='/js/picture/menu.js'/>"></script>
-<script src="<c:url value='/js/picture/modal.js'/>"></script>
-<script src="<c:url value='/js/picture/file.js'/>"></script>
-<script src="<c:url value='/js/artList.js' />"></script> <!-- 모달 (Detail)  --> --%>
 </html>

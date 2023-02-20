@@ -26,7 +26,7 @@
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/picture/button.css'/>">
 
 <script src="<c:url value='/js/picture/picture.js'/>"></script>
-<script src="<c:url value='/js/picture/modal.js'/>"></script>
+<script src="<c:url value='/js/picture/modal.js'/>"></script> <!-- 모달창 나타나는 스크립트 -->
 <script src="<c:url value='/js/picture/file.js'/>"></script>
 <script src="<c:url value='/js/artList.js' />"></script> 
 

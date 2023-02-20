@@ -106,7 +106,7 @@
 		resultType="com.spring_boot_cherrysumer.project.model.Exhibition2VO">
 		SELECT * FROM art JOIN exhibition ON exhibition.memId =
 		art.memId where #{today}>=exhibition.exhStartDate and
-		exhibition.exhEndDate>#{today};
+		exhibition.exhEndDate>#{today}limit 0,7;
 	</select>
 
 
