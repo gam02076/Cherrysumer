@@ -157,10 +157,12 @@ a{
 
 /* 위 버튼  */
 #upBtnBox{
-	position: fixed;
-	bottom: 15%;
-    left: 10%;
+	    position: fixed;
+    bottom: 15%;
+    left: 5%;
     z-index: 11;
+    height: auto;
+    width: 3%;
 }
 #upBtn{
 	width:45px;
@@ -170,4 +172,13 @@ a{
 	border-radius:50%;
 	border:none;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* chat 버튼  */
+
+#chatBtn{
+	width:45px;
+	height:45px;
+	color:black;
+	border-radius:50%;
 }

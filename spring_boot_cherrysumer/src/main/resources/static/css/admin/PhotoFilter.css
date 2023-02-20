@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+#wrap {
+	justify-content: center;
+	display: flex;
+}
+
+#filterTb, td, th {
+	text-align: center;
+	width: 1000px;
+	border: 1px solid;
+}
+
+.checkBtn {
+	width: 80px;
+	height: 30px;
+}

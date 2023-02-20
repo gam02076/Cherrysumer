@@ -87,4 +87,39 @@ public class ArtistService implements IArtistDAO {
 		return dao.exList3(today);
 	}
 
+	@Override
+	public Exhibition2VO exList1(String today) {
+		// TODO Auto-generated method stub
+		return dao.exList1(today);
+	}
+
+	@Override
+	public Exhibition2VO artDetailEX(String memId) {
+		// TODO Auto-generated method stub
+		return dao.artDetailEX(memId);
+	}
+
+	@Override
+	public ArrayList<PictureVO> picAll() {
+		// TODO Auto-generated method stub
+		return dao.picAll();
+	}
+
+	@Override
+	public ArrayList<PictureVO> picCheck() {
+		// TODO Auto-generated method stub
+		return dao.picCheck();
+	}
+
+	@Override
+	public void PicNopass(int picNo) {
+		dao.PicNopass(picNo);
+	}
+
+	@Override
+	public void PicPass(int picNo) {
+		dao.PicPass(picNo);
+		
+	}
+
 }

@@ -54,16 +54,17 @@ public class DealController {
 	}
 	
 	
-	@RequestMapping("/dealcheckinsert")
-	public String insertdeal (DealVO vo) {
-		
-		
-		service.insertdeal(vo);
-
-		
-		return "/picture/picture2"; 
-		
-	}
+	
+	  @RequestMapping("/dealcheckinsert") public String insertdeal (DealVO vo) {
+	  
+	  
+	  service.insertdeal(vo);
+	  
+	  
+	  return "/picture/picture2";
+	  
+	  }
+	 
 	
 	
 	

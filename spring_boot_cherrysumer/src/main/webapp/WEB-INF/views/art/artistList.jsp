@@ -44,6 +44,7 @@
 					</c:choose>
 				</c:forEach>
 			</div>
+			
 
 			<!-- Items -->
 			<div class="items">
