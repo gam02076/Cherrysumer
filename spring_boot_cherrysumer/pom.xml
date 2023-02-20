@@ -73,6 +73,12 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
+		<!-- json -->
+        	<groupId>org.json</groupId>
+        	<artifactId>json</artifactId>
+        	<version>20220924</version>
+        </dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>

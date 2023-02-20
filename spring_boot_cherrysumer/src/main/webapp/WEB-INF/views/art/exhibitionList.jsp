@@ -8,9 +8,12 @@
 <title>exhibitionList</title>
 <link rel="stylesheet" type="text/css"
 	href="<c:url value='/css/ex_List.css' />">
+<link rel="stylesheet" type="text/css"
+	href="<c:url value='/css/picture/main_button.css'/>">
+
 <script src="<c:url value='/js/jquery-3.6.1.min.js'/>"></script>
-<script src="<c:url value='/js/exSearch.js' />"></script>
-   	 <script src="<c:url value='/js/text2.js' />"></script><!-- 페이징  -->
+<script src="<c:url value='/js/text2.js' />"></script>
+<!-- 페이징  -->
 <c:import url="/WEB-INF/views/layout/head.jsp" />
 <link rel="shortcut icon" href="#">
 <!-- 파비콘 오류 -->
@@ -18,23 +21,25 @@
 <body>
 	<c:import url="/WEB-INF/views/layout/top.jsp" />
 	<!-- Banner -->
-	<section id="banner" class="major1">
-		<div class="inner">
-			<header id="ex_title">
-				<h1>시선, 전시회</h1>
-			</header>
-			<hr id="hline">
-			<div class="content">
-				<p>시선 전시회 입니닷 !</p>
-				<ul>
-					<li id="actions"><button
-							onclick="/exhibition/detailViewExhibibition/1/eee" id="btnArtist">
-							대표 전시회 보러가기</button></li>
-				</ul>
+		<section id="banner" class="major1"
+			style="background-image:url(<c:url value='/images/${bestart.artImg }'/>)">
+			<div class="inner">
+				<header id="ex_title">
+					<h1>${bestart.exhTitle_kr }</h1>
+				</header>
+				<hr id="hline">
+				<div class="content">
+					<p>${bestart.memId }</p>
+					<ul>
+						<li id="actions"><a
+							href="/exhibition/detailViewExhibibition/1/eee"><button
+									class="btnArtist">${bestart.memId } 전시회 보러가기</button></a></li>
+					</ul>
+				</div>
 			</div>
-		</div>
-	</section>
-
+		</section>
+	<button class="btnArtist">전시회 신청 바로가기</button>
+	<section></section>
 	<!-- 검색, 등록 -->
 	<div>
 		<!-- <div class="search-wrapper">
@@ -139,13 +144,13 @@
 			<%-- </c:forEach> --%>
 		</c:forEach>
 	</div>
-	
+
 	<!-- paging -->
-		<div id="pageNum">
-			<nav aria-label="Page navigation example">
-				<ul class="pagination pagination-seperated "></ul>
-			</nav>
-		</div>
+	<div id="pageNum">
+		<nav aria-label="Page navigation example">
+			<ul class="pagination pagination-seperated "></ul>
+		</nav>
+	</div>
 
 
 	<!-- bottom Banner -->

@@ -25,28 +25,25 @@
 			<div id="profile">
 				<div class="name">I N T R O D U C E</div>
 				<hr>
-				<div class="pflieindtro" style="height: 8%; 
-    margin: 3%;">작가 소개입니다.작가 소개입니다.작가 소개입니다.작가
-					소개입니다.작가 소개입니다.작가 소소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가
-					소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가
-					소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가
-					소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가
-					소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가
-					소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가
-					소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가 개입니다.작가 소개입니다.소개입니다.작가
-					소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가
-					소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.작가 작가
-					소개입니다.작가 소개입니다.작가 소개입니다.작가 소개입니다.</div>
+				<div class="pflieindtro" style="height: 8%; margin: 3%;">${name.memIntroduce }</div>
 				<div class="name">A R T & E X H I B I T I O N</div>
 				<hr>
-				<div id="pfiletitle"><span style="width: 190px;">Recent</span><span style="width: 190px;">Exhibition</span></div>
-				<div class="pflieindtro" style="justify-content: space-between; height: 30%;">
-					<span class="ArtNEx"><img
-						src="<c:url value='/images/04.jpg'/>" class="artImgs"
-						onerror="this.style.display='none';">
+				<div id="pfiletitle">
+					<span style="width: 190px;">Recent</span><span
+						style="width: 190px;">Exhibition</span>
+				</div>
+				<div class="pflieindtro"
+					style="justify-content: space-between; height: 30%;">
+					<span class="ArtNEx" style="background-image:url(<c:url value='/images/2.png'/>);"> 
+					<c:forEach var="art" items="${art }"
+							begin="0" end="0">
+							<img src="<c:url value='/images/${art.picimg }'/>"
+								class="artImgs"
+								onerror="this.style.display='none'; this.src='<c:url value='/images/2.png'/>'">
+						</c:forEach>
 					</span> <span class="ArtNEx"><img
-						src="<c:url value='/images/exh_painting.jpg'/>" class="artImgs"
-						onerror="this.style.display='none';"></span>
+						src="<c:url value='/images/${ex.artImg }'/>" class="artImgs"
+						onerror="this.style.display='none'; this.src='<c:url value='/images/2.png'/>'"></span>
 				</div>
 			</div>
 		</div>

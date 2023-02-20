@@ -19,7 +19,7 @@
    		<div id="local">마이페이지 > 내 작품</div>
 			<div id="container">
 		    	<c:forEach var="art" items="${art}">
-					<article class="box" style="background-image:url(/images/${art.picimg});">
+					<article class="box" style="background-image:url(<c:url value='/images/${art.picimg }'/>)">
 						<div id="title">${art.picTitle}</div>
 						<div class="info">
 							<input type="button" value="수정하기" class="update" id="${art.picNo}" style="margin-top:55px">
