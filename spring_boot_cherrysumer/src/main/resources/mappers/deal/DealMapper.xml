@@ -45,6 +45,21 @@ SELECT * FROM member WHERE memId = #{memId}
   		insert into buyer(buyerNo, buyerName,totalamount, buyerEmail, buyerHP,buyerZipcode,buyeraddress1,buyeraddress2,picNo,memId)
   		values (#{buyerNo},#{buyerName},#{totalamount},#{buyerEmail},#{buyerHP},#{buyerZipcode},#{buyeraddress1},#{buyeraddress2},#{picNo},#{memId})
  </insert>
+ 
+ 
+	<select id="Noexh" parameterType="string" resultType="com.spring_boot_cherrysumer.project.model.ArtVO">
+		select * from art where artImg=#{artImg}
+	</select>
+
+ 	<select id="exDealCheck" parameterType="string"
+		resultType="com.spring_boot_cherrysumer.project.model.ArtVO">
+		select * from art where artNo=#{artNo}
+	</select>
 
 
+ 	<select id="memCheck" parameterType="string"
+		resultType="com.spring_boot_cherrysumer.project.model.MemberVO">
+		select * from member where memId=#{memId}
+	</select>
+	
 </mapper>

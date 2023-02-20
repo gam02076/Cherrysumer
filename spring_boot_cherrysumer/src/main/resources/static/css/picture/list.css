@@ -115,7 +115,7 @@
     font-size: 18px;
     border: none;
     border-bottom: 1px solid;
-    background-color: #ffffff;
+    background-color: #c8c8c8;
 }
 
 .searchinput:focus {outline:none;}

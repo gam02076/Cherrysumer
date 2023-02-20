@@ -18,10 +18,23 @@
 		url('https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Kaisei+Tokumin:wght@500&family=Noto+Serif+KR&family=Sofia+Sans+Semi+Condensed&family=Titillium+Web&display=swap')
 		;
 	</style>
+	
+
+
+
+<link href="<c:url value='/css/picture/modal_register.css'/>" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/artList.css' />">
+
+<script src="<c:url value='/js/picture/modal.js' />"></script> 
+
+<!-- 그림,사진 목록 리스트 끝 -->	
+
 </head>
 
 <body>
 	<c:import url="/WEB-INF/views/layout/top.jsp" />
+	
 
 	<section class="background first">
 		<div id="text_header">
@@ -50,13 +63,21 @@
 
 	<section class="background bg-pic3"></section>
 	<section class="background exhibition">
+	
 		<div class="paintBox">
+		
+		<div class="box" id="${art.artImg}">
+		
+		
 			<c:forEach var="art" items="${artList }" begin="0" end="2">
-				<div class="paint" id="${art.artImg }" style="background-image: url(/image/${art.artImg});">
+				<div class="paint" id="${art.artImg }" style="background-image: url(/images/${art.artImg});">
 				</div>
 				<!-- <div class="paint paint2"></div>
 				<div class="paint paint3"></div> -->
 			</c:forEach>
+		
+		</div>
+		
 		</div>
 		<div class="picTitleBox">
 			<div class="picTitle picT1">
@@ -101,11 +122,17 @@
 	</section>
 	<section class="background exhibition">
 		<div class="paintBox">
+		
+		<div class="box" id="${art.artImg}">
 			<c:forEach var="art" items="${artList }" begin="3" end="5">
-				<div class="paint" style="background-image: url(/image/${art.artImg});"></div>
-				<!-- <div class="paint paint5"></div>
-				<div class="paint paint6"></div> -->
+				<div class="paint" id="${art.artImg }" style="background-image: url(/images/${art.artImg});"></div>
 			</c:forEach>
+		</div>
+		
+
+		
+		
+		
 		</div>
 		<div class="picTitleBox">
 			<div class="picTitle picT1">

@@ -17,24 +17,27 @@ overflow:hidden;
 }
 
 .list li {
-	flex:1;
-	height:100vh;
-	text-align:center;
-	line-height: 100vh;
-	font-size:50px;
-	transition:all .8s;
-	background: no-repeat center; background-size:cover;
+    flex: 1;
+    height: 100vh;
+    text-align: center;
+    line-height: 112vh;
+    font-size: 72px;
+    transition: all .8s;
+    background: no-repeat center;
+    background-size: cover;
+    font-weight: 900;
+    color:white;
 }
 .list li:hover{
-	flex:1.1;
-	font-size:70px;
+	flex:1.4;
+	font-size:130px;
 	color:white;
-	text-shadow:0 0 7px;
+	text-shadow:0 0 17px;
 }
 
 .list li:not(:hover){
 	flex:0.9;
 }
 
-.list li:nth-child(1){background-image:url(/image/art5.jpg) }
-.list li:nth-child(2){background-image :url(/image/picture.jpg) }
+.list li:nth-child(1){background-image:url(/image/art01.jpg) }
+.list li:nth-child(2){background-image :url(/image/photo03.jpg) }

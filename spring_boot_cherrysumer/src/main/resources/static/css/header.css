@@ -33,7 +33,7 @@ a{
 
 .logo{
 	position: fixed;
-    width: 110px;
+      width: 11%;
     z-index: 20;
     z-index: 30;
     margin: auto;
@@ -157,12 +157,10 @@ a{
 
 /* 위 버튼  */
 #upBtnBox{
-	    position: fixed;
-    bottom: 15%;
-    left: 5%;
+	position: fixed;
+	bottom: 15%;
+    left: 10%;
     z-index: 11;
-    height: auto;
-    width: 3%;
 }
 #upBtn{
 	width:45px;
@@ -173,6 +171,7 @@ a{
 	border:none;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
+
 
 /* chat 버튼  */
 

@@ -46,9 +46,9 @@
   		OR picauthor Like CONCAT('%',#{keyword},'%')
   	</select>
   	
-  	
+ <!--  	메인 목록 	 -->
   	  	<select id="ListPicture1" resultMap="resultpic">
-  		SELECT * FROM  picture ORDER BY picNo DESC
+  		SELECT * FROM  picture where good="1" ORDER BY picNo DESC limit 0,8
   	</select>
   	
   		<!--memId로 작가 사진 목록 불러오기 -->
@@ -69,14 +69,5 @@
 	</update>
 	
   	
-  <!-- 댓글 삭제 -->
-  	<!-- <delete id="Delete" parameterType="string">
-  		delete
-  		from comments
-  		where picNo=#{picNo}
-  	</delete>
-  	 -->
-
-  	<!-- SELECT * FROM members where memType='1'; -->
   	
   	</mapper>
