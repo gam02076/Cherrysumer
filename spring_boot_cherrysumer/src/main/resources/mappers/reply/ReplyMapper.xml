@@ -34,7 +34,7 @@
 	update reply set
 		writer = #{writer},
 		content = #{content}
-	where rno = #{rno}
+	    where rno = #{rno}
 		and cusNo = #{cusNo}	
 </update>
 
@@ -42,7 +42,12 @@
 <delete id="replyDelete" parameterType="com.spring_boot_cherrysumer.project.model.ReplyVO">
 	delete from reply
 	where rno = #{rno}
-		and cusNo = ${cusNo}	
+	and cusNo = ${cusNo}	
+</delete>
+<!-- 댓글 삭제 -->
+<delete id="replyDelete2" parameterType="String">
+	delete from reply
+	where cusNo = ${cusNo}	
 </delete>
 <!-- 단일 댓글 조회 -->
 <select id="replySelect" parameterType="com.spring_boot_cherrysumer.project.model.ReplyVO" resultType="com.spring_boot_cherrysumer.project.model.ReplyVO">
