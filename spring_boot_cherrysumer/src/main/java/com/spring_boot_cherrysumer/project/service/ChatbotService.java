@@ -147,9 +147,18 @@ public class ChatbotService {
 			JSONArray bubbles_array = new JSONArray();
 			bubbles_array.put(bubbles_obj);
 
-			obj.put("bubbles", bubbles_array);
-			obj.put("event", "send");
+			//obj.put("bubbles", bubbles_array);
+			//obj.put("event", "send");
+			
+			
+			// 웰컴 메시지 출력
+			if(voiceMessage == "") {
+				obj.put("event", "open"); // 웰컴 메시지
+			}else {
+				obj.put("event","send"); // 질문 메시지
+			}
 
+			
 			requestBody = obj.toString();
 
 		} catch (Exception e) {
