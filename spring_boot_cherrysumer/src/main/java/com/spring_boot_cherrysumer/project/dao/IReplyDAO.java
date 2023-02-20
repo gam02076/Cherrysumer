@@ -18,6 +18,7 @@ public interface IReplyDAO {
 
 	// 댓글 삭제
 	public void replyDelete(ReplyVO vo);
-	
+	//게시물 삭제에 필요한 댓글 삭제
+	public void replyDelete2(String cusNo);
 	public ReplyVO replySelect(ReplyVO vo);
 }

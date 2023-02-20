@@ -194,12 +194,14 @@ public class CustomerController {
 
 	@RequestMapping("/delete2")
 	public String postDelete(ReplyVO vo) {
+		System.out.println(vo.getCusNo());
 		Rservice.replyDelete(vo);
-		return "redirect:/customer/customerdetailview/" + vo.getCusNo();
+		return "redirect:/customer/customerreplyAll";
 	}
 
 	@RequestMapping("/custumer/deletecustumer/")
 	public String deletecustumer(@RequestParam("cusNo") String cusNo) {
+		Rservice.replyDelete2(cusNo);
 		service.deleteCustomer(cusNo);
 
 		return "redirect:/customer/customerListAll";
@@ -222,6 +224,7 @@ public class CustomerController {
 	public String customerreplyAll(Model model, HttpSession session){
 		String memId = (String) session.getAttribute("sid");
 		ArrayList<ReplyVO> rep = Rservice.replyList2(memId);
+		model.addAttribute("memId", memId);
 		model.addAttribute("rep", rep);
 		return "/reply/myreply";
 	}

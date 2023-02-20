@@ -14,6 +14,37 @@
 	href="<c:url value='/css/customer.css'/>">
 	<link rel="stylesheet" type="text/css"
 	href="<c:url value='/css/bottom.css'/>">
+	<script type="text/javascript">
+					function udateCheck(memId, writer, cusNo, rno){
+						var id=memId;
+						var writer=writer;
+						var cusNo=cusNo;
+						var rno=rno;
+					
+					if(id==writer){
+						confirm("수정하시겠습니까?");
+						location.href="http://localhost:8080/modify?cusNo="+cusNo+"&rno="+rno+"";
+					}else{
+						alert("본인의 댓글이 아닙니다")
+					}
+					
+					
+					}
+					function deleteCheck(memId, writer, cusNo, rno){
+						var id=memId;
+						var writer=writer;
+						var cusNo=cusNo;
+						var rno=rno;
+					
+					if(id==writer){
+						confirm("삭제하시겠습니까?");
+						location.href="http://localhost:8080/delete2?cusNo="+cusNo+"&rno="+rno+"";
+						
+					}else{
+						alert("본인의 댓글이 아닙니다")
+					}
+					}
+					</script>
 <style>
 #wrap {
 	margin: 0 auto;
@@ -64,10 +95,9 @@ a {
 <td style="width:100px;">${rep.writer}</td>
 <td style="width:500px;">${rep.content }</td>
 <td style="width:100px;">${rep.regDate}</td>
-<td><a
-							href="<c:url value='/custumer/custumer/${rep.cusNo }'/>"><input
+<td><a href="javascript:udateCheck('${memId}', '${rep.writer}','${rep.cusNo}','${rep.rno}');"><input
 								type="button" value="수정하기"></a></td>
-						<td><a href="javascript:deleteCheck3('${rep.cusNo }');"><input
+<td><a href="javascript:deleteCheck('${memId}', '${rep.writer}','${rep.cusNo}','${rep.rno}');"><input
 								type="button" value="삭제하기"></a></td>
 </tr>
 
@@ -75,11 +105,10 @@ a {
 			</table>
 		</div>
 		<script>
-			function deleteCheck3(cusNo) {
+			function deleteCheck4() {
 				var answer = confirm("삭제하시겠습니까?");
 				if (answer) {
-					location.href = "/custumer/deletecustumer/?cusNo=" + cusNo
-							+ "";
+					location.href = "/delete2";
 				}
 			}
 		</script>
