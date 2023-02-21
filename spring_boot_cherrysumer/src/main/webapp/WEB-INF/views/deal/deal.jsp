@@ -39,8 +39,9 @@
 						<td>${deal.picTitle}</td>
 						<th>ID</th>
 						<td>${sessionScope.sid}</td>
-						<input type="hidden" name="buypicNo" value="${deal.picNo}">
+						<input type="hidden" name="picNo" value="${deal.picNo}">
 						<input type="hidden" id="picName" value="${deal.picTitle}">
+						<input type="hidden" id="picType" value="${deal.picType}">
 
 					</tr>
 					<tr>
@@ -59,17 +60,16 @@
 					</tr>
 					<tr>
 						<td></td>
-						<td><label>실물<input type="radio" name="picType" value="1"></label> 
-								<label>Email<input type="radio" name="picType" value="2"></label></td>
+						<td>배송비:3000원</td>
 					</tr>
 				</table>
 
 			</div>
 			<hr>
 
-			<div class="infobox">
+			<!-- <div class="infobox"> -->
 
-				<div class="buyerbox1">
+				<%-- <div class="buyerbox1">
 					<h3 class="infotitle">구매자 정보</h3>
 					<ul>
 						<li class="buyerinfo_list"><span class="meminfo">이름</span>
@@ -88,35 +88,35 @@
 
 					</ul>
 
-				</div>
+				</div> --%>
 
 				<div class="buyerbox">
 					<h3 class="infotitle">배송지 정보</h3>
 					<ul>
 						<li class="buyerinfo_list"><span class="meminfo">받으시는
 								분</span> <input type="text" name="buyerName" class="underline"
-							id="buyerName">
-							<div></div></li>
+							id="buyerName" value="${vo.memId}">
+							</li>
 
 						<li class="buyerinfo_list"><span class="meminfo">연락처</span> <input
-							type="text" name="buyerHP" class="underline" id="buyerHP">
-							<div></div></li>
+							type="text" name="buyerHP" class="underline" id="buyerHP" value="${vo.memHP}">
+							</li>
 
 						<li class="buyerinfo_list"><span class="meminfo">이메일</span> <input
-							type="text" name=buyerEmail class="underline" id="buyerEmail">
-							<div></div></li>
+							type="text" name=buyerEmail class="underline" id="buyerEmail" value="${vo.memEmail }">
+							</li>
 
 						<li class="buyerinfo_list"><span class="meminfo">주소</span>
 							<div>
 								<span class="input_area"><input type="text"
 									name="buyerZipcode" class="postcodify_postcode underline"
-									id="buyerZipcode" readonly></span> <br> <span
+									id="buyerZipcode" value="${vo.memZipcode}" readonly></span> <br> <span
 									class="input_area"><input type="text"
 									name="buyeraddress1" class="postcodify_address underline"
-									id="buyeraddress1" readonly></span> <br> <span
+									id="buyeraddress1" value="${vo.memAddress1}" readonly></span> <br> <span
 									class="input_area"><input type="text"
 									name="buyeraddress2" class="postcodify_details underline"
-									id="buyeraddress2"></span>
+									id="buyeraddress2" value="${vo.memAddress2}"></span>
 							</div>
 
 							<div>
@@ -126,7 +126,7 @@
 					</ul>
 				</div>
 
-			</div>
+			<!-- </div> -->
 
 
 			<hr>
@@ -141,11 +141,11 @@
 				<label for="select4">페이코</label>
 			</div>
 
-			<div class="buyerinfo">
+			<!-- <div class="buyerinfo">
 
 				<h2 class="infotitle">배송비 +3000원</h2>
 
-			</div>
+			</div> -->
 
 			<hr>
 			<div>
@@ -155,7 +155,7 @@
 				<input type="hidden" name="totalamount"
 					value="${deal.picPrice+3000}" id="pictotal">
 				<div class="buybtn">
-					<button type="submit" value="등록" id="btn-kakaopay">결제하기</button>
+					<button type="submit" value="등록" id="btn-kakaopay" onclick="dealCheck();">결제하기</button>
 				</div>
 				<hr>
 			</div>
@@ -169,6 +169,7 @@
 	src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
 	<script src="https://cdn.iamport.kr/v1/iamport.js"></script>
 <script src="<c:url value='/js/kakaoDeal.js'/>"></script>
+<%-- <script src="<c:url value='/js/deal/deal.js'/>"></script> --%>
 <!-- 주소 API 스크립트 -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="//d1p7wdleee1q2z.cloudfront.net/post/search.min.js"></script>

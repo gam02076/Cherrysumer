@@ -66,7 +66,7 @@ public class DealController {
 		service.insertdeal(vo);
 
 		
-		return "/picture/picture2"; 
+		return "result"; 
 		
 	}
 	

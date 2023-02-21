@@ -2,50 +2,53 @@
  * 
  */
  
-  $(document).ready(function(){
+  function dealCheck(){
   
-   $(".myButton").click(function(){
+  var buyerName = document.getElementById("buyerName");
+	var buyerHP = document.getElementById("buyerHP");
+	var buyerEmail = document.getElementById("buyerEmail");
+	var buyerZipcode = document.getElementById("buyerZipcode");
+	var buyeraddress1 = document.getElementById("buyeraddress1");
+	var buyeraddress2 = document.getElementById("buyeraddress2");
+	
+            if(buyerName.value == "") {
+                alert('받으시는 분 성함을 입력하세요.');
+                buyerName.focus();
+				return false;
+            } 
+          	 var num = /^[0-9]+/g;
+
+			if (!num.test(buyerHP.value)) {
+				alert("전화번호는 숫자만 입력하세요.")
+				buyerHP.focus();
+				return false;
+			};
+	
+	
+		            if (buyerEmail.value == "") {
+				alert("이메일을 입력하세요.")
+				buyerEmail.focus();
+				return false;
+			};
+		            if (buyerZipcode.value == "") {
+				alert("주소를 입력하세요.")
+				buyerZipcode.focus();
+				return false;
+			};
+		            if (buyeraddress1.value == "") {
+				alert("주소를 입력하세요.")
+				buyeraddress1.focus();
+				return false;
+			};
+		            if (buyeraddress2.value == "") {
+				alert("상세주소를 입력하세요.")
+				buyeraddress2.focus();
+				return false;
+			};
+           
   
   
-    $.ajax({
- 			type:"post",
- 			url:"/dealcheck",
- 			data:{picNo:$(this).attr("id")}
- 			,
- 			success:function(result){
- 			},
- 			error:function(){
- 			},
- 			complete:function(){
- 			}
- 		}); // ajax 종료 
-    
-  });
-  
-  
  
- }); //종료
+ }; //종료
  
  
- 
- 
- 
- 
- 
- $.ajax({
-    type : 'post',           // 타입 (get, post, put 등등)
-    url : '/test',           // 요청할 서버url
-    
-    dataType : 'text',       // 데이터 타입 (html, xml, json, text 등등)
-    data : JSON.stringify({  // 보낼 데이터 (Object , String, Array)
-      "no" : no,
-      "name" : name,
-      "nick" : nick
-    }),
-    success : function(result) { // 결과 성공 콜백함수
-        console.log(result);
-    },
-    error : function(request, status, error) { // 결과 에러 콜백함수
-        console.log(error)
-    }
-})

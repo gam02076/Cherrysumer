@@ -88,9 +88,9 @@ public class PictureController {
 public String insert(PictureVO vo, @RequestParam("upload") MultipartFile file, Model model) throws IOException {
 	String result = ""; // -> 매개변수:String, return:String
 
-	 String uploadPath="/Users/shimgyumin/java_class/cherrysumer_upload/";
+	 //String uploadPath="/Users/shimgyumin/java_class/cherrysumer_upload/";
 	// String uploadPath = "/Users/pizza/STS3/SpringWorkspace/cherrysumer_upload/";
-//	String uploadPath = "C:/springWorkspace/test/test2/";
+	String uploadPath = "C:/springWorkspace/test/test2/";
 	// String uploadPath = "/usr/local/project/upload/upload/";
 
 	// 파일명 추출

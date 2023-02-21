@@ -6,7 +6,11 @@
   
   
   $('#dealcheckinsert').on('submit', function(){
-  event.preventDefault();
+   event.preventDefault();
+   var formData = $(this).serialize();
+   
+  
+   var picType = document.getElementById('picType').value; 
    var price = document.getElementById('pictotal').value; //price <아이디를 가진 value값을 price라는 변수에 넣어줌.
   var picName = document.getElementById('picName').value; //price <아이디를 가진 value값을 price라는 변수에 넣어줌.
   //alert(price);
@@ -22,7 +26,6 @@
         var makeMerchantUid = hours +  minutes + seconds + milliseconds;
  //$("input[name='payment']").change(function(){
 	var test = $("input[name='payment']:checked").val();
-	alert(test);			
 
 if($("input[name='payment']:checked").val() == '카카오'){
   
@@ -40,8 +43,7 @@ if($("input[name='payment']:checked").val() == '카카오'){
         m_redirect_url : '/' //redirect url
     }, function(rsp) {
         if ( rsp.success ) {
-            alert('결제가 완료되었습니다.');
-            insertDB();
+            insertDB(formData);
         } else {
         	alert('결제에 실패하였습니다.');
             
@@ -68,8 +70,7 @@ if($("input[name='payment']:checked").val() == '카카오'){
   confirm_url: 'https://helloworld.com/api/v1/payments/confirm',
             }, function(rsp) {
         if ( rsp.success ) {
-            alert('결제가 완료되었습니다.');
-            insertDB();
+            insertDB(formData);
         } else {
         	alert('결제에 실패하였습니다.');
             
@@ -96,8 +97,7 @@ if($("input[name='payment']:checked").val() == '카카오'){
                 buyer_postcode : '123-456'
             }, function(rsp) {
         if ( rsp.success ) {
-            alert('결제가 완료되었습니다.');
-            insertDB();
+            insertDB(formData);
         } else {
         	alert('결제에 실패하였습니다.');
             
@@ -128,8 +128,7 @@ if($("input[name='payment']:checked").val() == '카카오'){
                 }
              }, function(rsp) {
         if ( rsp.success ) {
-            alert('결제가 완료되었습니다.');
-            insertDB();
+            insertDB(formData);
         } else {
         	alert('결제에 실패하였습니다.');
             
@@ -145,18 +144,22 @@ if($("input[name='payment']:checked").val() == '카카오'){
     
   }); // submit 종료
      
-     
-     
-     
-    function insertDB(){
-	 var formData = $(this).serialize();
+    
+    function insertDB(formData){
+	
  		$.ajax({
  			type:"post",
  			url:"/dealcheckinsert",
  			data:formData,
  			success:function(view){
  			  alert('결제가 완료되었습니다.');
- 				
+ 			  if(picType=1){
+ 			  alert(view);
+ 			  //href="/picture/photo_list/";
+ 			  }else{
+ 			  alert(view);
+ 				//href="/picture/picture_list/";
+ 				}
  			},
  			error:function(){
  				alert("오류");
@@ -165,5 +168,7 @@ if($("input[name='payment']:checked").val() == '카카오'){
  				//alert("작업 완료");
  			}
  		}); // ajax 종료
+ 		
  		}
-  });//끝
+ 		
+    });//끝 
