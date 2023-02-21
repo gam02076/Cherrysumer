@@ -43,7 +43,7 @@
 			</div>
 			<div class="product">
 				<div class="product_image" onError="this.style.visibility='hidden'">
-					<img src="<c:url value='/image/빈값.jpg/'/>" id="preview" >
+					<img src="<c:url value='/images/빈값.jpg/'/>" id="preview" >
 				</div>
 				<div class="productInfo">
 					<table class="register_table">

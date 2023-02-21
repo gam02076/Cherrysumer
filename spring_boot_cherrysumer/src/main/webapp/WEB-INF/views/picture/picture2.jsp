@@ -26,7 +26,7 @@
 
 <ul class="list">
 
-<li>
+<li >
 <a href="<c:url value='/picture/picture_list/'/>">Art</a>
 
 
