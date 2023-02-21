@@ -15,8 +15,8 @@ public class WebConfig implements WebMvcConfigurer {
 				  "file:///usr/local/project/upload/upload/");
 				 
 		        /*.addResourceLocations("file:///C:/springWorkspace/cherrysumer_images/",
-		        		*"file:///C:/springWorkspace/upload/");
-					*/
+		        		"file:///C:/springWorkspace/upload/");*/
+					
 	}
 }
 /*
