@@ -37,5 +37,8 @@ public interface IExhibitionService {
 	
 	// 전시회 신청 목록에 출력할 회원 정보
 	public MemberVO getMemberInfo2(String memId);
+	
+	// 전시회 승인 여부 저장
+	public void confirmSave(ExhibitionVO exh);
 
 }

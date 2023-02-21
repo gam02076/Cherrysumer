@@ -199,6 +199,15 @@ public class Exhibition_RequestController {
 		return "exhibition/exhibition_requestListForm";
 	}
 	
+	// (관리자페이지) 전시회 신청 목록 승인 저장 : 수정된 데이터 DB에 저장
+	@RequestMapping("/exhibition/adminConfirm")
+	public String confirmSave(ExhibitionVO exh) {
+		service.confirmSave(exh);
+		System.out.println(exh.getExhConfirm());
+		// 수정된 데이터 저장 후 전시회 신청 관리자 화면으로 포워딩
+		return "redirect:/exhibition/exhibition_requestListForm";
+	}
+	
 }
 
 

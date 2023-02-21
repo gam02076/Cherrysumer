@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+#textBox{
+	background: rgb(54,78,79); 
+	margin:0 auto;
+	text-align:center;
+	width: 350px;
+	height: 350px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+
+}
+
+#textForm{
+	background: white;
+	border-radius:300px;
+	width:300px;
+	height: 300px;
+	font-family: 'Gowun Dodum', sans-serif;
+}
+
