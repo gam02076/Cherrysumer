@@ -38,7 +38,7 @@
 				</div>
 			</div>
 		</section>
-	<button class="btnArtist">전시회 신청 바로가기</button>
+	<a href="/exhibition_requestForm"><button class="btnArtist">전시회 신청 바로가기</button></a>
 	<section></section>
 	<!-- 검색, 등록 -->
 	<div>
