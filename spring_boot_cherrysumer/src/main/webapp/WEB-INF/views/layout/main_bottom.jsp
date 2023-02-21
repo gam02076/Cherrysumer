@@ -15,16 +15,16 @@
 		<section id="footerSNS">
 			<ul class="icons">
 				<li><a href="https://twitter.com/?lang=ko" target="_blank"
-					class="icon1"><img src="<c:url value='/image/twitter.png'/>">
+					class="icon1"><img src="<c:url value='/images/twitter.png'/>">
 				</a></li>
 				<li><a href="https://www.instagram.com/" target="_blank"
-					class="icon1"><img src="<c:url value='/image/Instagram.png'/>"></a></li>
+					class="icon1"><img src="<c:url value='/images/Instagram.png'/>"></a></li>
 				<li><a href="https://ko-kr.facebook.com/" target="_blank"
-					class="icon1"><img src="<c:url value='/image/Facebook.png'/>">
+					class="icon1"><img src="<c:url value='/images/Facebook.png'/>">
 				</a></li>
 			</ul>
 				<a href="#" class="qna"><img
-						src="<c:url value='/image/qna.png'/>"></a>
+						src="<c:url value='/images/qna.png'/>"></a>
 			<ul class="copyright">
 				<li>문의 번호 : 02-5115-1351</li>
 				<li>문의 번호 : 02-246-2318</li>

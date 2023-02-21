@@ -10,13 +10,13 @@ public class WebConfig implements WebMvcConfigurer {
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		registry.addResourceHandler("/images/**")
 				
-				  .addResourceLocations(
+				  /*.addResourceLocations(
 				  "file:///usr/local/project/cherrysumer_images/cherrysumer_images/",
-				  "file:///usr/local/project/upload/upload/");
+				  "file:///usr/local/project/upload/upload/");*/
 				 
-		        /*.addResourceLocations("file:///C:/springWorkspace/cherrysumer_images/",
-		        		*"file:///C:/springWorkspace/upload/");
-					*/
+		        .addResourceLocations("file:///C:/springWorkspace/cherrysumer_images/",
+		        		"file:///C:/springWorkspace/upload/");
+					
 	}
 }
 /*
