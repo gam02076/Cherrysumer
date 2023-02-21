@@ -179,4 +179,67 @@
 		$("#searchpost").postcodifyPopUp();
 	});
 </script>
+
+
+
+
+<script>
+    
+  
+    
+    
+    
+		let sf = document.getElementById("deal");
+    	sf.addEventListener("submit", function(e){
+    		
+
+    		
+    		if(buyerName.value.length == 0) {
+    			alert('받으시는 분 성함을 입력하세요.');
+    			e.preventDefault();
+    		} 
+    		else if (buyerHP.value.length == 0) {
+    			alert('받으시는 분 연락처를 입력하세요.');
+    			e.preventDefault();
+    		}
+    		else if (buyerEmail.value.length == 0) {
+    			alert('Email을 입력하세요.');
+    			e.preventDefault();
+    		}
+    		else if (buyerHP.value.length == 0) {
+    			alert('연락처를 입력하세요.');
+    			e.preventDefault();
+    		}
+    		else if (buyerZipcode.value.length == 0) {
+    			alert('우편번호를 입력하세요.');
+    			e.preventDefault();
+    		}
+    		else if (buyeraddress1.value.length == 0) {
+    			alert('주소 등록하세요.');
+    			e.preventDefault();
+    		}
+    		else if (buyeraddress2.value.length == 0) {
+    			alert('상세주소를 설명해주세요.');
+    			e.preventDefault();   
+    		}else {
+    		 alert('결제가 완료되었습니다.');
+    		}
+    	}); 
+    	
+
+   	
+   	
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
 </html>

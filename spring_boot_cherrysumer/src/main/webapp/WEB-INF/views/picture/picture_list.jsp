@@ -34,7 +34,7 @@
 	<div class="list_container">
 
 		<c:forEach var="pict" items="${pic}">
-		<c:if test="${pict.picType eq '1' }">
+		<c:if test="${pict.picType eq '2' }">
 			<div class="box" id="${pict.picNo}">
 				<input type="hidden" class="cardNO" value="${pict.picNo}">
 				<div class="img" value="${pict.picNo}">
