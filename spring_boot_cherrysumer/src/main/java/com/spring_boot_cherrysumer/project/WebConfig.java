@@ -13,7 +13,7 @@ public class WebConfig implements WebMvcConfigurer {
 				  .addResourceLocations(
 						  
 				  "file:///usr/local/project/cherrysumer_images/cherrysumer_images/",
-				  "file:///usr/local/project/upload/upload/",);
+				  "file:///usr/local/project/upload/upload/");
 				  
 						  
 				  /*"file:///C:/springWorkspace/cherrysumer_images/",
