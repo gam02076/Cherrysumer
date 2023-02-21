@@ -14,7 +14,7 @@
 <c:import url="/WEB-INF/views/layout/head.jsp" />
 <title>구매 결제 페이지</title>
 </head>
-<body>
+<body id="bdone">
 	<c:import url="/WEB-INF/views/layout/top.jsp" />
 
 	<div class="conteiner">
@@ -30,7 +30,7 @@
 						id="preview" />
 				</div>
 
-				<table class="tb" style="width: 50%;">
+				<table class="tb" style="width: 50%; padding: 25px 0;">
 
 					<tr>
 						<th>작품명</th>
@@ -115,20 +115,22 @@
 								name="buyeraddress2" class="postcodify_details addresss"
 								id="buyeraddress2" value="${vo.memAddress2}"></span>
 				<span>
-							<button type="button" id="searchpost">검색</button>
+							<button type="button" id="searchpost" class="dealbtn">검색</button>
 						</span>
 						</div>
 
 
 				</ul>
 			</div>
+			<hr>
+			<h3 class="infotitle">결제 수단</h3>
 			<div class="select">
 				<input type="radio" class="dealCtg" id="select" name="payment" value="카카오">
-				<label for="select">카카오</label> <input type="radio" id="select2"
-					name="payment" value="토스"> <label for="select2">토스</label>
+				<label for="select"><img src="<c:url value="/images/kakao.jpg"/>"></label> <input type="radio" id="select2"
+					name="payment" value="토스"> <label for="select2" ><img src="<c:url value="/images/toss.jpg"/>"></label>
 				<input type="radio" id="select3" name="payment" value="다날">
-				<label for="select3">다날</label> <input type="radio" id="select4"
-					name="payment" value="페이코"> <label for="select4">페이코</label>
+				<label for="select3"><img src="<c:url value="/images/danal.jpg"/>"></label> <input type="radio" id="select4"
+					name="payment" value="페이코"> <label for="select4"><img src="<c:url value="/images/payco.jpg"/>"></label>
 			</div>
 
 			<!-- </div> -->
@@ -145,10 +147,10 @@
 					value="${deal.picPrice+3000}" id="pictotal">
 			<div id="totalDealBar">
 			<sapn id="tdb1">
-				총 결제 금액:${deal.picPrice+3000}원
+				총 결제 금액:  ${deal.picPrice+3000} 원
 				</sapn>
 				<span id="tdb2">
-				<button type="submit" value="등록" id="btn-kakaopay" >결제하기</button></span>
+				<button type="submit" value="등록" id="btn-kakaopay" class="dealbtn" onclick="dealCheck()">결제하기</button></span>
 			</div>
 		</form>
 	</div>

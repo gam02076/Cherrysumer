@@ -37,14 +37,14 @@ body {
 }
 
 #productInfo{
-	color:white
+	color:white;
+	    padding: 10px;
 	
 }
 
 #TbModal {
-    min-width: 500px;
-    border-spacing: 32px;
-    margin-bottom: 3%;
+    border-spacing: 25px;
+        width: 100%;
 }
 .underline { 
     border-style: none;
@@ -60,10 +60,11 @@ body {
     }
     
     #artInfo{
-    height: 50%;
+       height: 200px;
     text-align: center;
-    margin: 3% 0;
     width: 550px;
+    display: table-cell;
+    vertical-align: middle;
     }
     
     .myButton {
@@ -94,8 +95,5 @@ body {
 
 
 th {
-	font-size:x-large;
+	font-size:20px;
 }
-
-    
- }
