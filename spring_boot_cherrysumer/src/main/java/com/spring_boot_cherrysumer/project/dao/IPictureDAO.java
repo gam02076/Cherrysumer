@@ -18,7 +18,10 @@ public interface IPictureDAO {
 
 	public ExhibitionVO ListPicture2(String exhNo);
 	
+	public ArrayList<PictureVO> ListPicture3();
+	
 	public void PicNopass(int picNo); // 불통과시 삭제
+	
 	public void PicPass(int picNo); // 통과된 사진 '1'로 교체
 	
 	

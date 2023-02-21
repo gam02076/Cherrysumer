@@ -14,7 +14,7 @@
    </head>
     <body>
     <c:import url="/WEB-INF/views/layout/top.jsp" />
-    <div id="mypageMenuBar">메뉴</div>
+   
    	<div id="main">
    		<div id="local">마이페이지 > 내 작품</div>
 			<div id="container">
