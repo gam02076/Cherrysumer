@@ -7,6 +7,7 @@
   
   $('#dealcheckinsert').on('submit', function(){
    event.preventDefault();
+   
    var formData = $(this).serialize();
    
   
@@ -15,6 +16,8 @@
   var picName = document.getElementById('picName').value; //price <아이디를 가진 value값을 price라는 변수에 넣어줌.
   //alert(price);
   //alert(picName);
+  
+  alert(picType);
  var IMP = window.IMP; 
     IMP.init('imp46756083'); //가맹점코드(발급받은것) 수정X
     
@@ -26,6 +29,7 @@
         var makeMerchantUid = hours +  minutes + seconds + milliseconds;
  //$("input[name='payment']").change(function(){
 	var test = $("input[name='payment']:checked").val();
+
 
 if($("input[name='payment']:checked").val() == '카카오'){
   
@@ -143,8 +147,9 @@ if($("input[name='payment']:checked").val() == '카카오'){
     //}); //$("input[name='payment']").change(function(){
     
   }); // submit 종료
+  
+    });//끝 
      
-    
     function insertDB(formData){
 	
  		$.ajax({
@@ -171,4 +176,4 @@ if($("input[name='payment']:checked").val() == '카카오'){
  		
  		}
  		
-    });//끝 
+ 
