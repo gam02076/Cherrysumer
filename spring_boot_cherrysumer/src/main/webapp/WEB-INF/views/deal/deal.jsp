@@ -162,7 +162,7 @@
 	src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
 <script src="https://cdn.iamport.kr/v1/iamport.js"></script>
 <script src="<c:url value='/js/kakaoDeal.js'/>"></script>
-<%-- <script src="<c:url value='/js/deal/deal.js'/>"></script> --%>
+<script src="<c:url value='/js/deal/deal.js'/>"></script>
 <!-- 주소 API 스크립트 -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 <script src="//d1p7wdleee1q2z.cloudfront.net/post/search.min.js"></script>
