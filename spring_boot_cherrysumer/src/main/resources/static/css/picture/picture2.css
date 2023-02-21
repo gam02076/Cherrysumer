@@ -38,6 +38,5 @@ overflow:hidden;
 .list li:not(:hover){
 	flex:0.9;
 }
-
-.list li:nth-child(1){background-image:url(/image/art01.jpg) }
-.list li:nth-child(2){background-image :url(/image/photo03.jpg) }
+.list li:nth-child(1){background-image:url(/image/picmain2.jpg) }
+.list li:nth-child(2){background-image:url(/image/picmain.jpg) } 

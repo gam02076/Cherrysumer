@@ -79,16 +79,18 @@
 		</div>
 		
 		</div>
-		<div class="picTitleBox">
+		<div class="picTitleBox">	
+		<c:forEach var="art" items="${artList }" begin="0" end="2">
 			<div class="picTitle picT1">
-				평화 속 고요함<br>Silence in Peace<br>250x325 cm
+				${art.artName_eng}<br>${art.artName_kr}<br>250x325 cm
 			</div>
-			<div class="picTitle picT2">
+			<!-- <div class="picTitle picT2">
 				햇살<br>in the Sunshine<br>250x325 cm
 			</div>
 			<div class="picTitle picT3">
 				정원 가꾸기<br>Gardening<br>250x325 cm
-			</div>
+			</div> -->
+			</c:forEach>
 		</div>
 
 		<div class="explain">그림을 클릭하시면 상세한 설명을 확인할 수 있습니다</div>
@@ -135,16 +137,19 @@
 		
 		</div>
 		<div class="picTitleBox">
+			<c:forEach var="art" items="${artList }" begin="3" end="5">
 			<div class="picTitle picT1">
-				해바라기<br>sunflowers<br>250x325 cm
+				${art.artName_eng}<br>${art.artName_kr}<br>250x325 cm
 			</div>
-			<div class="picTitle picT2">
+			<!-- <div class="picTitle picT2">
 				고사리<br>bracken<br>250x325 cm
 			</div>
 			<div class="picTitle picT3">
 				희망이 자라는 곳<br>a place where hope grows<br>250x325 cm
 			</div>
-		</div>
+		</div> -->
+		</c:forEach>
+	
 		<div class="explain">그림을 클릭하시면 상세한 설명을 확인할 수 있습니다</div>
 	</section>
 

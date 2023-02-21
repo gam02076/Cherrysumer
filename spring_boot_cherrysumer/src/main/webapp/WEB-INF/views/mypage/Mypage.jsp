@@ -8,6 +8,8 @@
 <meta charset="UTF-8">
 <title>마이페이지</title>
 <script src="<c:url value='/js/jquery-3.6.1.min.js' />"></script>
+<c:import url="/WEB-INF/views/layout/head_sim.jsp" />
+<c:import url="/WEB-INF/views/layout/top.jsp" />
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/header.css'/>">
 <style>
 #wrap{
@@ -61,7 +63,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
-img{
+#b img{
  width : 100px;
   height: 100px;
 }
@@ -69,7 +71,6 @@ img{
 </head>
 <body>
 <div id="wrap">
-<c:import url = "/WEB-INF/views/layout/top.jsp"/>
 <br/><br/><br/>
 <h1>마이페이지</h1>
 <div id="my">
@@ -91,6 +92,6 @@ ${vo.memAddress2} </td></tr>
 </div>
 <br/><br/><br/><br/>
 </div>
-
+<c:import url = "/WEB-INF/views/layout/bottom.jsp"/>
 </body>
 </html>

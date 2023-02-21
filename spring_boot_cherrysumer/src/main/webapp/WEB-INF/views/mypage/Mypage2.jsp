@@ -55,11 +55,12 @@ opacity:1;
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="<c:url value='/js/jquery-3.6.1.min.js' />"></script>
+<c:import url="/WEB-INF/views/layout/head_sim.jsp" />
+<c:import url="/WEB-INF/views/layout/top.jsp" />
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/header.css'/>">
 </head>
 <body>
 <div id="wrap">
-<c:import url = "/WEB-INF/views/layout/top.jsp"/>
 <br /><br /><br />
 <form method="post" action="<c:url value='/Mypage2/update'/>" enctype="multipart/form-data" >
 <table id="propil">
@@ -91,5 +92,6 @@ opacity:1;
 	
 	<!-- "검색" 단추를 누르면 팝업 레이어가 열리도록 설정한다 -->
 	<script> $(function() { $("#postcodify_search_button").postcodifyPopUp(); }); </script>
+	<c:import url = "/WEB-INF/views/layout/bottom.jsp"/>
 </body>
 </html>

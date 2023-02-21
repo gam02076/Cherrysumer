@@ -88,10 +88,10 @@ public class PictureController {
 public String insert(PictureVO vo, @RequestParam("upload") MultipartFile file, Model model) throws IOException {
 	String result = ""; // -> 매개변수:String, return:String
  System.out.println(vo.getMemId());
-	 //String uploadPath="/Users/shimgyumin/java_class/cherrysumer_upload/";
+	// String uploadPath="/Users/shimgyumin/java_class/cherrysumer_upload/";
 	// String uploadPath = "/Users/pizza/STS3/SpringWorkspace/cherrysumer_upload/";
-	String uploadPath = "C:/springWorkspace/upload/";
-	// String uploadPath = "/usr/local/project/upload/upload/";
+//	String uploadPath = "C:/springWorkspace/upload/";
+	String uploadPath = "/usr/local/project/upload/upload/";
 
 	// 파일명 추출
 	String orgName = file.getOriginalFilename();
