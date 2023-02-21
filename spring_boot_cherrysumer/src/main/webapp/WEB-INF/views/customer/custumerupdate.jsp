@@ -84,7 +84,7 @@ textarea {
 						<td><input type="text" name="cusabc" id="cusabc" value="${cus.cusabc }" readonly></td>
 					</tr>
                 <tr><td colspan="2"><input type="submit" value="등록"> 
-										<input type="reset" value="취소"></td></tr>
+										<a href="<c:url value='/boardList'/>"><input type="reset" value="취소"></a></td></tr>
 										</table>
 			</form>
 			<br> <br>

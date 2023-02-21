@@ -74,7 +74,7 @@
 <div id="warp">
 <div id="upBtnBox2">
 		<button id="upBtn2">글쓰기</button>
-<input type="hidden" value="${memId}" id="memIdd">
+<input type="hidden" value="${memId}" id="memId">
 </div><br/>
 
 <form action="">
