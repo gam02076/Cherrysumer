@@ -60,9 +60,9 @@
 					</div>
 				</c:if>
 				
-				<c:if test="${sessionScope.sid=='심규민'}">
+				<c:if test="${sessionScope.sid=='admin'}">
 			
-			  <button class="adminbtn"><a href="/picture/registerform/">관리자 목록</a></button>
+			  <button class="adminbtn"><a href="/exhibition/requestList">관리자 목록</a></button>
 			   <button class="adminbtn_01"><a href="/PhotoFilter">사진 승인</a></button>
 			</c:if>
 				
