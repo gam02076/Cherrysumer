@@ -7,7 +7,7 @@ import com.spring_boot_cherrysumer.project.model.ReplyVO;
 public interface IReplyDAO {
 	// 댓글 조회
 	public ArrayList<ReplyVO> replyList(int cusNo);
-	
+	//자기가 쓴 댓글 조회
 	public ArrayList<ReplyVO> replyList2(String memId);
 
 	// 댓글 조회
@@ -20,5 +20,6 @@ public interface IReplyDAO {
 	public void replyDelete(ReplyVO vo);
 	//게시물 삭제에 필요한 댓글 삭제
 	public void replyDelete2(String cusNo);
+	//단일 댓글 조회
 	public ReplyVO replySelect(ReplyVO vo);
 }
