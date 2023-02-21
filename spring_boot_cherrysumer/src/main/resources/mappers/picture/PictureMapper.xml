@@ -49,7 +49,12 @@
   	
  <!--  	메인 목록 	 -->
   	  	<select id="ListPicture1" resultMap="resultpic">
-  		SELECT * FROM  picture where good="1" ORDER BY picNo DESC limit 0,8
+  		SELECT * FROM  picture where good="1" and pictype="2" ORDER BY picNo DESC limit 0,8
+  	</select>
+
+  	
+  	<select id="ListPicture3" resultMap="resultpic">
+  		SELECT * FROM  picture where good="1" and pictype="1" ORDER BY picNo DESC limit 0,8
   	</select>
   	
   		<!--memId로 작가 사진 목록 불러오기 -->

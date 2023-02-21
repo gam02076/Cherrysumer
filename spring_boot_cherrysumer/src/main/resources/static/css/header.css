@@ -160,8 +160,11 @@ a{
 #upBtnBox{
 	position: fixed;
 	bottom: 15%;
-    left: 10%;
+    left: 2%;
     z-index: 11;
+    
+ 
+
 }
 #upBtn{
 	width:45px;
@@ -183,5 +186,5 @@ a{
 	border-radius:50%;
 	position: relative;
     left: 53%;
-    bottom: 31px;
+    bottom: 35px;
 }
