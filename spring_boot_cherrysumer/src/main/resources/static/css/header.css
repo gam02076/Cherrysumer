@@ -33,7 +33,7 @@ a{
 
 .logo{
 	position: fixed;
-      width: 11%;
+      width: 9%;
     z-index: 20;
     z-index: 30;
     margin: auto;
@@ -180,4 +180,7 @@ a{
 	height:45px;
 	color:black;
 	border-radius:50%;
+	position: relative;
+    left: 53%;
+    bottom: 31px;
 }

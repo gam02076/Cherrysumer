@@ -82,7 +82,12 @@
 					<input type="hidden" name="good" value="1">
 					<div class="register_btn">
 						<button type="submit" value="등록" class="btn_1" onclick="submit1">등록</button>
-						<button type="button" class="btn_1">취소</button>
+						<button type="button" class="btn_1" onclick="history.go(-1)">취소</button>
+						
+					
+						
+						
+						
 					</div>
 				</div>
 
@@ -174,8 +179,10 @@
     		    e.preventDefault();
     		    
     		}else {
-    		 alert('작품이 등록 되었습니다.');
-    		}
+    		 
+    			 alert('작품이 등록 되었습니다.');
+    		 }
+    	
     	}); 
     	
 
