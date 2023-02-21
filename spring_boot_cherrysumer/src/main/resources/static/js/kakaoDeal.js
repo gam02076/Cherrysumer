@@ -17,7 +17,6 @@
   //alert(price);
   //alert(picName);
   
-  alert(picType);
  var IMP = window.IMP; 
     IMP.init('imp46756083'); //가맹점코드(발급받은것) 수정X
     

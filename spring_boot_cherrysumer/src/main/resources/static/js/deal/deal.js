@@ -10,6 +10,7 @@
 	var buyerZipcode = document.getElementById("buyerZipcode");
 	var buyeraddress1 = document.getElementById("buyeraddress1");
 	var buyeraddress2 = document.getElementById("buyeraddress2");
+	var test = $("input[name='payment']:checked").val();
 	
             if(buyerName.value == "") {
                 alert('받으시는 분 성함을 입력하세요.');
@@ -46,6 +47,9 @@
 				return false;
 			};
            
+		            if(test==null){
+				 alert("결제 수단을 선택해주세요");
+				 }
   
   
  

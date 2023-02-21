@@ -25,14 +25,15 @@ button {
 }
 
 #loginBox {
-	width: 1080px;
-	height: 1080px;
-	/* margin: 0 auto; */
- 	margin-left: 455px;
-	margin-top: -130px;
-	/* margin-bottom: 128px; */
-	background-image: url("/images/login_image1.png");
-	background-size:100% 100%;
+	    width: 1080px;
+    height: 1080px;
+    background-image: url(/images/login_image1.png);
+    background-size: 100% 100%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    top: 0;
 }
 
 #loginBox h1 {
