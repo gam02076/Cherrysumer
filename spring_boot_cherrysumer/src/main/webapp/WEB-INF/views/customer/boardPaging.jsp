@@ -7,7 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>게시판 목록</title>
-
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="<c:url value='/js/jquery-3.6.1.min.js' />"></script>
 <script src="<c:url value='/js/customersearch.js' />"></script>
 <script src="<c:url value='/js/customer.js' />"></script>
@@ -73,7 +73,8 @@
 <div id="warp">
 <c:import url = "/WEB-INF/views/layout/top.jsp"/>
 <div id="upBtnBox2">
-		<button id="upBtn2" onclick="customerCheck(${memId});">글쓰기</button>
+		<button id="upBtn2">글쓰기</button>
+<input type="hidden" value="${memId}" id="memIdd">
 </div><br/>
 
 <form action="">
