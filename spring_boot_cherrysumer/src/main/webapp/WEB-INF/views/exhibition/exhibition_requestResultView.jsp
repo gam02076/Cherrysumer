@@ -6,12 +6,24 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>신청 완료</title>
+		<link rel="stylesheet" type="text/css" href="<c:url value='/css/header.css'/>">
+		<link rel="stylesheet" type="text/css" href="<c:url value='/css/bottom.css'/>">
+		<link rel="stylesheet" type="text/css" href="<c:url value='/css/exhibition_requstResult.css'/>">
+		
+		<style>
+		  @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+		</style>
 	</head>
 	<body>
-		신청이 완료 되었습니다. <br>
-		신청해 주셔서 감사합니다. <br>
-		<br>
-		Thanks for your Request.
-		
+		<c:import url = "/WEB-INF/views/layout/top.jsp"/>
+		<div id="textBox">
+			<div id="textForm">
+				신청이 완료 되었습니다. <br>
+				신청해 주셔서 감사합니다. <br>
+				<br>
+				Thanks for your Request.
+			</div>
+		</div>
+		<c:import url="/WEB-INF/views/layout/bottom.jsp" />
 	</body>
 </html>

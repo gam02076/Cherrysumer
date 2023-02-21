@@ -61,6 +61,12 @@ public class ExhibitionService implements IExhibitionService {
 	public MemberVO getMemberInfo2(String memId) {
 		return dao.getMemberInfo2(memId);
 	}
+
+	@Override
+	public void confirmSave(ExhibitionVO exh) {
+		dao.confirmSave(exh);
+		
+	}
 	
 	
 
