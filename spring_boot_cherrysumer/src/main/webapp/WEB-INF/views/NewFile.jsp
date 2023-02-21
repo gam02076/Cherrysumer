@@ -83,7 +83,7 @@
 
 			<div class="show3-2">
 	
-				<c:forEach var="pict" items="${pic}" begin="0" end="15"><a href="/picture/picture_list/">
+				<c:forEach var="pict" items="${pic}" ><a href="/picture/picture_list/">
 					
 						<br />
 						<div class="show3-1">
@@ -101,7 +101,7 @@
 		<div id="show3">
 			<div class="show3-2">
 
-				<c:forEach var="pict" items="${pic2}" begin="0" end="15"><a href="/picture/photo_list/">
+				<c:forEach var="pict" items="${pic2}" ><a href="/picture/photo_list/">
 					
 						<br />
 						

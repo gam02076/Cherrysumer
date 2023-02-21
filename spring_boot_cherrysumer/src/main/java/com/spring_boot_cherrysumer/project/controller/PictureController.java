@@ -162,8 +162,9 @@ public String pictureList1(Model model) {
 
 	
 ArrayList<PictureVO> pic = service.ListPicture1();
+ArrayList<PictureVO> pic2 = service.ListPicture3();
 model.addAttribute("pic",pic);
-
+model.addAttribute("pic2",pic2);
 
 	return "NewFile"; 	
 }
