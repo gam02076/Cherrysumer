@@ -8,6 +8,8 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script src="<c:url value='/js/jquery-3.6.1.min.js' />"></script>
+<c:import url="/WEB-INF/views/layout/head_sim.jsp" />
+<c:import url="/WEB-INF/views/layout/top.jsp" />
 <link rel="stylesheet" type="text/css"
 	href="<c:url value='/css/header.css'/>">
 <link rel="stylesheet" type="text/css"
@@ -51,7 +53,6 @@ textarea {
 </style>
 </head>
 <body>
-	<c:import url="/WEB-INF/views/layout/top.jsp" />
 
 	<div id="wrap">
 		<br /> <br />

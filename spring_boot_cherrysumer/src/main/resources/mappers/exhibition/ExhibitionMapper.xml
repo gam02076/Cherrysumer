@@ -23,7 +23,7 @@
   <!-- 전시회에 출력할 작품 정보 반환 -->
   	<select id="getArtInfo" parameterType="string"
   			resultType="com.spring_boot_cherrysumer.project.model.ArtVO">
-  		SELECT artImg
+  		SELECT *
   		FROM art
   		WHERE memId=#{memId}
   	</select>  	
