@@ -64,6 +64,7 @@
 	}
 </style>
 <body>
+<c:import url="/WEB-INF/views/layout/top.jsp" />
 <script>
 	function selChange() {
 		var sel = document.getElementById('cntPerPage').value;
