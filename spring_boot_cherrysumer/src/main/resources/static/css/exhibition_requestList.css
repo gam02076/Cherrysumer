@@ -1,6 +1,29 @@
 @charset "UTF-8";
 
+#wrap{
+	background: rgb(54,78,79); 
+	width:900px;
+	height: 500px;
+	margin:0 auto;	
+	padding-top: 20px;
+	margin-top:50px;
+}
+
+h2 {
+	text-align:center;
+	margin-bottom: 50px;
+	color:white;
+}
+
 table {
 	text-align:center;
 	margin:0 auto;
+	border-radius: 15px;
+	background:white;
+}
+
+#exhSearchFrm {
+	text-align:center;
+	margin-top: 50px;
+	margin-bottom: 50px;
 }

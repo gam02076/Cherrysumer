@@ -72,7 +72,7 @@ table{
 th, td{
 	padding: 10px; /* 테두리와 내용 사이 간격*/
 }
-input{
+table input{
 	height:100%;
 	width: 100%;
 	border: none;
