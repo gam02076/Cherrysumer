@@ -153,7 +153,7 @@
 			<div class="text firstText ending">${evo.exhClosingWords }</div>
 			<div id="GotoPainter">작가 보러 가기</div>
 		</div>
-		<table border="1">
+		<%-- <table border="1">
 			<tr>
 				<th>상품번호</th>
 				<th>상품명</th>
@@ -177,7 +177,7 @@
 						width="30" height="20"></td>
 				</tr>
 			</c:forEach>
-		</table>
+		</table> --%>
 		<br>
 		<br>
 	</section>

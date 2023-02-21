@@ -173,9 +173,9 @@
     		    alert('사진/그림 선택해주세요.');
     		    e.preventDefault();
     		    
-    		}
+    		}else {
     		 alert('작품이 등록 되었습니다.');
-    	
+    		}
     	}); 
     	
 
