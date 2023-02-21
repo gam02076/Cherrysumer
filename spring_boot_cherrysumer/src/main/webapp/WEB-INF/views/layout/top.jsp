@@ -42,8 +42,8 @@
 						<ul id="menuItem">
 							<li><a class="header-item" href="/member/logout">로그아웃</a></li>
 							<li><a id="showAllMenu">내 정보 ▼</a></li>
-							<li style="width: auto;"><fmt:formatNumber
-									value="${sessionScope.mypoint}" pattern="#,###" /> 포인트</li>
+							<%-- <li style="width: auto;"><fmt:formatNumber
+									value="${sessionScope.mypoint}" pattern="#,###" /> 포인트</li> --%>
 							<li>${sessionScope.sid}님</li>
 						</ul>
 					</div>
@@ -53,8 +53,8 @@
 							<ul>
 								<li><a href="/Mypage">마이페이지</a></li>
 								<li><a href="/myArt">작품 관리</a></li>
-								<li><a href="#">포인트 충전</a></li>
-								<li><a href="#">주문 정보</a></li>
+								<!-- <li><a href="#">포인트 충전</a></li>
+								<li><a href="#">주문 정보</a></li> -->
 							</ul>
 						</div>
 					</div>
