@@ -72,7 +72,6 @@
 	}
 </script>
 <div id="warp">
-<c:import url = "/WEB-INF/views/layout/top.jsp"/>
 <div id="upBtnBox2">
 		<button id="upBtn2">글쓰기</button>
 <input type="hidden" value="${memId}" id="memIdd">

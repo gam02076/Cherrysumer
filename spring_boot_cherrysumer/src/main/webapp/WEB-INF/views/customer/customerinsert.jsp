@@ -28,6 +28,36 @@ textarea{
 				font-family: Georgia;
 				font-weight: 600;
 			}
+			input[type=text]{
+	width:100%;
+	border:2px solid #aaa;
+	border-radius:4px;
+	margin: 8px 0;
+	outline: none;
+	padding:8px;
+	box-sizing: border-box;
+	transition:.3s;
+}
+
+input[type=text]:focus{
+	border-color:dodgerBlue;
+	box-shadow:0 0 8px 0 dodgetBlue;
+}
+textarea{
+width:100%;
+height:500px;
+	border:2px solid #aaa;
+	border-radius:4px;
+	margin: 8px 0;
+	outline: none;
+	padding:8px;
+	box-sizing: border-box;
+	transition:.3s;
+}
+textarea:focus{
+border-color:dodgerBlue;
+	box-shadow:0 0 8px 0 dodgetBlue;
+}
 </style>
 <script src="<c:url value='/js/jquery-3.6.1.min.js' />"></script>
 <c:import url="/WEB-INF/views/layout/head_sim.jsp" />
@@ -52,11 +82,6 @@ textarea{
 										</table>
 										</form>
 </div>
-<form id="fileUploadFormMulti" method="post" action="<c:url value='/fileUploadMultiple'/>"
-																			  enctype="multipart/form-data">
-			파일 : <input type="file" id="uploadFileMulti"	 name="uploadFileMulti"	multiple="multiple">	
-			<input type="submit"	 value="업로드"	>		
-		</form>
 <script>
 /*  $(document).ready(function() {
 	$("#cus").hide();
@@ -72,5 +97,6 @@ textarea{
 	     });
 	 });
 </script>
+<c:import url = "/WEB-INF/views/layout/bottom.jsp"/>
 </body>
 </html>

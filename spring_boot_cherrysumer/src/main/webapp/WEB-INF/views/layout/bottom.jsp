@@ -18,9 +18,10 @@
 					class="icon1"><img src="<c:url value='/images/twitter.png'/>">
 				</a></li>
 				<li><a href="https://www.instagram.com/" target="_blank"
-					class="icon1"><img src="<c:url value='/images/Instagram.png'/>"></a></li>
+					class="icon1"><img src="<c:url value='/images/instagram.png'/>">
+			    </a></li>
 				<li><a href="https://ko-kr.facebook.com/" target="_blank"
-					class="icon1"><img src="<c:url value='/images/Facebook.png'/>">
+					class="icon1"><img src="<c:url value='/images/facebook.png'/>">
 				</a></li>
 			</ul>
 				<a href="/boardList" class="qna"><img
