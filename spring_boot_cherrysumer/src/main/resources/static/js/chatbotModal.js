@@ -4,7 +4,7 @@
  
 $(document).ready(function(){
     $("#chatBtn").click(function(){
-        alert("챗봇");
+       // alert("챗봇");
     //$("#selectmemId").val($(this).attr("id")); //id값 저장 후 #selectmemId로 보냄
     //alert($(this).find("img").attr("src"));
     
