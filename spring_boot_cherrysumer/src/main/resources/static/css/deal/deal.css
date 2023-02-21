@@ -148,8 +148,10 @@
 }
 
 .select input[type=radio]+label {
-	background-color: #fff;
-	color: #333;
+	    background-color: #fff;
+    color: #333;
+    height: 30px;
+    width: 120px;
 }
 
 .select input[type=radio]:checked+label {

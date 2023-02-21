@@ -6,7 +6,6 @@
   
   
   $('#dealcheckinsert').on('submit', function(){
-  alert("성공");
    event.preventDefault();
    
    var formData = $(this).serialize();
@@ -31,8 +30,6 @@
  //$("input[name='payment']").change(function(){
 	var test = $("input[name='payment']:checked").val();
 
-
-alert(test);
 
 if($("input[name='payment']:checked").val() == '카카오'){
   
