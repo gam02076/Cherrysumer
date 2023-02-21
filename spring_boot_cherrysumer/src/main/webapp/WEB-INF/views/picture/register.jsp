@@ -51,7 +51,7 @@
 							<th>작품명</th>
 							<td><input type="text" name="picTitle"class="underline" id="picTitle"></td>
 							<th>ID</th>
-							<td></td>
+							<td>${sessionScope.sid}<input type="hidden" name="memId" value="${sessionScope.sid}"></td>
 						</tr>
 												<tr>
 							<th style="pading:10px">소재/기법</th>

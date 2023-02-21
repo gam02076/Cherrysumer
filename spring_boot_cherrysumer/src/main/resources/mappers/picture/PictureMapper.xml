@@ -33,8 +33,9 @@
   	
   	<!-- 등록 -->
  <insert id="insert" parameterType="com.spring_boot_cherrysumer.project.model.PictureVO">
-  		insert into picture(picTitle, picNo, picPrice, picType, picSize,picimg,picauthor,piccontent,pictech,good)
-  		values (#{picTitle},#{picNo},#{picPrice},#{picType},#{picSize},#{picimg},#{picauthor},#{piccontent},#{pictech},#{good})
+  		insert into picture(memId, picTitle, picNo, picPrice, picType, picSize, piccontent,
+								picimg, pictech, picauthor, good)
+  		values (#{memId},#{picTitle},#{picNo},#{picPrice},#{picType},#{picSize},#{piccontent},#{picimg},#{pictech},#{picauthor},#{good})
  </insert>
   	
   	<!-- 검색 -->
