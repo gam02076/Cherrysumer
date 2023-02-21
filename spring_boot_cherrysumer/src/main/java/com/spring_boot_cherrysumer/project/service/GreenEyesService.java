@@ -20,7 +20,7 @@ public class GreenEyesService {
 		ArrayList<GreenEyesVO> GreenList = new ArrayList<GreenEyesVO>();
 		String result = "";
 		
-		String uploadPath = "http://49.50.173.22:8080/images";
+		String uploadPath = "http://49.50.173.22:8080/images/";
 		
 		String greenURLPath = uploadPath + filePathName;
 		
