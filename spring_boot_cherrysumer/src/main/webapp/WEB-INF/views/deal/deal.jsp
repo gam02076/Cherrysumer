@@ -38,7 +38,7 @@
 						<th>작품명</th>
 						<td>${deal.picTitle}</td>
 						<th>ID</th>
-						<td>${sessionScope.sid}</td>
+					<td>${sessionScope.sid}    <input type="hidden" name="memId" value="${sessionScope.sid}"></td>
 						<input type="hidden" name="picNo" value="${deal.picNo}">
 						<input type="hidden" id="picName" value="${deal.picTitle}">
 						<input type="hidden" id="picType" value="${deal.picType}">

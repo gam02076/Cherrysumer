@@ -10,7 +10,7 @@
   left:0; 
   /* font-family: 'Noto Serif KR', serif; */
   font-family: 'Gowun Dodum', sans-serif;
-  z-index:11;
+  z-index:1001;
 }
 
 .modal_content{
