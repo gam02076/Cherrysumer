@@ -110,7 +110,7 @@ public String insert(PictureVO vo, @RequestParam("upload") MultipartFile file, M
 	vo.picimg = savedFileName;
 
 	// 그린아이
-	ArrayList<GreenEyesVO> GreenEyesResult = greenService.GreenEye(orgName); // 그린아이 서버 실행
+	ArrayList<GreenEyesVO> GreenEyesResult = greenService.GreenEye(savedFileName); // 그린아이 서버 실행
 	double resultNum = GreenEyesResult.get(0).getConfidence();
 
 	for (int i = 1; i < GreenEyesResult.size(); i++) {
