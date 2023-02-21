@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 
 <!DOCTYPE html>
 <html>
@@ -29,7 +30,7 @@ textarea{
 				font-weight: 600;
 			}
 			input[type=text]{
-	width:100%;
+	width:300px;
 	border:2px solid #aaa;
 	border-radius:4px;
 	margin: 8px 0;
@@ -43,9 +44,9 @@ input[type=text]:focus{
 	border-color:dodgerBlue;
 	box-shadow:0 0 8px 0 dodgetBlue;
 }
-textarea{
-width:100%;
-height:500px;
+#custext{
+width:300px;
+height:300px;
 	border:2px solid #aaa;
 	border-radius:4px;
 	margin: 8px 0;
@@ -54,7 +55,7 @@ height:500px;
 	box-sizing: border-box;
 	transition:.3s;
 }
-textarea:focus{
+#custext:focus{
 border-color:dodgerBlue;
 	box-shadow:0 0 8px 0 dodgetBlue;
 }
@@ -78,7 +79,7 @@ border-color:dodgerBlue;
 					<tr><td>비공개</td><td> <input type="checkbox" name="cuspublic" id="cuspublic" ><label>비공개글로 작성</label></td></tr>
 					<tr><td>비밀번호</td><td> <input type="text" name="cus" id="cus" ></td></tr>
 					<tr><td colspan="2"><input type="submit" value="등록"> 
-										<input type="reset" value="취소"></td></tr>
+										<a href="<c:url value='/boardList'/>"><input type="reset" value="취소"></a></td></tr>
 										</table>
 										</form>
 </div>

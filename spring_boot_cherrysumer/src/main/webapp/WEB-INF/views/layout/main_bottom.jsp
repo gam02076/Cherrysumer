@@ -18,12 +18,12 @@
 					class="icon1"><img src="<c:url value='/images/twitter.png'/>">
 				</a></li>
 				<li><a href="https://www.instagram.com/" target="_blank"
-					class="icon1"><img src="<c:url value='/images/Instagram.png'/>"></a></li>
+					class="icon1"><img src="<c:url value='/images/instagram.png'/>"></a></li>
 				<li><a href="https://ko-kr.facebook.com/" target="_blank"
-					class="icon1"><img src="<c:url value='/images/Facebook.png'/>">
+					class="icon1"><img src="<c:url value='/images/facebook.png'/>">
 				</a></li>
 			</ul>
-				<a href="#" class="qna"><img
+				<a href="/boardList" class="qna"><img
 						src="<c:url value='/images/qna.png'/>"></a>
 			<ul class="copyright">
 				<li>문의 번호 : 02-5115-1351</li>
