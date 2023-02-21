@@ -52,12 +52,12 @@
 	</section>
 	<section class="background bg-pic1"></section>
 	<section class="background article">
-		<img src="<c:url value='/image/exh_person1.png'/>" class="person">
+		<img src="<c:url value='/images/exh_person1.png'/>" class="person">
 		<div class="text interview">${evo.exhInterview1 }</div>
 	</section>
 	<section class="background bg-pic2"></section>
 	<section class="background article">
-		<img src="<c:url value='/image/exh_glass.jpg'/>" class="pic pic3">
+		<img src="<c:url value='/images/exh_glass.jpg'/>" class="pic pic3">
 		<div class="text article2">${evo.exhInterview2}</div>
 	</section>
 
