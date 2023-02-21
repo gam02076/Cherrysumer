@@ -65,6 +65,7 @@
 	    display: flex;
     justify-content: left;
     padding: 0 30%;
+   
 }
 
 .meminfo {
@@ -72,21 +73,26 @@
 	width: 140px;
 	padding: 6px 10px;
 	font-weight: 700;
+	width: 200px;
 }
 .underline, .addresss{
     border-style: none;
     border-bottom: solid 1px #868686;
     border-collapse: collapse;
     background: transparent;
+    width: 200px;
 }
 #searchpost {
-	height: 60px;
-	width: 56px;
-	position: relative;
-	left: 5px;
+	height: 72px;
+    width: 60px;
+    position: relative;
+    left: 5px;
+    top: -32px;
 }
 #adad{
 	width:100%;
+	    position: relative;
+    left: 53px;
 }
 
 .addresss{
