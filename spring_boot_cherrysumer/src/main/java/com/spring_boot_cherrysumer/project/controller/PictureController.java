@@ -134,7 +134,7 @@ public String insert(PictureVO vo, @RequestParam("upload") MultipartFile file, M
 	}
 	service.insert(vo);
 
-	return "/picture/photo_list";
+	return "/picture/picture2";
 
 }
 
