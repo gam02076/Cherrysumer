@@ -14,9 +14,11 @@
 <script src="<c:url value='/js/admin/photoFilter.js' />"></script>
 </head>
 <body>
-	<div id="wrap">
+<div id="asdf">
 	<input type="button" value="새로고침" class="checkBtn" id="redirect">
-	<a href="<c:url value='/'/>">index 페이지로 이동</a><br><br>
+	<a href="<c:url value='/'/>">메인페이지로 이동</a><br><br>
+	</div>
+	<div id="wrap">
 		<table id="filterTb">
 			<tr>
 				<th>아이디</th>

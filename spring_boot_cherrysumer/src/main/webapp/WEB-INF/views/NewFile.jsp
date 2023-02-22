@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>이게 뜨길 비시면 됩니다.</title>
+<title>온라인 전시회 시선</title>
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/main.css'/>">
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/text.css'/>">
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/slides.css'/>">

@@ -52,8 +52,8 @@
 
 					<div class="textarea">
 						<textarea name="piccontent" value="${art.piccontent }" placeholder="${art.piccontent }"></textarea>
-					</div>
-					<div class="btn">
+					<!-- </div>
+					<div class="btn"> -->
 						<button type="submit" value="등록" class="btn_1">등록</button>
 						<button type="button" class="btn_1">취소</button>
 					</div>

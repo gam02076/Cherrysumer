@@ -62,11 +62,11 @@ public class DealController {
 	@RequestMapping("/dealcheckinsert")
 	public String insertdeal (DealVO vo) {
 		
-		
+		service2.picDeal(vo.getPicNo());
 		service.insertdeal(vo);
 
 		
-		return "result"; 
+		return "redirect:/picture"; 
 		
 	}
 	
