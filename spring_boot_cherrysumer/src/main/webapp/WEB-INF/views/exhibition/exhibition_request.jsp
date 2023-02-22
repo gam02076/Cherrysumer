@@ -98,21 +98,21 @@
 										<td><label for="exhSummary" class="item">전시회 요약</label></td><td colspan="3"><label><input type="text" name="exhSummary" id="exhSummary" placeholder="Exhibition Summary"></label></td>				
 									</tr>
 									<tr>
-										<td><label for="introduce" class="item">전시회 소개</label></td>
+										<td><label for="introduce" class="item">전시회 소개1</label></td>
 										<td colspan="3"><textarea id="introduce" name="exhInterview1"
 												placeholder="전시회 컨셉과 작품 소개 및 설명을 해주세요.&#13;&#10;Please introduce the concept of the exhibition and your works."></textarea>
 										</td>
 									</tr>
 									<tr>
-										<td><label for="introduce" class="item">전시회 소개</label></td>
+										<td><label for="introduce" class="item">전시회 소개2</label></td>
 										<td colspan="3"><textarea id="introduce" name="exhInterview2"
 												placeholder="전시회 컨셉과 작품 소개 및 설명을 해주세요.&#13;&#10;Please introduce the concept of the exhibition and your works."></textarea>
 										</td>
 									</tr>
 									<tr>
-										<td><label for="introduce" class="item">전시회 소개</label></td>
+										<td><label for="introduce" class="item">전시회 소개3</label></td>
 										<td colspan="3"><textarea id="introduce" name="exhInterview3"
-												placeholder="전시회 컨셉과 작품 소개 및 설명을 해주세요.&#13;&#10;Please introduce the concept of the exhibition and your works."></textarea>
+												placeholder="전시회를 기획하게 된 계기를 설명해주세요.&#13;&#10;Please explain why you planned the exhibition."></textarea>
 										</td>
 									</tr>
 									<tr>
@@ -215,21 +215,21 @@
 									<!-- 공백 -->		
 									<tr><td colspan="5" height="50" style="border-top:1px solid grey;"></td></tr>
 									<tr>
-										<td colspan="3" style="text-align:center;"> 한글로 계약 조건 어쩌고 저쩌고</td>
+										<td colspan="3" style="text-align:center;"> 
+											<div class="terms">
+												1. 주최자는 어떠한 예약도 거부할 권리가 있으며 어떠한 이유도 밝히지 않고 예약 비용을 전액 환불할 수 있습니다
+												2. 우리는 출품자로서 위에 표시된 총 비용을 지불하는 것에 동의합니다. 당사는 참가 계약의 조건을 읽고 수락했음을 선언하며, 관련 당국 또는 장소가 공간 할당 조건으로 부과할 수 있는 모든 계약에 동의합니다.
+												3. 모든 예약은 주최자가 확인한 후 대금을 전액 지불하고 제시간에 결제한 경우에만 유효합니다.
+											</div>
+										</td>
 									</tr>		
 									<tr>
 										<td colspan="3" style="text-align:center;">
 											<div class="terms">
 												Terms and Conditions:<br>
-												1. The booking fee/first payment of 50% is non-refundable and the second payment of 50% will be due on 1st October 2019<br>
-												
-												2. The organizer remains the right to reject any reservation and to refund the booking fee in full without naming any reasons<br>
-												
-												3. As exhibitors we agree to pay the total cost shown above. We hereby declare that we have read and accepted the terms and conditions of the participation contract and agree to abide by the Rules and Regulations of the Dubai Off-Road and Adventure Show 2014 (as set out in the Exhibitor Manual) and any agreements which may be imposed by the relevant authorities or the venue as a condition of allotment of space. We hereby sign and agree to be bound by them. The terms and condition can be downloaded from our website http://dubaiadventureshow.com/TC.pdf
-												<br>
-												4. Payments have to be made in favor of "OutdoorUAE FZE" or to Emirates NBD account AC No.: 101 42193821 01 AC Name: OutdoorUAE FZE 
-												<br>
-												5. Any booking is only valid after it is confirmed by the organizer and if the payments are made in full and on time.
+												1. The organizer remains the right to reject any reservation and to refund the booking fee in full without naming any reasons. <br>
+												2. As exhibitors we agree to pay the total cost shown above. We hereby declare that we have read and accepted the terms and conditions of the participation contract and agree to any agreements which may be imposed by the relevant authorities or the venue as a condition of allotment of space. <br>
+												3. Any booking is only valid after it is confirmed by the organizer and if the payments are made in full and on time.<br>
 												<br>				
 											</div>
 										</td>

@@ -18,10 +18,13 @@
 		<c:import url = "/WEB-INF/views/layout/top.jsp"/>
 		<div id="textBox">
 			<div id="textForm">
-				신청이 완료 되었습니다. <br>
-				신청해 주셔서 감사합니다. <br>
-				<br>
-				Thanks for your Request.
+				<div id="text">
+					신청이 완료 되었습니다. <br>
+					신청해 주셔서 감사합니다. <br>
+					<br>
+					Your application has been completed.<br>
+					Thanks for your Request.
+				</div>
 			</div>
 		</div>
 		<c:import url="/WEB-INF/views/layout/bottom.jsp" />
