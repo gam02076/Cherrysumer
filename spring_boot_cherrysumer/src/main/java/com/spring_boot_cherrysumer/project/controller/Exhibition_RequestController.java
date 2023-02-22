@@ -203,9 +203,10 @@ public class Exhibition_RequestController {
 	@RequestMapping("/exhibition/adminConfirm")
 	public String confirmSave(ExhibitionVO exh) {
 		service.confirmSave(exh);
-		System.out.println(exh.getExhConfirm());
+		System.out.println("##exhNo : " + exh.getExhNo());
+		System.out.println("##exhConfirm : " + exh.getExhConfirm());
 		// 수정된 데이터 저장 후 전시회 신청 관리자 화면으로 포워딩
-		return "redirect:/exhibition/exhibition_requestListForm";
+		return "redirect:/exhibition/requestList"; // 리다이렉트 뒤에는 리퀘스트매핑의 URL을 써야함.
 	}
 	
 }

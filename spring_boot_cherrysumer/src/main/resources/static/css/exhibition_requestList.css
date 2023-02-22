@@ -3,7 +3,7 @@
 #wrap{
 	background: rgb(54,78,79); 
 	width:900px;
-	height: 500px;
+	height: 600px;
 	margin:0 auto;	
 	padding-top: 20px;
 	margin-top:50px;
@@ -20,10 +20,45 @@ table {
 	margin:0 auto;
 	border-radius: 15px;
 	background:white;
+	width: 833px;
+}
+table td{
+	padding: 3px 9px;
 }
 
 #exhSearchFrm {
 	text-align:center;
-	margin-top: 50px;
+	margin-top: 5px;
 	margin-bottom: 50px;
+}
+
+.columnTitle {
+	background: #e1e1e185;	
+}
+
+#save {
+	float: right;
+	text-align: right;
+	margin-right: 100px;
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+
+/* ---------------------페이징 (은빈님 공유)---------------------- */
+
+#pageNum{
+	display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    color:white;
+}
+.pagination{
+	display: inline-flex;
+}
+.pagination li{
+	margin: 0 10px;
+    padding: 10px;
+    width: 15px;
+    text-align: center;
 }

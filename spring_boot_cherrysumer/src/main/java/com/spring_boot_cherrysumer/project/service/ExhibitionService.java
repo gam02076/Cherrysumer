@@ -64,7 +64,9 @@ public class ExhibitionService implements IExhibitionService {
 
 	@Override
 	public void confirmSave(ExhibitionVO exh) {
+
 		dao.confirmSave(exh);
+
 		
 	}
 	

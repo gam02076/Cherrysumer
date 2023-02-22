@@ -8,9 +8,9 @@ $(document).ready(function(){
         event.preventDefault();
 
         // confirm값 변수에 저장
-        //var confirm = $('#exhConfirm').val();
-        var test = $("select[name='exhConfirm']:checked").val();
-        alert(test);
+        var confirm = $('#exhConfirm').val();
+        //var test = $("select[name='exhConfirm']:checked").val();
+        //alert(test);
         // 서버에 전송하고 결과 받아서 처리 (Ajax 불러옴)
         $.ajax({
             type:"post",
