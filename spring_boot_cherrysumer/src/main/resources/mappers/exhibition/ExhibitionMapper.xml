@@ -80,9 +80,9 @@
 	
 	<!-- 전시회 신청 승인 저장 -->
 	<update id="confirmSave" parameterType="com.spring_boot_cherrysumer.project.model.ExhibitionVO">
-		UPDATE exhibition
-		SET exhConfirm=#{exhConfirm}
-		WHERE exhNo=#{exhNo}
+		UPDATE exhibition 
+		SET exhConfirm=#{exhConfirm} 
+		WHERE exhNo=#{exhNo} 
 	</update>
 
   </mapper>
