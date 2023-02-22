@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+
+#asdf{
+	text-align: center;
+}
 #wrap {
 	justify-content: center;
 	display: flex;

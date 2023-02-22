@@ -157,13 +157,7 @@ if($("input[name='payment']:checked").val() == '카카오'){
  			data:formData,
  			success:function(view){
  			  alert('결제가 완료되었습니다.');
- 			  if(picType=1){
- 			  alert(view);
- 			  //href="/picture/photo_list/";
- 			  }else{
- 			  alert(view);
- 				//href="/picture/picture_list/";
- 				}
+ 			  location.href="/picture";
  			},
  			error:function(){
  				alert("오류");
