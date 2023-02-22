@@ -67,7 +67,7 @@
 		resultType="com.spring_boot_cherrysumer.project.model.Exhibition2VO">
 		SELECT * FROM art JOIN exhibition ON exhibition.memId =
 		art.memId where exhibition.exhStartDate>#{today} and art.artMain="O"
-		and exhConfirm="O";
+		and exhConfirm="2";
 	</select>
 
 	<!-- 작품 업데이트 -->
@@ -109,6 +109,13 @@
 		exhibition.exhEndDate>#{today}limit 0,7;
 	</select>
 
+	<!-- 작품 업데이트 -->
+	<update id="picDeal"
+		parameterType="String">
+		UPDATE picture
+		SET
+		good="4" WHERE picNo=#{picNo};
+	</update>
 
 
 

@@ -122,4 +122,10 @@ public class ArtistService implements IArtistDAO {
 		
 	}
 
+	@Override
+	public void picDeal(String picNo) {
+		// TODO Auto-generated method stub
+		dao.picDeal(picNo);
+	}
+
 }
