@@ -9,8 +9,7 @@ body {
     height: 1980px;
 	background-image: url("/images/signup_image1.png");
 	background-size:100% 100%;
-	margin-top: -160px;
-	margin-left: 475px;
+	margin: auto;
 }
 
 #signUpForm {
@@ -38,7 +37,6 @@ body {
 
 .btnArea {
 	text-align: center;
-	padding: 30px;
 }
 
 button {
