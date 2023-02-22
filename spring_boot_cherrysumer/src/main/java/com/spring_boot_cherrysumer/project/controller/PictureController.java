@@ -121,17 +121,15 @@ public String insert(PictureVO vo, @RequestParam("upload") MultipartFile file, M
 		double con = GreenEyesResult.get(i).getConfidence();
 		if (Double.compare(resultNum, con) == 0) { // 결과 값이랑 같으면
 			result = GreenEyesResult.get(i).getValue(); // result에 넣음.
-			System.out.print(result + "이므로");
+			if(i!=2) {
+                vo.setGood(2);
+
+                //System.out.println("불통과입니다");
+			}
 			break;
 		}
 	}
-	if (result.equals("Normal")) {
-		//System.out.println("통과입니다");
-	} else {
-		vo.setGood(2);
-		
-		//System.out.println("불통과입니다");
-	}
+	
 	service.insert(vo);
 
 	return "/picture/picture2";
