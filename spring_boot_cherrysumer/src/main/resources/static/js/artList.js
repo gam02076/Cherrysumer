@@ -7,7 +7,7 @@
    $(".box").click(function(){
 
     $("#Detailmodal").fadeIn('slow');
-    alert($(this).attr("id"));
+    
     $.ajax({
  			type:"post",
  			url:"/artDetail",
